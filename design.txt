@@ -1,0 +1,31 @@
+-------MAYNOOTH WEBSITE DEVELOPMENT--------
+
+MODELS
+---
+  Product
+  ---
+    name
+    price
+    pictures
+    short description
+    colors
+    category(ex. livingroom...)
+    in stock
+  
+  Order
+  ---
+    products
+    first-name
+    last-name
+    address
+    shipped
+
+  ProductPicture
+  ---
+    product
+    picture
+
+  Color
+  ---
+    name
+    hex
