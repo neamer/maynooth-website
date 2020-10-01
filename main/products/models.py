@@ -10,6 +10,9 @@ class Color(models.Model):
     name = models.CharField(max_length=20)
     hexa = models.CharField(max_length=7)
 
+    def __str__(self):
+        return f'{self.name}, [{self.hexa}]'
+
 
 class Product(models.Model):
     LIVINGROOM = 'L'
@@ -40,3 +43,6 @@ class ProductPicture(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     picture = models.ImageField(
         upload_to=get_upload_location, default="no-picture.png")
+
+    def __str__(self):
+        return f'{self.product.name} picture '
