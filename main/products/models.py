@@ -26,7 +26,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     short_desc = models.CharField(max_length=150)
     detail_desc = models.TextField()
-    colors = models.ManyToManyField(Color, on_delete=models.SET_NULL)
+    colors = models.ManyToManyField(Color)
     category = models.CharField(
         max_length=2, choices=CATEGORY, default=LIVINGROOM)
     in_stock = models.BooleanField(default=True)
@@ -38,4 +38,5 @@ class Product(models.Model):
 
 class ProductPicture(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL)
-    picture = models.ImageField(upload_to=get_upload_location, required=True)
+    picture = models.ImageField(
+        upload_to=get_upload_location, default="no-picture.png")

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # external
-    'rest_framework'
+    'rest_framework',
 
     # local
     'products.apps.ProductsConfig',
