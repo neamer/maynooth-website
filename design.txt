@@ -15,8 +15,7 @@ MODELS
   Order
   ---
     products
-    first-name
-    last-name
+    name
     address
     shipped
 
@@ -29,3 +28,30 @@ MODELS
   ---
     name
     hex
+
+
+BACKEND FUNCTIONALITY(views)
+---
+  new arrivals
+  ---
+    return three newest products
+
+  clearance deals
+  ---
+    return three chosen products
+
+  product list
+  ---
+    return shallow products paginated with the page size 12(can be reordered)(can also be filtered)
+
+  product detail
+  ---
+    returns all fields of a chosen product
+
+  similar products
+  ---
+    return three products that the user is likely to buy
+
+  create Order
+  ---
+    create new order from the incoming data
