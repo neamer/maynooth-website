@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Color, Product, ProductPicture
+from .models import Color, Product, Picture
 
 
 class ColorSerializer(serializers.ModelSerializer):
@@ -9,15 +9,15 @@ class ColorSerializer(serializers.ModelSerializer):
         fields = ['name', 'hexa']
 
 
-class ProductPictureSerializer(serializers.ModelSerializer):
+class PictureSerializer(serializers.ModelSerializer):
     class Meta:
+        model = Picture
         fields = ['picture']
 
 
 class ProductSerializer(serializers.ModelSerializer):
     colors = ColorSerializer(read_only=True, many=True)
-    picture = serializers.PrimaryKeyRelatedField(
-        queryset=ProductPicture.objects.all(), many=True)
+    pictures = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Product

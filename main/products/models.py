@@ -3,7 +3,7 @@ from django.utils import timezone
 
 
 def get_upload_location(instance, filename):
-    return f'ProductPictures/{instance.product.name}/'
+    return f'ProductPictures/ab/{filename}'
 
 
 class Color(models.Model):
@@ -11,7 +11,7 @@ class Color(models.Model):
     hexa = models.CharField(max_length=7)
 
     def __str__(self):
-        return f'{self.name}, [{self.hexa}]'
+        return f'{self.name}, {self.hexa}'
 
 
 class Product(models.Model):
@@ -39,10 +39,11 @@ class Product(models.Model):
         return self.name
 
 
-class ProductPicture(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+class Picture(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='pictures')
     picture = models.ImageField(
         upload_to=get_upload_location, default="no-picture.png")
 
     def __str__(self):
-        return f'{self.product.name} picture '
+        return self.picture.url
