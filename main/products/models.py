@@ -3,7 +3,7 @@ from django.utils import timezone
 
 
 def get_upload_location(instance, filename):
-    return f'ProductPictures/ab/{filename}'
+    return f'ProductPictures/{instance.product.name}/{filename}'
 
 
 class Color(models.Model):
