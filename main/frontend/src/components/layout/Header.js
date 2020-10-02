@@ -22,7 +22,6 @@ function Header() {
             <div className="nav-icon"></div>
           </li>
           <li className="nav-item nav-dropdown">
-            <div className="nav-dropdown-square"></div>
             <div
               id="nav-dropdown-btn"
               onMouseLeave={() => handleDropDown(false)}
