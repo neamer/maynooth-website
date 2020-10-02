@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # local
     'products.apps.ProductsConfig',
+    'frontend.apps.FrontendConfig',
 ]
 
 MIDDLEWARE = [
