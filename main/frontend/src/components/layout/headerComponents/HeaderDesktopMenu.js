@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import DropDownArrow from "./dropdown.svg";
+import ShoppingBasketIcon from "./basket-black.svg";
+import SearchBlack from "./search-black.svg";
 import "./HeaderDesktopMenu.css";
 
 function HeaderDesktopMenu() {
@@ -12,10 +14,14 @@ function HeaderDesktopMenu() {
     <>
       <ul className="nav-menu">
         <li className="nav-item">
-          <div className="nav-icon"></div>
+          <div className="nav-icon">
+            <SearchBlack className="search-icon" />
+          </div>
         </li>
         <li className="nav-item">
-          <div className="nav-icon"></div>
+          <div className="nav-icon">
+            <ShoppingBasketIcon className="basket-icon" />
+          </div>
         </li>
         <li
           className="nav-item nav-dropdown"

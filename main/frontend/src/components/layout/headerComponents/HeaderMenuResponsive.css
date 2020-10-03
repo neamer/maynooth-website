@@ -1,8 +1,52 @@
 .nav-sidebar {
+  box-sizing: border-box;
+  padding-top: 90px;
   position: fixed;
-  height: 1200px;
-  width: 80%;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
   left: 0;
   z-index: 100;
-  background-color: aqua;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.nav-sidebar-active {
+  width: 80%;
+}
+
+.sidebar-section {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebar-list {
+  margin: 20px 0;
+  list-style-type: none;
+}
+.sidebar-list-item {
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+.sidebar-list-item:first-of-type {
+  border-top: 1px solid rgb(241, 241, 241);
+}
+
+.basket-button {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #4cb3aa;
+  color: #fff;
+  margin: 5px 20px;
+  border-radius: 7px;
+}
+.basket-button:hover,
+.basket-button:active {
+  background-color: #58d8cd;
+  cursor: pointer;
+}
+
+.basket-icon-inline {
+  width: 27px;
 }

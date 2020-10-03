@@ -55,7 +55,7 @@ function Nav(props) {
         </a>
 
         {showButton ? (
-          showMenu ? (
+          props.sidebar ? (
             <ToggleMenuCloseIcon onClick={() => props.onClick(false)} />
           ) : (
             <ToggleMenuOpenIcon onClick={() => props.onClick(true)} />
@@ -64,15 +64,7 @@ function Nav(props) {
           ""
         )}
 
-        {showMenu ? (
-          responsive ? (
-            <HeaderMenuResponsive />
-          ) : (
-            <HeaderDesktopMenu />
-          )
-        ) : (
-          ""
-        )}
+        {showMenu ? <HeaderDesktopMenu /> : ""}
       </div>
     </div>
   );

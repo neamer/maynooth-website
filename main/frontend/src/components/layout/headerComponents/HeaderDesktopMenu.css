@@ -8,15 +8,29 @@
 }
 
 .nav-item {
-  margin-left: 20px;
+  margin-left: 23px;
 }
 
 .nav-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background-color: rgb(228, 228, 228);
+  background-color: #e8e8e8;
+  transition: all 0.2s;
+}
+.nav-icon:hover {
+  cursor: pointer;
+  background-color: #d6d6d6;
+}
+
+.basket-icon {
+  margin-top: 12px;
+  width: 28px;
+}
+.search-icon {
+  margin-top: 12px;
+  width: 19px;
 }
 
 #nav-dropdown-btn {

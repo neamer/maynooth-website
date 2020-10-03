@@ -28,6 +28,9 @@
   width: 18px;
   height: 15px;
 }
+.nav-toggle-open-icon:hover {
+  cursor: pointer;
+}
 
 .nav-toggle-line {
   height: 1px;
@@ -47,8 +50,11 @@
 .nav-toggle-close-icon {
   display: inline-block;
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
+}
+.nav-toggle-close-icon:hover {
+  cursor: pointer;
 }
 .nav-toggle-close-line {
   height: 1px;
@@ -56,6 +62,10 @@
   background-color: black;
   position: absolute;
   top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+.nav-toggle-close-line:first-of-type {
+  transform: rotate(-45deg);
 }
 
 .display-none {
