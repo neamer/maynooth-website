@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import DropDownArrow from "./dropdown.svg";
 import ShoppingBasketIcon from "./basket-black.svg";
 import SearchBlack from "./search-black.svg";
-import "./HeaderDesktopMenu.css";
+import "./Menu.css";
 
 function HeaderDesktopMenu() {
   const [dropDown, setDropDown] = useState(false);

@@ -17,6 +17,7 @@ function SidebarShadow(props) {
 
   return (
     <div
+      onClick={() => props.onClick(false)}
       className={
         show
           ? "nav-sidebar-shadow nav-sidebar-shadow-active"

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import ShoppingBasketIcon from "./basket-white.svg";
-import "./HeaderMenuResponsive.css";
+import "./Sidebar.css";
 
 function HeaderMenuResponsive(props) {
   const [show, setShow] = useState(false);
@@ -25,7 +25,8 @@ function HeaderMenuResponsive(props) {
         <li className="sidebar-list-item">KITCHEN & DINING</li>
       </ul>
       <div className="basket-button">
-        SHOPPING BASKET <ShoppingBasketIcon className="basket-icon-inline" />
+        <span className="basket-button-txt">SHOPPING BASKET</span>{" "}
+        <ShoppingBasketIcon className="basket-icon-inline" />
       </div>
     </div>
   );

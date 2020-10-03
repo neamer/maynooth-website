@@ -3,15 +3,16 @@
   padding-top: 90px;
   position: fixed;
   height: 100%;
-  width: 0;
   overflow: hidden;
   left: 0;
   z-index: 100;
   background-color: #fff;
   transition: 0.2s;
+  width: 80%;
+  transform: translate(-100%);
 }
 .nav-sidebar-active {
-  width: 80%;
+  transform: translate(0%);
 }
 
 .sidebar-section {
@@ -35,18 +36,26 @@
 
 .basket-button {
   padding: 10px 20px;
+  position: relative;
   text-align: center;
   background-color: #4cb3aa;
   color: #fff;
   margin: 5px 20px;
   border-radius: 7px;
+  font-weight: bold;
 }
 .basket-button:hover,
 .basket-button:active {
   background-color: #58d8cd;
   cursor: pointer;
 }
-
+.basket-button-txt {
+  padding-right: 30px;
+}
 .basket-icon-inline {
+  position: absolute;
+  top: 10px;
+  right: calc(50% - 91px);
+
   width: 27px;
 }

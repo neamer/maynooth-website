@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./Nav.css";
 import Logo from "./Logo-Maynooth-Option1.svg";
-import HeaderDesktopMenu from "./HeaderDesktopMenu";
-import HeaderMenuResponsive from "./HeaderMenuResponsive";
-
-// CHANGE TO HAMBURGER MENU ICON
+import HeaderDesktopMenu from "./Menu";
 
 function ToggleMenuOpenIcon(props) {
   return (
@@ -29,6 +26,18 @@ function ToggleMenuCloseIcon(props) {
 function Nav(props) {
   const [showButton, setShowButton] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
+
+  // force the ToggleMenuOpenIcon without waiting for the fade out to finish
+  const [forceClose, setForceClose] = useState(false);
+
+  const handleClose = () => {
+    setForceClose(true);
+    props.onClick(false);
+
+    setTimeout(() => {
+      setForceClose(false);
+    }, 500);
+  };
 
   useEffect(() => {
     if (window.innerWidth >= 750) {
@@ -55,8 +64,8 @@ function Nav(props) {
         </a>
 
         {showButton ? (
-          props.sidebar ? (
-            <ToggleMenuCloseIcon onClick={() => props.onClick(false)} />
+          props.sidebar && !forceClose ? (
+            <ToggleMenuCloseIcon onClick={handleClose} />
           ) : (
             <ToggleMenuOpenIcon onClick={() => props.onClick(true)} />
           )
