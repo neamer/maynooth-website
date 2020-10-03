@@ -1,1 +1,24 @@
-----MAYNOOTH SITE DEV LOG====
+-==== MAYNOOTH SITE DEV LOG ====-
+
+WEEK ONE
+---
+
+  Tuesday 01.10.2020
+  ---
+    Initialize the git repository.
+    Start the django project and set up the rest framework.
+    try to convert the requirements from design.txt into actual django models,
+    serializers made some trouble but got it working in the end.
+    Set up a basic apiview with some pagination
+  
+  Friday 02.10.2020
+  ---
+    Start and set up the django frontend app for react with webpack.
+    Start working header, SHOP BY ROOM dropdown and showing hamburger menu 
+    button in responsive.
+    
+  Saturday 03.10.2020
+  ---
+    Work on the responsive sidebar. Bring state up and disconnect the rendering
+    from the animations to be able to do unmounting animations. 
+    Add header icons.
