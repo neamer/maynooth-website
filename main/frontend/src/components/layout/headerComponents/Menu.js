@@ -5,7 +5,7 @@ import ShoppingBasketIcon from "./basket-black.svg";
 import SearchBlack from "./search-black.svg";
 import "./Menu.css";
 
-function HeaderDesktopMenu() {
+function Menu() {
   const [dropDown, setDropDown] = useState(false);
 
   const handleDropDown = (status) => setDropDown(status);
@@ -58,4 +58,4 @@ function HeaderDesktopMenu() {
   );
 }
 
-export default HeaderDesktopMenu;
+export default Menu;

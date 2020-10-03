@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeaderMenuResponsive from "./headerComponents/Sidebar";
+import Sidebar from "./headerComponents/Sidebar";
 
 import Nav from "./headerComponents/Nav";
 import SidebarShadow from "./headerComponents/SidebarShadow";
@@ -26,7 +26,7 @@ function Header() {
       {sidebar ? (
         <>
           {" "}
-          <HeaderMenuResponsive triggerFadeOut={triggerFadeOut} />{" "}
+          <Sidebar triggerFadeOut={triggerFadeOut} />{" "}
           <SidebarShadow
             onClick={handleSidebar}
             triggerFadeOut={triggerFadeOut}

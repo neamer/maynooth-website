@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ShoppingBasketIcon from "./basket-white.svg";
 import "./Sidebar.css";
 
-function HeaderMenuResponsive(props) {
+function Sidebar(props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ function HeaderMenuResponsive(props) {
   );
 }
 
-export default HeaderMenuResponsive;
+export default Sidebar;

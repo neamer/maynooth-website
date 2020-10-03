@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./Nav.css";
 import Logo from "./Logo-Maynooth-Option1.svg";
-import HeaderDesktopMenu from "./Menu";
+import Menu from "./Menu";
 
 function ToggleMenuOpenIcon(props) {
   return (
@@ -73,7 +73,7 @@ function Nav(props) {
           ""
         )}
 
-        {showMenu ? <HeaderDesktopMenu /> : ""}
+        {showMenu ? <Menu /> : ""}
       </div>
     </div>
   );
