@@ -21,4 +21,4 @@ WEEK ONE
   ---
     Work on the responsive sidebar. Bring state up and disconnect the rendering
     from the animations to be able to do unmounting animations. 
-    Add header icons.
+    Add header icons. Tighten up the transitions and rename the components.
