@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "./common/Search";
 import Slider from "./heroComponents/Slider";
 
 import "./HeroSection.css";
@@ -15,6 +16,7 @@ function HeroSection() {
   return (
     <div className="hero-container" style={{ height: height }}>
       <Slider />
+      <Search />
     </div>
   );
 }
