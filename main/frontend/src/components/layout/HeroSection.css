@@ -1,0 +1,11 @@
+.hero-container {
+  margin-top: 65px;
+  width: 100%;
+  background-color: aqua;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-container {
+    height: 75%;
+  }
+}

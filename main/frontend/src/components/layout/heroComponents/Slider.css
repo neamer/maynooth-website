@@ -1,0 +1,41 @@
+.hero-slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-btn {
+  position: absolute;
+  height: 100%;
+  width: 8vw;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  top: 0;
+}
+.slider-btn:hover {
+  background-color: rgba(95, 95, 95, 0.3);
+  cursor: pointer;
+}
+.slider-btn-right {
+  right: 0;
+}
+
+.slider-element {
+  min-width: 100%;
+  height: 100%;
+  background-color: rgb(218, 218, 218);
+  transition: transform 0.4s ease-out;
+}
+.slider-element:nth-of-type(odd) {
+  background-color: rgb(192, 192, 192);
+}
+
+@media screen and (max-width: 750px) {
+  .slider-btn {
+    width: 70px;
+  }
+}

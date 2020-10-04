@@ -3,14 +3,16 @@ import { render } from "react-dom";
 
 import "./App.css";
 import Header from "./layout/Header";
+import HeroSection from "./layout/HeroSection";
 import Lorem from "./layout/Lorem";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
+      <HeroSection />
       <Lorem />
-    </div>
+    </>
   );
 }
 
