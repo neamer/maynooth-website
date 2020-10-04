@@ -22,3 +22,10 @@ WEEK ONE
     Work on the responsive sidebar. Bring state up and disconnect the rendering
     from the animations to be able to do unmounting animations. 
     Add header icons. Tighten up the transitions and rename the components.
+
+
+  Sunday 04.10.2020
+  ---
+    Started work on the hero section slider. Finished most of the technicals,
+    some aesthetics still need work. Started first new branch for the search
+    component, it is basically done.
