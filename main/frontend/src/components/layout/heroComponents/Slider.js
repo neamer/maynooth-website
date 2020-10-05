@@ -4,7 +4,23 @@ import "./Slider.css";
 function Slider() {
   const [position, setPosition] = useState(0);
 
-  let elements = [1, 2, 3, 4];
+  let elements = [
+    {
+      caption: "The perfect sofa for your home",
+      action: "SHOP SOFAS",
+      src: "static/frontend/slide1.png",
+    },
+    {
+      caption: "Slide 2",
+      action: "BUTTON",
+      src: "{% static './frontend/slide1.png' %}",
+    },
+    {
+      caption: "Slide 2",
+      action: "BUTTON",
+      src: "{% static './frontend/slide1.png' %}",
+    },
+  ];
 
   const goLeft = () => {
     setPosition(position + 100);
@@ -21,9 +37,15 @@ function Slider() {
           <div
             key={index}
             className="slider-element"
-            style={{ transform: `translate(${position}%)` }}
+            style={{
+              transform: `translate(${position}%)`,
+              backgroundImage: `url(${item.src})`,
+            }}
           >
-            {item}
+            <div className="slider-content-wrapper">
+              <h1 className="slider-caption">{item.caption}</h1>
+              <button className="slider-action">{item.action}</button>
+            </div>
           </div>
         );
       })}
