@@ -1,4 +1,5 @@
 .hero-container {
+  position: relative;
   margin-top: 65px;
   width: 100%;
   background-color: aqua;
