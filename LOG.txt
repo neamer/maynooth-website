@@ -23,7 +23,6 @@ WEEK ONE
     from the animations to be able to do unmounting animations. 
     Add header icons. Tighten up the transitions and rename the components.
 
-
   Sunday 04.10.2020
   ---
     Started work on the hero section slider. Finished most of the technicals,
