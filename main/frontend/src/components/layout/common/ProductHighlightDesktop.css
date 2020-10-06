@@ -11,7 +11,8 @@
 .highlight-container {
   padding-left: 15px;
   box-sizing: border-box;
-  width: 100%;
+  width: 1366px;
+  margin: auto;
   margin-bottom: 50px;
 
   display: flex;
@@ -20,10 +21,12 @@
 }
 
 .highlight-slider-element {
-  min-width: 260px;
-  height: 260px;
+  min-width: 320px;
+  height: 320px;
+  margin: 0 25px;
+
   border: 1px solid rgb(235, 235, 235);
-  margin: 0 15px;
+
   transition: transform 0.2s ease-out;
 }
 
@@ -32,5 +35,16 @@
     font-size: 40px;
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+  .highlight-slider-element {
+    min-width: 260px;
+    height: 260px;
+    margin: 0 15px;
+  }
+  .highlight-container {
+    padding-left: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 50px;
   }
 }
