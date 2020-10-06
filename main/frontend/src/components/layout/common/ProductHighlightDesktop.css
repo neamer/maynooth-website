@@ -1,0 +1,16 @@
+.highlight-heading {
+  margin-top: 50px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #4cb3aa;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .highlight-heading {
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

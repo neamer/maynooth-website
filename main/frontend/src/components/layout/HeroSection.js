@@ -9,7 +9,7 @@ function HeroSection() {
 
   useEffect(() => {
     if (window.innerWidth >= 750)
-      setHeight(parseInt(window.innerHeight * 0.65) + "px");
+      setHeight(parseInt(window.innerHeight * 0.6) + "px");
     else setHeight(parseInt(window.innerHeight * 0.85) + "px");
   }, []);
 

@@ -16,3 +16,14 @@ body {
 #app {
   min-height: 100%;
 }
+
+.content-wrapper {
+  width: 1366px;
+  margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+  .content-wrapper {
+    width: 90%;
+  }
+}
