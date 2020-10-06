@@ -34,3 +34,9 @@ WEEK ONE
   ---
     Merged the search branch with main and it worked seamlessly. Adjusted the
     hero section for responsive and made adding text easier than before
+    
+  Tuesday 06.10.2020
+  ---
+    The new in store section for desktop needed some more desing work, so didn't
+    get a lot done in terms of coding. Started work on the responsive version
+    later because the design for it is solid. Got the slider working
