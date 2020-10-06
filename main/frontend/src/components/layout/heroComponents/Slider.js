@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slider.css";
 
 function Slider() {
   const [position, setPosition] = useState(0);
+  const [fontSize, setFontSize] = useState(100);
+  const [lineHeight, setLineHeight] = useState(100);
+  const [responsive, setResponsive] = useState(false);
 
   let elements = [
     {
@@ -11,14 +14,14 @@ function Slider() {
       src: "static/frontend/slide1.png",
     },
     {
-      caption: "Slide 2",
-      action: "BUTTON",
-      src: "{% static './frontend/slide1.png' %}",
+      caption: "Everything you need for your dining room",
+      action: "SHOP NOW",
+      src: "static/frontend/slide2.png",
     },
     {
-      caption: "Slide 2",
-      action: "BUTTON",
-      src: "{% static './frontend/slide1.png' %}",
+      caption: "Everything you need for your bedroom",
+      action: "SHOP NOW",
+      src: "static/frontend/slide3.jpg",
     },
   ];
 
@@ -29,6 +32,14 @@ function Slider() {
   const goRight = () => {
     setPosition(position - 100);
   };
+
+  useEffect(() => {
+    setFontSize(parseInt(document.body.clientHeight * 0.06) + "px");
+    setLineHeight(parseInt(document.body.clientHeight * 0.08) + "px");
+    if (document.body.clientWidth <= 750) {
+      setResponsive(true);
+    }
+  }, []);
 
   return (
     <div className="hero-slider">
@@ -43,7 +54,16 @@ function Slider() {
             }}
           >
             <div className="slider-content-wrapper">
-              <h1 className="slider-caption">{item.caption}</h1>
+              <h1
+                className="slider-caption"
+                style={
+                  responsive
+                    ? { fontSize: fontSize, lineHeight: lineHeight }
+                    : {}
+                }
+              >
+                {item.caption}
+              </h1>
               <button className="slider-action">{item.action}</button>
             </div>
           </div>
