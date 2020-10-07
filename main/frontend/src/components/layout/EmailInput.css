@@ -1,0 +1,44 @@
+.email-input-div {
+  padding: 15px 0;
+  position: relative;
+}
+
+.email-input {
+  display: inline-block;
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 15px 25px;
+}
+.email-input:hover,
+.email-input:focus {
+  background-color: rgb(255, 255, 255);
+}
+
+.email-btn {
+  box-sizing: border-box;
+  border: none;
+  position: absolute;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  background-color: #4cb3aa;
+  border-radius: 7px;
+  padding: 13px 40px;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 750px) {
+  .email-input {
+    padding-left: 15px;
+  }
+  .email-btn {
+    padding: 14px 20px 13px 20px;
+    right: 0px;
+    bottom: 15px;
+  }
+}

@@ -1,50 +1,141 @@
+.content-wrapper {
+  width: 1366px;
+  margin: auto;
+}
+
 .highlight-heading {
   margin-top: 50px;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: 62px;
+  font-size: 54px;
   color: #4cb3aa;
   margin-bottom: 30px;
-  margin-left: 5%;
 }
+.highlight-pic-div {
+  position: relative;
+  min-width: 320px;
+  height: 320px;
+  background-size: auto 100%;
+  background-position: center;
 
+  border: 1px solid rgb(235, 235, 235);
+}
+.highlight-pic-div:hover {
+  cursor: pointer;
+}
+.highlight-pic-div:hover .highlight-arrow {
+  padding-right: 0px;
+  padding-left: 5px;
+}
 .highlight-container {
-  padding-left: 15px;
-  box-sizing: border-box;
-  width: 1366px;
-  margin: auto;
+  width: 100%;
+
   margin-bottom: 50px;
 
   display: flex;
   position: relative;
   overflow: hidden;
 }
-
+.highlight-name {
+  margin-top: 10px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 32px;
+  line-height: 30px;
+  color: #393939;
+}
+.highlight-desc {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #393939;
+}
+.highlight-price {
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #fff;
+  background-color: #842c68;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  padding: 5px 0;
+  width: 90px;
+}
+.highlight-shopnow {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: #fff;
+  padding: 6px 10px 6px 15px;
+  color: #393939;
+}
+.highlight-arrow {
+  display: inline-block;
+  width: 22px;
+  padding-right: 5px;
+  transition: all 0.2s ease-out;
+}
 .highlight-slider-element {
-  min-width: 320px;
-  height: 320px;
+  min-width: 322px;
   margin: 0 25px;
-
-  border: 1px solid rgb(235, 235, 235);
 
   transition: transform 0.2s ease-out;
 }
 
 @media screen and (max-width: 750px) {
+  .content-wrapper {
+    width: 100%;
+  }
+  .highlight-pic-div {
+    min-width: 260px;
+    height: 260px;
+  }
   .highlight-heading {
+    margin-left: 5%;
     font-size: 40px;
     margin-top: 25px;
     margin-bottom: 25px;
   }
   .highlight-slider-element {
-    min-width: 260px;
-    height: 260px;
     margin: 0 15px;
+    min-width: 262px;
   }
   .highlight-container {
     padding-left: 15px;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+  .highlight-text {
+    position: absolute;
+    top: 10px;
+    left: 77px;
+    right: 5px;
+  }
+  .highlight-arrow {
+    width: 18px;
+  }
+  .highlight-name {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 25px;
+  }
+  .highlight-desc {
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .highlight-price {
+    font-size: 30px;
+    color: #fff;
+    top: 15px;
+    left: -15px;
+    padding: 5px 0;
+    width: 85px;
+    text-align: center;
   }
 }

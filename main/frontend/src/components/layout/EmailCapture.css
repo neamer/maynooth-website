@@ -1,0 +1,31 @@
+.email-capture-div {
+  background-color: #842c68;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+.email-capture-h {
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 23px;
+  color: #fff;
+  margin: 15px 0;
+}
+.email-capture-p {
+  text-align: center;
+  color: #ebd5d5;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 750px) {
+  .email-capture-div {
+    padding: 10px;
+  }
+  .email-capture-p {
+    display: none;
+  }
+  .email-capture-h {
+    margin: 5px 0;
+    font-size: 21px;
+  }
+}

@@ -73,7 +73,10 @@
 
 @media screen and (max-width: 750px) {
   .slider-btn {
-    width: 70px;
+    width: 60px;
+  }
+  .slider-btn:first-of-type {
+    width: 45px;
   }
   .slider-btn:hover {
     background-color: transparent;
@@ -92,11 +95,12 @@
     line-height: 8vh;
   }
   .slider-content-wrapper {
+    box-sizing: border-box;
     width: 90%;
     margin: 0;
     position: absolute;
     top: calc(50% - 29px);
-    left: 5vw;
+    left: 45px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }

@@ -3,6 +3,7 @@ import { render } from "react-dom";
 
 import "./App.css";
 import ProductHighlightDesktop from "./layout/common/ProductHighlightDesktop";
+import EmailCapture from "./layout/EmailCapture";
 import Header from "./layout/Header";
 import HeroSection from "./layout/HeroSection";
 import Lorem from "./layout/Lorem";
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <HeroSection />
       <ProductHighlightDesktop />
+      <EmailCapture />
       <Lorem />
     </>
   );
