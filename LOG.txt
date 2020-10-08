@@ -39,3 +39,19 @@ WEEK ONE
     The new in store section for desktop needed some more desing work, so didn't
     get a lot done in terms of coding. Started work on the responsive version
     later because the design for it is solid. Got the slider working
+
+  Wednesday 07.10.2020
+  ---
+    Added some styling to the highlight section, undecided on the desktop version
+    , currently it's just a bigger version of the responsive version. Started the
+    email capture component to be able to tune the design of the highlight better.
+
+  
+WEEK TWO
+---
+
+  Tuesday 08.10.2020
+  ---
+    Started wrapping up the highlight component. Finished the buttons and the
+    background graphics. Made the desktop version pictures a different aspect ratio
+    , still undecided on the desktop design.
