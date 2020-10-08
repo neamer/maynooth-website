@@ -73,17 +73,12 @@
 
 @media screen and (max-width: 750px) {
   .slider-btn {
-    width: 60px;
-  }
-  .slider-btn:first-of-type {
     width: 45px;
   }
+
   .slider-btn:hover {
     background-color: transparent;
     cursor: pointer;
-  }
-  .slider-btn:active {
-    background-color: rgba(0, 0, 0, 0.3);
   }
   .slider-element {
     transition: transform 0.3s ease-out;

@@ -5,7 +5,7 @@ import EmailInput from "./EmailInput";
 
 function EmailCapture() {
   return (
-    <div class="email-capture-div">
+    <div className="email-capture-div">
       <div className="content-wrapper">
         <p className="email-capture-p">
           Want to be the first to know when we have exciting new arrivals, or

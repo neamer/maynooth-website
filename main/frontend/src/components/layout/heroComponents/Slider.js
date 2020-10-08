@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import ArrowIcon from "../common/arrowLight.svg";
 import "./Slider.css";
 
 function Slider() {
@@ -71,7 +73,7 @@ function Slider() {
       })}
       {position !== 0 ? (
         <button className="slider-btn slider-btn-left" onClick={goLeft}>
-          Left
+          <ArrowIcon className="arrow arrow-left" />
         </button>
       ) : (
         ""
@@ -79,7 +81,7 @@ function Slider() {
 
       {position !== (elements.length - 1) * -100 ? (
         <button className="slider-btn slider-btn-right" onClick={goRight}>
-          Right
+          <ArrowIcon className="arrow" />
         </button>
       ) : (
         ""

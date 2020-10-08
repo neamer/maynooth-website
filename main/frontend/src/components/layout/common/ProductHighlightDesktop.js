@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import ArrowIcon from "./arrow.svg";
+import ArrowIcon from "./arrowDark.svg";
 import "./ProductHighlightDesktop.css";
 
 function ProductHighlightDesktop() {
@@ -11,33 +11,33 @@ function ProductHighlightDesktop() {
   const elements = [
     {
       price: "$123",
-      name: "Blue Sofa",
+      name: "Haru Large Double Sofa Bed",
       shortDesc: "3 colors available",
-      src: "/static/frontend/sampleProductPicBg.png",
+      src: "/static/frontend/sampleProductPic.png",
     },
     {
       price: "$321",
-      name: "Haru Large Double Sofa Bed",
-      shortDesc: "1 color available",
-      src: "/static/frontend/sampleProductPicBg.png",
+      name: "Cecil Accent Armchair",
+      shortDesc: "4 colors available",
+      src: "/static/frontend/sampleProductPic2.png",
     },
     {
       price: "$546",
       name: "Blue Sofa",
       shortDesc: "Medium sized comfortable Blue Sofa",
-      src: "/static/frontend/sampleProductPicBg.png",
+      src: "/static/frontend/sampleProductPic.png",
     },
     {
       price: "$458",
       name: "Blue Sofa",
       shortDesc: "Medium sized comfortable Blue Sofa",
-      src: "/static/frontend/sampleProductPicBg.png",
+      src: "/static/frontend/sampleProductPic2.png",
     },
     {
       price: "$983",
       name: "Blue Sofa",
       shortDesc: "Medium sized comfortable Blue Sofa",
-      src: "/static/frontend/sampleProductPicBg.png",
+      src: "/static/frontend/sampleProductPic.png",
     },
   ];
 
@@ -45,11 +45,11 @@ function ProductHighlightDesktop() {
     if (document.body.clientWidth <= 750) {
       setResponsive(true);
     }
-    setElementsDisplayed(responsive ? 1 : 3);
+    setElementsDisplayed(responsive ? 1 : 2);
   }, [responsive]);
 
   window.addEventListener("resize", () => {
-    setElementsDisplayed(responsive ? 1 : 3);
+    setElementsDisplayed(responsive ? 1 : 2);
   });
 
   const goLeft = () => {
@@ -61,49 +61,60 @@ function ProductHighlightDesktop() {
   };
 
   return (
-    <div className="content-wrapper">
-      <h1 className="highlight-heading">New In Store</h1>
-      <div className="highlight-container">
-        {elements.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="highlight-slider-element"
-              style={{
-                transform: `translate(${
-                  position * (responsive ? -292 : -372)
-                }px)`,
-              }}
-            >
+    <div
+      className="highlight-wrapper"
+      style={{
+        backgroundImage:
+          'url("static/frontend/background-1.svg"), url("static/frontend/background-2.svg")',
+      }}
+    >
+      <div className="content-wrapper">
+        <h1 className="highlight-heading">New In Store</h1>
+        <div className="highlight-container">
+          {elements.map((item, index) => {
+            return (
               <div
-                className="highlight-pic-div"
-                style={{ backgroundImage: `url(${item.src})` }}
+                key={index}
+                className="highlight-slider-element"
+                style={{
+                  transform: `translate(${
+                    position * (responsive ? -292 : -600)
+                  }px)`,
+                }}
               >
-                <h3 className="highlight-price">{item.price}</h3>
-                <p className="highlight-shopnow">
-                  SHOP NOW <ArrowIcon className="highlight-arrow" />
-                </p>
+                <div
+                  className="highlight-pic-div"
+                  style={{ backgroundImage: `url(${item.src})` }}
+                >
+                  <h3 className="highlight-price">{item.price}</h3>
+                </div>
+                <h3 className="highlight-name">{item.name}</h3>
+                <p className="highlight-desc">{item.shortDesc}</p>
               </div>
-              <h3 className="highlight-name">{item.name}</h3>
-              <p className="highlight-desc">{item.shortDesc}</p>
-            </div>
-          );
-        })}
-        {position !== 0 ? (
-          <button className="slider-btn slider-btn-left" onClick={goLeft}>
-            Left
-          </button>
-        ) : (
-          ""
-        )}
+            );
+          })}
+          {position !== 0 ? (
+            <button
+              className="highlight-btn highlight-btn-left"
+              onClick={goLeft}
+            >
+              <ArrowIcon className="arrow arrow-left" />
+            </button>
+          ) : (
+            ""
+          )}
 
-        {position + elementsDisplayed !== elements.length ? (
-          <button className="slider-btn slider-btn-right" onClick={goRight}>
-            Right
-          </button>
-        ) : (
-          ""
-        )}
+          {position + elementsDisplayed !== elements.length ? (
+            <button
+              className="highlight-btn highlight-btn-right"
+              onClick={goRight}
+            >
+              <ArrowIcon className="arrow" />
+            </button>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

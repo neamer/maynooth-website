@@ -1,10 +1,25 @@
+.arrow {
+  height: 50px;
+}
+.arrow-left {
+  transform: rotate(180deg);
+}
+
 .content-wrapper {
   width: 1366px;
   margin: auto;
 }
 
+.highlight-wrapper {
+  position: relative;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1200px 1200px, 300px auto;
+  background-position: -400px -650px, right bottom;
+  background-blend-mode: normal, overlay;
+  padding: 50px 0;
+}
+
 .highlight-heading {
-  margin-top: 50px;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-size: 54px;
@@ -13,12 +28,10 @@
 }
 .highlight-pic-div {
   position: relative;
-  min-width: 320px;
-  height: 320px;
+  min-width: 550px;
+  height: 370px;
   background-size: auto 100%;
   background-position: center;
-
-  border: 1px solid rgb(235, 235, 235);
 }
 .highlight-pic-div:hover {
   cursor: pointer;
@@ -30,14 +43,11 @@
 .highlight-container {
   width: 100%;
 
-  margin-bottom: 50px;
-
   display: flex;
-  position: relative;
   overflow: hidden;
 }
 .highlight-name {
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   text-align: center;
@@ -79,24 +89,61 @@
   transition: all 0.2s ease-out;
 }
 .highlight-slider-element {
-  min-width: 322px;
+  min-width: 550px;
   margin: 0 25px;
 
   transition: transform 0.2s ease-out;
 }
 
+.highlight-btn {
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 0px;
+  text-align: center;
+  transition: 0.3s ease-out;
+  text-align: center;
+  height: 100%;
+  width: 100px;
+  background-color: transparent;
+  transition: 0.2s ease-out;
+}
+.highlight-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.highlight-btn-left {
+  left: 0px;
+}
+.highlight-btn-right {
+  right: 0px;
+}
+
 @media screen and (max-width: 750px) {
+  .arrow {
+    padding: 11px 13px 11px 17px;
+    height: 35px;
+  }
+  .highlight-wrapper {
+    background-repeat: no-repeat;
+    background-size: 350px 350px, 160px auto;
+    background-position: -150px -150px, right bottom;
+    padding: 30px 0;
+  }
   .content-wrapper {
     width: 100%;
   }
   .highlight-pic-div {
     min-width: 260px;
     height: 260px;
+
+    -webkit-box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
+    box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
   }
   .highlight-heading {
     margin-left: 5%;
     font-size: 40px;
-    margin-top: 25px;
     margin-bottom: 25px;
   }
   .highlight-slider-element {
@@ -107,7 +154,6 @@
     padding-left: 15px;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 30px;
   }
   .highlight-text {
     position: absolute;
@@ -122,7 +168,7 @@
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-size: 28px;
-    line-height: 25px;
+    line-height: 29px;
   }
   .highlight-desc {
     margin-top: 4px;
@@ -137,5 +183,34 @@
     padding: 5px 0;
     width: 85px;
     text-align: center;
+  }
+
+  .highlight-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s ease-out;
+    height: 57px;
+    width: 57px;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: 0.2s ease-out;
+    border: 1px solid #f3f3f3;
+  }
+  .highlight-btn-left {
+    left: 5px;
+  }
+  .highlight-btn-left:active {
+    padding-right: 7px;
+  }
+  .highlight-btn-right {
+    right: 5px;
+  }
+  .highlight-btn-right:active {
+    padding-left: 7px;
   }
 }
