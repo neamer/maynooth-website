@@ -55,3 +55,8 @@ WEEK TWO
     Started wrapping up the highlight component. Finished the buttons and the
     background graphics. Made the desktop version pictures a different aspect ratio
     , still undecided on the desktop design.
+    
+  Friday 09.10.2020
+  ---
+    Finally happy with the showcase component. Renamed a lot of files and focused
+    on cleaning up the code. Started work on the customer credentials component.
