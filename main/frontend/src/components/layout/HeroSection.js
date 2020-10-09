@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./common/Search";
-import Slider from "./heroComponents/Slider";
+import Slider from "./heroSection/Slider";
 
 import "./HeroSection.css";
 

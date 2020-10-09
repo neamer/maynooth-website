@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Sidebar from "./headerComponents/Sidebar";
+import Sidebar from "./header/Sidebar";
 
-import Nav from "./headerComponents/Nav";
-import SidebarShadow from "./headerComponents/SidebarShadow";
+import Nav from "./header/Nav";
+import SidebarShadow from "./header/SidebarShadow";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
