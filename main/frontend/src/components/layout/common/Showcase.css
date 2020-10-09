@@ -82,7 +82,7 @@
 
 /* BUTTON */
 .arrow {
-  height: 50px;
+  height: 40px;
 }
 .arrow-left {
   transform: rotate(180deg);

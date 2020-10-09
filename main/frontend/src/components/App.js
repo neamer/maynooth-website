@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import "./App.css";
 
 import Showcase from "./layout/common/Showcase";
+import Credentials from "./layout/Credentials";
 import EmailCapture from "./layout/EmailCapture";
 import Header from "./layout/Header";
 import HeroSection from "./layout/HeroSection";
@@ -16,6 +17,7 @@ function App() {
       <HeroSection />
       <Showcase />
       <EmailCapture />
+      <Credentials />
       <Lorem />
     </>
   );
