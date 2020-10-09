@@ -73,7 +73,10 @@
 
 @media screen and (max-width: 750px) {
   .slider-btn {
-    width: 45px;
+    width: 60px;
+  }
+  .slider-btn:active {
+    background-color: transparent;
   }
 
   .slider-btn:hover {

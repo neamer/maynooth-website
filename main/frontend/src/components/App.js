@@ -2,7 +2,8 @@ import React from "react";
 import { render } from "react-dom";
 
 import "./App.css";
-import ProductHighlightDesktop from "./layout/common/ProductHighlightDesktop";
+
+import Showcase from "./layout/common/Showcase";
 import EmailCapture from "./layout/EmailCapture";
 import Header from "./layout/Header";
 import HeroSection from "./layout/HeroSection";
@@ -13,7 +14,7 @@ function App() {
     <>
       <Header />
       <HeroSection />
-      <ProductHighlightDesktop />
+      <Showcase />
       <EmailCapture />
       <Lorem />
     </>

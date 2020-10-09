@@ -35,6 +35,7 @@
 
 #nav-dropdown-btn {
   padding-top: 8px;
+  font-size: 15px;
 }
 #nav-dropdown-btn:hover {
   cursor: pointer;

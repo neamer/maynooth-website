@@ -1,101 +1,93 @@
-.arrow {
-  height: 50px;
-}
-.arrow-left {
-  transform: rotate(180deg);
-}
-
 .content-wrapper {
   width: 1366px;
   margin: auto;
 }
 
-.highlight-wrapper {
+.showcase-wrapper {
   position: relative;
   background-repeat: no-repeat, no-repeat;
-  background-size: 1200px 1200px, 300px auto;
+  background-size: 1200px 1200px, 360px auto;
   background-position: -400px -650px, right bottom;
   background-blend-mode: normal, overlay;
-  padding: 50px 0;
+  padding: 80px 0 100px 0;
 }
 
-.highlight-heading {
+.showcase-heading {
   font-family: "DM Serif Display", serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 54px;
   color: #4cb3aa;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
-.highlight-pic-div {
-  position: relative;
-  min-width: 550px;
-  height: 370px;
-  background-size: auto 100%;
-  background-position: center;
-}
-.highlight-pic-div:hover {
-  cursor: pointer;
-}
-.highlight-pic-div:hover .highlight-arrow {
-  padding-right: 0px;
-  padding-left: 5px;
-}
-.highlight-container {
+
+/* SLIDER */
+.showcase-container {
   width: 100%;
 
   display: flex;
   overflow: hidden;
+
+  z-index: 200;
 }
-.highlight-name {
-  margin-top: 20px;
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: 32px;
-  line-height: 30px;
-  color: #393939;
-}
-.highlight-desc {
-  margin-top: 10px;
-  font-size: 16px;
-  text-align: center;
-  color: #393939;
-}
-.highlight-price {
-  text-align: center;
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-size: 36px;
-  color: #fff;
-  background-color: #842c68;
-  position: absolute;
-  top: 15px;
-  left: -15px;
-  padding: 5px 0;
-  width: 90px;
-}
-.highlight-shopnow {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  background-color: #fff;
-  padding: 6px 10px 6px 15px;
-  color: #393939;
-}
-.highlight-arrow {
-  display: inline-block;
-  width: 22px;
-  padding-right: 5px;
-  transition: all 0.2s ease-out;
-}
-.highlight-slider-element {
+.showcase-slider-element {
   min-width: 550px;
   margin: 0 25px;
 
   transition: transform 0.2s ease-out;
 }
 
-.highlight-btn {
+/* CARD SETUP */
+.showcase-pic-div {
+  border-radius: 7px;
+  position: relative;
+  min-width: 550px;
+  height: 370px;
+  background-size: auto 100%;
+  background-position: center;
+}
+.showcase-pic-div:hover {
+  cursor: pointer;
+}
+.showcase-pic-div:hover .showcase-arrow {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+.showcase-name {
+  margin-top: 25px;
+  font-family: "DM Serif Display", serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 32px;
+  line-height: 30px;
+  color: #393939;
+}
+.showcase-desc {
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: center;
+  color: #393939;
+}
+.showcase-price {
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #fff;
+  background-color: #842c68;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  padding: 10px 20px;
+}
+
+/* BUTTON */
+.arrow {
+  height: 50px;
+}
+.arrow-left {
+  transform: rotate(180deg);
+}
+.showcase-btn {
   position: absolute;
   border: none;
   outline: none;
@@ -108,74 +100,71 @@
   background-color: transparent;
   transition: 0.2s ease-out;
 }
-.highlight-btn:hover {
+.showcase-btn:hover {
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-.highlight-btn-left {
+.showcase-btn-left {
   left: 0px;
 }
-.highlight-btn-right {
+.showcase-btn-right {
   right: 0px;
 }
 
-@media screen and (max-width: 750px) {
-  .arrow {
-    padding: 11px 13px 11px 17px;
-    height: 35px;
-  }
-  .highlight-wrapper {
-    background-repeat: no-repeat;
-    background-size: 350px 350px, 160px auto;
-    background-position: -150px -150px, right bottom;
-    padding: 30px 0;
-  }
-  .content-wrapper {
-    width: 100%;
-  }
-  .highlight-pic-div {
-    min-width: 260px;
-    height: 260px;
+/* LIGHT MODE */
+.showcase-price-light {
+  background-color: #4cb3aa;
+}
+.showcase-name-light,
+.showcase-desc-light {
+  color: #fff;
+}
 
-    -webkit-box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
-    box-shadow: -2px 9px 24px -4px rgba(0, 0, 0, 0.45);
-  }
-  .highlight-heading {
+@media screen and (max-width: 750px) {
+  .showcase-heading {
     margin-left: 5%;
     font-size: 40px;
     margin-bottom: 25px;
   }
-  .highlight-slider-element {
+
+  /* SLIDER */
+  .showcase-wrapper {
+    background-repeat: no-repeat;
+    background-size: 350px 350px, 160px auto;
+    background-position: -150px -150px, right bottom;
+    padding: 30px 0 40px 0;
+  }
+  .content-wrapper {
+    width: 100%;
+  }
+  .showcase-pic-div {
+    min-width: 260px;
+    height: 260px;
+  }
+  .showcase-slider-element {
     margin: 0 15px;
     min-width: 262px;
   }
-  .highlight-container {
+  .showcase-container {
     padding-left: 15px;
     box-sizing: border-box;
     width: 100%;
   }
-  .highlight-text {
-    position: absolute;
-    top: 10px;
-    left: 77px;
-    right: 5px;
-  }
-  .highlight-arrow {
-    width: 18px;
-  }
-  .highlight-name {
+
+  /* CARD */
+  .showcase-name {
+    margin-top: 20px;
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 29px;
   }
-  .highlight-desc {
+  .showcase-desc {
     margin-top: 4px;
     font-size: 15px;
     line-height: 15px;
   }
-  .highlight-price {
+  .showcase-price {
     font-size: 30px;
     color: #fff;
     top: 15px;
@@ -185,7 +174,12 @@
     text-align: center;
   }
 
-  .highlight-btn {
+  /* RESPONSIVE BUTTON */
+  .arrow {
+    padding: 11px 13px 11px 17px;
+    height: 35px;
+  }
+  .showcase-btn {
     position: absolute;
     border: none;
     outline: none;
@@ -201,16 +195,22 @@
     transition: 0.2s ease-out;
     border: 1px solid #f3f3f3;
   }
-  .highlight-btn-left {
+  .showcase-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .showcase-btn:active {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .showcase-btn-left {
     left: 5px;
   }
-  .highlight-btn-left:active {
+  .showcase-btn-left:active {
     padding-right: 7px;
   }
-  .highlight-btn-right {
+  .showcase-btn-right {
     right: 5px;
   }
-  .highlight-btn-right:active {
+  .showcase-btn-right:active {
     padding-left: 7px;
   }
 }

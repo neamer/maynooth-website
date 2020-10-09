@@ -15,11 +15,6 @@ function Menu() {
       <ul className="nav-menu">
         <li className="nav-item">
           <div className="nav-icon">
-            <SearchBlack className="search-icon" />
-          </div>
-        </li>
-        <li className="nav-item">
-          <div className="nav-icon">
             <ShoppingBasketIcon className="basket-icon" />
           </div>
         </li>
