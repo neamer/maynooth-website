@@ -1,0 +1,8 @@
+.second-section {
+  background: rgb(132, 44, 104);
+  background: linear-gradient(
+    180deg,
+    rgba(132, 44, 104, 1) 0%,
+    rgba(100, 33, 79, 1) 100%
+  );
+}

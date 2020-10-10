@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import ArrowIcon from "./arrowDark.svg";
+import ArrowIconLight from "./arrowLight.svg"
 import "./Showcase.css";
 
 function Showcase(props) {
@@ -63,13 +64,13 @@ function Showcase(props) {
   return (
     <div
       className="showcase-wrapper"
-      style={{
+      style={ props.Background ? {
         backgroundImage:
-          'url("static/frontend/background-1.svg"), url("static/frontend/background-2.svg")',
-      }}
+          'url("static/frontend/background-1.png"), url("static/frontend/background-2.svg")',
+      } : {}}
     >
       <div className="content-wrapper">
-        <h1 className="showcase-heading">New In Store</h1>
+        <h1 className={ props.Light ? "showcase-heading showcase-heading-light" : "showcase-heading"}>{props.heading}</h1>
         <div className="showcase-container">
           {elements.map((item, index) => {
             return (
@@ -86,7 +87,7 @@ function Showcase(props) {
                   className="showcase-pic-div"
                   style={{ backgroundImage: `url(${item.src})` }}
                 >
-                  <h3 className={ props.light ? "showcase-price showcase-price-light" : "showcase-price"}>{item.price}</h3>
+                  <h3 className={ props.Light ? "showcase-price showcase-price-light" : "showcase-price"}>{item.price}</h3>
                 </div>
                 <h3 className={ props.Light ? "showcase-name showcase-name-light" : "showcase-name"}>{item.name}</h3>
                 <p className={ props.Light ? "showcase-desc showcase-desc-light" : "showcase-desc"}>{item.shortDesc}</p>
@@ -98,7 +99,7 @@ function Showcase(props) {
               className="showcase-btn showcase-btn-left"
               onClick={goLeft}
             >
-              <ArrowIcon className="arrow arrow-left" />
+              { props.Light ? <ArrowIconLight className="arrow arrow-left" /> : <ArrowIcon className="arrow arrow-left" /> }
             </button>
           ) : (
             ""
@@ -109,7 +110,7 @@ function Showcase(props) {
               className="showcase-btn showcase-btn-right"
               onClick={goRight}
             >
-              <ArrowIcon className="arrow" />
+              { props.Light ? <ArrowIconLight className="arrow" /> : <ArrowIcon className="arrow" /> }
             </button>
           ) : (
             ""

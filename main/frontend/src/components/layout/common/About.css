@@ -1,0 +1,17 @@
+.about-heading {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 54px;
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about-wrapper {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-placeholder {
+  height: 1200px;
+}
