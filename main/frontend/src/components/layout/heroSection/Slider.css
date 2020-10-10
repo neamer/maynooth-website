@@ -72,8 +72,11 @@
 }
 
 @media screen and (max-width: 750px) {
+  .hero-slider .arrow {
+    padding: 0;
+  }
   .slider-btn {
-    width: 60px;
+    width: 45px;
   }
   .slider-btn:active {
     background-color: transparent;

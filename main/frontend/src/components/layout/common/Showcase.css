@@ -68,6 +68,7 @@
   color: #393939;
 }
 .showcase-price {
+  border-radius: 0 2px 2px 0;
   text-align: center;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -172,8 +173,7 @@
     color: #fff;
     top: 15px;
     left: -15px;
-    padding: 5px 0;
-    width: 85px;
+    padding: 6px 15px;
     text-align: center;
   }
 

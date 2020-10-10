@@ -8,10 +8,10 @@ import SecondSection from "./layout/common/SecondSection";
 import Showcase from "./layout/common/Showcase";
 
 import EmailCapture from "./layout/EmailCapture";
+import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import HeroSection from "./layout/HeroSection";
 
-import Lorem from "./layout/Lorem";
 import SocialsSection from "./layout/SocialsSection";
 
 function App() {
@@ -22,10 +22,10 @@ function App() {
       <Showcase Background heading="New in store" />
       <EmailCapture />
       <SocialsSection />
-      <SecondSection >
+      <SecondSection>
         <Showcase Light heading="Clearance deals" />
         <About />
-        <Lorem />
+        <Footer />
       </SecondSection>
     </>
   );
