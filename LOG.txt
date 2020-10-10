@@ -60,3 +60,14 @@ WEEK TWO
   ---
     Finally happy with the showcase component. Renamed a lot of files and focused
     on cleaning up the code. Started work on the customer credentials component.
+
+  Saturday 10.10.2020
+  ---
+    Finished the customer credentials component. Decided to postpone the instagram
+    feed component because it requires some token authentication and interacting
+    with the instagram API. Updated the showcase component for light mode and added
+    the Clearance deals component. Added a placeholder for the about section and
+    made the footer. And with that I've finished the very first presentable version
+    of the landing page! No more lorem
+    
+  
