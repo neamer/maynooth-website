@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Footer.css";
+import Logo from './logoOption2.svg'
 
 function Footer() {
   return (
@@ -15,7 +16,7 @@ function Footer() {
             Country
           </div>
           <div className="footer-logo-div">
-            <div className="footer-logo"></div>
+            <Logo className="footer-logo" />
           </div>
           <div className="footer-list-div">
             <ul className="footer-list">

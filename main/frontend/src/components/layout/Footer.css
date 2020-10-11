@@ -41,9 +41,8 @@
 }
 
 .footer-logo {
-  width: 70px;
-  height: 70px;
-  background-color: #fff;
+  width: 100px;
+  height: 100px;
 }
 
 .footer-list-item {
@@ -78,6 +77,10 @@
   }
   .footer-list-item {
     float: none;
+  }
+  .footer-logo {
+    width: 65px;
+    height: 65px;
   }
   .footer-logo-div {
     justify-self: right;
