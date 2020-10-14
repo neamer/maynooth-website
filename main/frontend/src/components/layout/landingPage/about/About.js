@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './About.css'
-import Placeholder from '../about/placeholder.svg'
+import Placeholder from './placeholder.svg'
 
 function About() {
   return (
