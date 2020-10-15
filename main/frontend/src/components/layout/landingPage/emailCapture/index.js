@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./EmailCapture.css";
+import "./index.css";
 import EmailInput from "./EmailInput";
 
 function EmailCapture() {

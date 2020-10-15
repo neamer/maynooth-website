@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import ArrowIcon from './common/arrowDark.svg'
+import ArrowIcon from '../../common/img/arrowDark.svg'
 
 import './Credentials.css';
 

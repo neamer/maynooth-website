@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import ArrowIcon from "./arrowDark.svg";
-import ArrowIconLight from "./arrowLight.svg";
+import ArrowIcon from "../common/img/arrowDark.svg";
+import ArrowIconLight from "../common/img/arrowLight.svg";
 import "./Showcase.css";
 
 function Showcase(props) {

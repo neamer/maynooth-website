@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./Nav.css";
-import Logo from "./Logo-Maynooth-Option1.svg";
+import Logo from "./img/Logo-Maynooth-Option1.svg";
 import Menu from "./Menu";
 
 function ToggleMenuOpenIcon(props) {

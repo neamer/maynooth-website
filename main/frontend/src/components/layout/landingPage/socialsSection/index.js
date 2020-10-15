@@ -3,7 +3,7 @@ import React from 'react'
 import Credentials from './Credentials'
 import InstaFeed from './InstaFeed'
 
-import './SocialsSection.css'
+import './index.css'
 
 function SocialsSection() {
   return (

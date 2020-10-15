@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import ArrowIcon from "../common/arrowLight.svg";
+import ArrowIcon from "../../common/img/arrowLight.svg";
 import "./Slider.css";
 
 function Slider() {

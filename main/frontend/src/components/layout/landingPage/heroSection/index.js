@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Search from "./common/Search";
+import Search from "../../common/Search";
 import Slider from "./Slider";
 
-import "./HeroSection.css";
+import "./index.css";
 
 function HeroSection() {
   const [height, setHeight] = useState("auto");

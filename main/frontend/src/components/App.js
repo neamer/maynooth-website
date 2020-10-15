@@ -2,31 +2,13 @@ import React from "react";
 import { render } from "react-dom";
 
 import "./App.css";
-import About from "./layout/common/About";
-import SecondSection from "./layout/common/SecondSection";
 
-import Showcase from "./layout/common/Showcase";
-
-import EmailCapture from "./layout/EmailCapture";
-import Footer from "./layout/Footer";
-import Header from "./layout/Header";
-import HeroSection from "./layout/HeroSection";
-
-import SocialsSection from "./layout/SocialsSection";
+import LandingPage from './layout/landingPage';
 
 function App() {
   return (
     <>
-      <Header />
-      <HeroSection />
-      <Showcase Background heading="New in store" />
-      <EmailCapture />
-      <SocialsSection />
-      <SecondSection>
-        <Showcase Light heading="Clearance deals" />
-        <About />
-        <Footer />
-      </SecondSection>
+      <LandingPage />
     </>
   );
 }

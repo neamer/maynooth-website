@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Arrow from './common/arrowLong.svg';
+import Arrow from '../../common/img/arrowLong.svg';
 import './InstaFeed.css'
 
 function InstaFeed() {

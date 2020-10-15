@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-import DropDownArrow from "./dropdown.svg";
-import ShoppingBasketIcon from "./basket-black.svg";
-import SearchBlack from "./search-black.svg";
+import DropDownArrow from "./img/dropdown.svg";
+import ShoppingBasketIcon from "./img/basket-black.svg";
 import "./Menu.css";
 
 function Menu() {

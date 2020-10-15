@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ShoppingBasketIcon from "./basket-white.svg";
+import ShoppingBasketIcon from "./img/basket-white.svg";
 import "./Sidebar.css";
 
 function Sidebar(props) {
