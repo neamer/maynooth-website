@@ -70,4 +70,12 @@ WEEK TWO
     made the footer. And with that I've finished the very first presentable version
     of the landing page! No more lorem
     
+  ---
+  Study break - Sunday 11.10.2020 thru Wednesday 14.10.2020
+  ---
+  
+  Thursday 15.10.2020
+  ---
+    Reorganized the whole layout folder. Made a landing page component and moved app
+    into it in preparation for react router.
   
