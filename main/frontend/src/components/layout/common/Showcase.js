@@ -45,12 +45,34 @@ function Showcase(props) {
   useEffect(() => {
     if (document.body.clientWidth <= 750) {
       setResponsive(true);
+      setElementsDisplayed(1);
+    } else if (document.body.clientWidth <= 1366) {
+      setElementsDisplayed(1);
+    } else {
+      setElementsDisplayed(2);
     }
-    setElementsDisplayed(responsive ? 1 : 2);
-  }, [responsive]);
+  }, []);
 
   window.addEventListener("resize", () => {
-    setElementsDisplayed(responsive ? 1 : 2);
+    if (document.body.clientWidth <= 750) {
+      if (!responsive) {
+        setResponsive(true);
+        setPosition(0);
+        setElementsDisplayed(1);
+      }
+    } else if (document.body.clientWidth <= 1366) {
+      if (responsive) {
+        setResponsive(false);
+        setPosition(0);
+        setElementsDisplayed(1);
+      }
+    } else {
+    if (responsive) {
+      setResponsive(false);
+      setPosition(0);
+      setElementsDisplayed(2);
+    }
+  }
   });
 
   const goLeft = () => {

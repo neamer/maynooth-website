@@ -39,6 +39,23 @@
   height: 15px;
 }
 
+@media screen and (max-width: 1366px) {
+  .feed-wrapper {
+    padding: 0 0 100px 0;
+  }
+  .feed-grid {
+    margin: 50px 0px 10px 0px;
+  }
+  .feed-action {
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  .arrow-long {
+    margin-top: 9px;
+    height: 12px;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .feed-wrapper {
     padding: 0 0 100px 0;

@@ -55,3 +55,7 @@ BACKEND FUNCTIONALITY(views)
   create Order
   ---
     create new order from the incoming data
+
+redux design plan
+
+  

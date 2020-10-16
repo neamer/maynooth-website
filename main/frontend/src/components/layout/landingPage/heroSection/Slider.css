@@ -69,6 +69,11 @@
   .slider-caption {
     width: 60%;
   }
+  .slider-element {
+    transition: transform 0.3s ease-out;
+    background-size: 100% auto;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 750px) {

@@ -9,15 +9,24 @@ function Credentials() {
   const [responsive, setResponsive] = useState(false);
 
   useEffect(() => {
-    if (document.body.clientWidth <= 750) {
+    if (document.body.clientWidth <= 1366) {
       setResponsive(true);
     }
   }, []);
 
   window.addEventListener("resize", () => {
-    if (document.body.clientWidth <= 750) {
-      setResponsive(true);
+    if (document.body.clientWidth <= 1366) {
+      if (!responsive) {
+        setResponsive(true);
+        setPosition(0);
+      }
     }
+    else {
+    if (responsive) {
+      setResponsive(false);
+      setPosition(0);
+    }
+  }
   });
 
   const goLeft = () => {
@@ -33,9 +42,10 @@ function Credentials() {
       <div className="credentials-wrapper">
         <h3 className="credentials-heading">Customer Credentials</h3>
         <div className="credentials-slider">
-          <div className="credentials-card" style={ responsive ? {transform: `translate(${
+        <div className="credentials-card-wrapper" style={ responsive ? {transform: `translate(${
                     position * -300
                   }px)`} : {}}>
+          <div className="credentials-card">
           <div className="credentials-profile">
               <div className="credentials-picture"></div>
               <div>
@@ -43,31 +53,36 @@ function Credentials() {
                 <div className="credentials-title">Made up person, loves Maynooth</div>
               </div>
             </div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, quam accusantium expedita! Tempore ipsa ad nesciunt at natus! Sunt voluptatum, consectetur dignissimos saepe facilis
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, 
           </div>
-          <div className="credentials-card" style={ responsive ? {transform: `translate(${
-                    position * -300
-                  }px)`} : {}}>
+          </div>
+          <div className="credentials-card-wrapper" style={ responsive ? {transform: `translate(${
+                      position * -300
+                    }px)`} : {}}>
+            <div className="credentials-card">
+              <div className="credentials-profile">
+                <div className="credentials-picture"></div>
+                <div>
+                  <div className="credentials-name">Jon Jones</div>
+                  <div className="credentials-title">UFC Champion, furniture enthusiast</div>
+                </div>
+              </div>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, quam accusantium expedita! Tempore ipsa ad nesciunt at natus! Sunt voluptatum, consectetur dignissimos saepe facilis 
+            </div>
+          </div>
+          <div className="credentials-card-wrapper" style={ responsive ? {transform: `translate(${
+                      position * -300
+                    }px)`} : {}}>
+            <div className="credentials-card">
             <div className="credentials-profile">
-              <div className="credentials-picture"></div>
-              <div>
-                <div className="credentials-name">Jon Jones</div>
-                <div className="credentials-title">UFC Champion, furniture enthusiast</div>
+                <div className="credentials-picture"></div>
+                <div>
+                  <div className="credentials-name">Jane Doe</div>
+                  <div className="credentials-title">Reccomends Maynooth to her friends</div>
+                </div>
               </div>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, quam accusantium expedita! 
             </div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, quam accusantium expedita! Tempore ipsa ad nesciunt at natus! Sunt voluptatum, consectetur dignissimos saepe facilis
-          </div>
-          <div className="credentials-card" style={ responsive ? {transform: `translate(${
-                    position * -300
-                  }px)`} : {}}>
-          <div className="credentials-profile">
-              <div className="credentials-picture"></div>
-              <div>
-                <div className="credentials-name">Jane Doe</div>
-                <div className="credentials-title">Reccomends Maynooth to her friends</div>
-              </div>
-            </div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut nemo ducimus, distinctio facere nihil debitis odit incidunt provident deleniti, quam accusantium expedita! Tempore ipsa ad nesciunt at natus! Sunt voluptatum, consectetur dignissimos saepe facilis
           </div>
 
           {position !== 0 && responsive ? (

@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1366px) {
   .footer-lower {
     font-size: 14px;
   }
