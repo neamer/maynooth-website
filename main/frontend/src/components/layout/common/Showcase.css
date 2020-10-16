@@ -6,10 +6,17 @@
 .showcase-wrapper {
   position: relative;
   background-repeat: no-repeat, no-repeat;
-  background-size: 1200px 1200px, 360px auto;
-  background-position: -400px -650px, right bottom;
+  background-size: 1200px 1200px, 300px auto;
+  background-position: -500px -750px, right bottom;
   background-blend-mode: overlay, multiply;
   padding: 80px 0 100px 0;
+
+  transition: 1s;
+}
+
+.showcase-wrapper:hover {
+  background-size: 1200px 1200px, 360px auto;
+  background-position: -400px -650px, right bottom;
 }
 
 .showcase-heading {
