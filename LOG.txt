@@ -1,10 +1,10 @@
--==== MAYNOOTH SITE DEV LOG ====-
+===== MAYNOOTH SITE DEV LOG =====
 
 WEEK ONE
----
+----
 
   Tuesday 01.10.2020
-  ---
+  ----
     Initialize the git repository.
     Start the django project and set up the rest framework.
     try to convert the requirements from design.txt into actual django models,
@@ -12,57 +12,57 @@ WEEK ONE
     Set up a basic apiview with some pagination
   
   Friday 02.10.2020
-  ---
+  ----
     Start and set up the django frontend app for react with webpack.
     Start working header, SHOP BY ROOM dropdown and showing hamburger menu 
     button in responsive.
     
   Saturday 03.10.2020
-  ---
+  ----
     Work on the responsive sidebar. Bring state up and disconnect the rendering
     from the animations to be able to do unmounting animations. 
     Add header icons. Tighten up the transitions and rename the components.
 
   Sunday 04.10.2020
-  ---
+  ----
     Started work on the hero section slider. Finished most of the technicals,
     some aesthetics still need work. Started first new branch for the search
     component, it is basically done.
 
   Monday 05.10.2020
-  ---
+  ----
     Merged the search branch with main and it worked seamlessly. Adjusted the
     hero section for responsive and made adding text easier than before
     
   Tuesday 06.10.2020
-  ---
+  ----
     The new in store section for desktop needed some more desing work, so didn't
     get a lot done in terms of coding. Started work on the responsive version
     later because the design for it is solid. Got the slider working
 
   Wednesday 07.10.2020
-  ---
+  ----
     Added some styling to the highlight section, undecided on the desktop version
     , currently it's just a bigger version of the responsive version. Started the
     email capture component to be able to tune the design of the highlight better.
 
   
 WEEK TWO
----
+----
 
   Tuesday 08.10.2020
-  ---
+  ----
     Started wrapping up the highlight component. Finished the buttons and the
     background graphics. Made the desktop version pictures a different aspect ratio
     , still undecided on the desktop design.
     
   Friday 09.10.2020
-  ---
+  ----
     Finally happy with the showcase component. Renamed a lot of files and focused
     on cleaning up the code. Started work on the customer credentials component.
 
   Saturday 10.10.2020
-  ---
+  ----
     Finished the customer credentials component. Decided to postpone the instagram
     feed component because it requires some token authentication and interacting
     with the instagram API. Updated the showcase component for light mode and added
@@ -70,12 +70,19 @@ WEEK TWO
     made the footer. And with that I've finished the very first presentable version
     of the landing page! No more lorem
     
-  ---
-  Study break - Sunday 11.10.2020 thru Wednesday 14.10.2020
-  ---
+  ----
+  uni start/burnout break - Sunday 11.10.2020 thru Wednesday 14.10.2020
+  ----
   
   Thursday 15.10.2020
-  ---
+  ----
     Reorganized the whole layout folder. Made a landing page component and moved app
     into it in preparation for react router.
+
+  Friday 16.10.2020
+  ----
+    Optimized the landing page for tablets and fixed the credentials component for
+    mobile. Made a slight direction change from immediate redux integration to 
+    finishing the frontend first and then integrating redux later. Started work on
+    react router implementation.
   
