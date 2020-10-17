@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./Search.css";
+import "./index.css";
 
 function Search() {
   const [left, setLeft] = useState(0);
@@ -27,13 +27,13 @@ function Search() {
   });
 
   return (
-    <div className="search-wrapper" style={{ left: left + "px" }}>
+    <div className="home-search-wrapper" style={{ left: left + "px" }}>
       <input
         type="text"
-        className="search-input"
-        placeholder="Search through our collection"
+        className="home-search-input"
+        placeholder="home-search through our collection"
       />
-      <button className="search-btn">SEARCH</button>
+      <button className="home-search-btn">SEARCH</button>
     </div>
   );
 }

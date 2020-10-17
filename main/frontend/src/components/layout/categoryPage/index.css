@@ -1,0 +1,6 @@
+/* there is 300px of whitespace on the bottom because of the way
+ the second section is positioned. This div cuts the last 300px out */
+
+.second-section-fix {
+  height: calc(auto - 300px);
+}

@@ -133,7 +133,7 @@ function Showcase(props) {
                 </div>
                 <h3
                   className={
-                    props.Light
+                    props.Light || props.LightText
                       ? "showcase-name showcase-name-light"
                       : "showcase-name"
                   }
@@ -142,7 +142,7 @@ function Showcase(props) {
                 </h3>
                 <p
                   className={
-                    props.Light
+                    props.Light || props.LightText
                       ? "showcase-desc showcase-desc-light"
                       : "showcase-desc"
                   }

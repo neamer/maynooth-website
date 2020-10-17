@@ -1,0 +1,21 @@
+.category-hero-wrapper {
+  margin-top: 65px;
+  background-color: #666666;
+  padding: 80px;
+}
+.category-hero-heading {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .category-hero-wrapper {
+    padding: 40px 0;
+  }
+  .category-hero-heading {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,7 @@
+.span-bg {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: -300px;
+  background-color: #842c68;
+}

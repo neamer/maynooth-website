@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { Link } from 'react-router-dom'
+
 import ShoppingBasketIcon from "./img/basket-white.svg";
 import "./Sidebar.css";
 
@@ -20,9 +22,9 @@ function Sidebar(props) {
     <div className={show ? "nav-sidebar nav-sidebar-active" : "nav-sidebar"}>
       <h4 className="sidebar-section">SHOP BY ROOM</h4>
       <ul className="sidebar-list">
-        <li className="sidebar-list-item">LIVING ROOM</li>
-        <li className="sidebar-list-item">BEDROOM</li>
-        <li className="sidebar-list-item">KITCHEN & DINING</li>
+        <li className="sidebar-list-item"><Link className="dropdown-link" to="/shopbyroom/livingroom">LIVING ROOM</Link></li>
+        <li className="sidebar-list-item"><Link className="dropdown-link" to="/shopbyroom/bedroom">BEDROOM</Link></li>
+        <li className="sidebar-list-item">K<Link className="dropdown-link" to="/shopbyroom/kitchendining">KITCHEN & DINING</Link></li>
       </ul>
       <div className="basket-button">
         <span className="basket-button-txt">SHOPPING BASKET</span>{" "}

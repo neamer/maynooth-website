@@ -4,6 +4,7 @@
 }
 
 .showcase-wrapper {
+  z-index: 20;
   position: relative;
   background-repeat: no-repeat, no-repeat;
   background-size: 1200px 1200px, 300px auto;

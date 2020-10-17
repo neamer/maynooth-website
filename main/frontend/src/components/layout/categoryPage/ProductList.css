@@ -1,0 +1,20 @@
+.product-list-wrapper {
+  padding-top: 320px;
+}
+.filter-grid {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  column-gap: 20px;
+}
+.filter-reorder {
+  padding: 10px 0;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  border: 3px solid white;
+  border-radius: 7px;
+}
+
+.results-wrapper {
+  padding: 150px 0;
+}

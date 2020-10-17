@@ -4,7 +4,7 @@ import './SecondSection.css'
 
 function SecondSection(props) {
   return (
-    <div className="second-section">
+    <div className={ props.GoUnder ? "second-section second-section-under" : "second-section" }>
       {props.children}
     </div>
   )

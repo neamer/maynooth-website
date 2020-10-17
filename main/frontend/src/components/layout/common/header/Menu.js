@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Link } from 'react-router-dom'
+
 import DropDownArrow from "./img/dropdown.svg";
 import ShoppingBasketIcon from "./img/basket-black.svg";
 import "./Menu.css";
@@ -42,9 +44,9 @@ function Menu() {
                 : "nav-dropdown-container display-none"
             }
           >
-            <li className="nav-dropdown-item">LIVING ROOM</li>
-            <li className="nav-dropdown-item">BEDROOM</li>
-            <li className="nav-dropdown-item">KITCHEN & DINING</li>
+            <li className="nav-dropdown-item"><Link className="dropdown-link" to="/shopbyroom/livingroom">LIVING ROOM</Link></li>
+            <li className="nav-dropdown-item"><Link className="dropdown-link" to="/shopbyroom/bedroom">BEDROOM</Link></li>
+            <li className="nav-dropdown-item"><Link className="dropdown-link" to="/shopbyroom/kitchen">KITCHEN & DINING</Link></li>
           </ul>
         </li>
       </ul>

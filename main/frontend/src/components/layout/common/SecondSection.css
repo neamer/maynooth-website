@@ -6,3 +6,8 @@
     rgba(100, 33, 79, 1) 100%
   );
 }
+
+.second-section-under {
+  position: relative;
+  z-index: 2;
+}

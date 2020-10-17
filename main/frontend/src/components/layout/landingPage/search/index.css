@@ -1,4 +1,4 @@
-.search-wrapper {
+.home-search-wrapper {
   width: 1366px;
   margin: auto;
   position: absolute;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.search-input {
+.home-search-input {
   position: absolute;
   display: inline-block;
   background-color: rgb(243, 243, 243);
@@ -19,12 +19,12 @@
   border-radius: 7px;
   padding: 15px 25px;
 }
-.search-input:hover,
-.search-input:focus {
+.home-search-input:hover,
+.home-search-input:focus {
   background-color: rgb(255, 255, 255);
 }
 
-.search-btn {
+.home-search-btn {
   box-sizing: border-box;
   border: none;
   position: absolute;
@@ -39,25 +39,25 @@
 }
 
 @media screen and (max-width: 1463px) {
-  .search-wrapper {
+  .home-search-wrapper {
     width: calc(100% - 80px);
     right: 40px;
   }
-  .search-btn {
+  .home-search-btn {
     right: 0px;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .search-wrapper {
+  .home-search-wrapper {
     width: calc(100% - 20px);
     right: 10px;
     bottom: 10px;
   }
-  .search-input {
+  .home-search-input {
     padding-left: 15px;
   }
-  .search-btn {
+  .home-search-btn {
     padding: 14px 20px 13px 20px;
     right: 0px;
   }
