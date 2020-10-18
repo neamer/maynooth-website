@@ -1,5 +1,4 @@
 .product-list-wrapper {
-  padding-top: 320px;
 }
 .filter-grid {
   display: grid;
@@ -17,4 +16,30 @@
 
 .results-wrapper {
   padding: 150px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.result-product-wrapper {
+  background-color: #fff;
+  width: 370px;
+  height: 370px;
+  margin-bottom: 150px;
+}
+
+.product-left {
+  margin-right: auto;
+}
+
+.product-middle {
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-right {
+  margin-left: auto;
 }
