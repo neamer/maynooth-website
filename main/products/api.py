@@ -6,7 +6,7 @@ from rest_framework import status
 
 from .models import Product
 from .serializers import ProductSerializer
-from .pagination import SmallResultsSetPagination
+from .pagination import SmallResultsSetPagination, StandardResultsSetPagination
 
 
 class ProductList(generics.ListAPIView):
@@ -15,4 +15,4 @@ class ProductList(generics.ListAPIView):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = SmallResultsSetPagination
+    pagination_class = StandardResultsSetPagination
