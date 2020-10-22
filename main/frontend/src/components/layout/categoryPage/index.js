@@ -21,6 +21,7 @@ function CategoryPage(props) {
   switch (params.category) {
     case "livingroom":
       categoryName = "Living Room";
+      categoryPic = "static/frontend/livingRoomHero.png";
       break;
     case "bedroom":
       categoryName = "Bedroom";
@@ -35,12 +36,12 @@ function CategoryPage(props) {
 
   useEffect(() => {
     document.title = `Maynooth Furniture - ${categoryName}`;
-  }, []);
+  }, [categoryName]);
 
   return (
     <>
       <Header />
-      <CategoryHero Category={categoryName} />
+      <CategoryHero Category={categoryName} heroImgSrc={categoryPic} />
       <Showcase LightText heading="New in category" />
       <SecondSection GoUnder>
         <ExtendBackground />

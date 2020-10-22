@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import Header from '../common/header';
-import HeroSection from './heroSection';
-import Showcase from '../common/Showcase';
-import EmailCapture from '../landingPage/emailCapture';
-import SocialsSection from './socialsSection';
-import SecondSection from '../common/SecondSection'
-import About from './about';
-import Footer from '../common/footer';
+import Header from "../common/header";
+import HeroSection from "./heroSection";
+import Showcase from "../common/Showcase";
+import EmailCapture from "../landingPage/emailCapture";
+import SocialsSection from "./socialsSection";
+import SecondSection from "../common/SecondSection";
+import About from "./about";
+import Footer from "../common/footer";
 
 function LandingPage() {
+  useEffect(() => {
+    document.title = `Maynooth Furniture - Home`;
+  }, []);
+
   return (
     <>
       <Header />

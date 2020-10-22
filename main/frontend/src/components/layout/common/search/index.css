@@ -34,6 +34,9 @@
   right: 0px;
   bottom: 0px;
 }
+.search-btn:hover {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1463px) {
   .search-wrapper {

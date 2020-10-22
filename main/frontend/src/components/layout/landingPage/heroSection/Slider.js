@@ -36,8 +36,8 @@ function Slider() {
   };
 
   useEffect(() => {
-    setFontSize(parseInt(document.body.clientHeight * 0.06) + "px");
-    setLineHeight(parseInt(document.body.clientHeight * 0.08) + "px");
+    setFontSize(parseInt(window.innerHeight * 0.06) + "px");
+    setLineHeight(parseInt(window.innerHeight * 0.08) + "px");
     if (document.body.clientWidth <= 750) {
       setResponsive(true);
     }

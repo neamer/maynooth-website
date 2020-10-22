@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import './CategoryHero.css';
+import "./CategoryHero.css";
 
 function CategoryHero(props) {
   return (
-    <div className="category-hero-wrapper">
+    <div
+      className="category-hero-wrapper"
+      style={{ backgroundImage: `url(${props.heroImgSrc})` }}
+    >
       <h1 className="category-hero-heading">{props.Category}</h1>
     </div>
-  )
+  );
 }
 
-export default CategoryHero
+export default CategoryHero;

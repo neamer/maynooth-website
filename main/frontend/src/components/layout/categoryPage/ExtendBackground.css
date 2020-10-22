@@ -5,3 +5,10 @@
   top: -300px;
   background-color: #842c68;
 }
+
+@media screen and (max-width: 750px) {
+  .span-bg {
+    height: 240px;
+    top: -240px;
+  }
+}

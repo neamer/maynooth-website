@@ -55,6 +55,7 @@
   font-size: 18px;
   padding: 3px 25px;
   transition: 0.4s ease-out;
+  font-weight: 500;
 }
 .slider-action:hover {
   cursor: pointer;

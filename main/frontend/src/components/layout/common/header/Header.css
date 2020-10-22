@@ -8,9 +8,9 @@
 
   font-size: 14px;
 
-  -webkit-box-shadow: 1px 1px 5px 2px rgba(148, 148, 148, 0.61);
-  -moz-box-shadow: 1px 1px 5px 2px rgba(148, 148, 148, 0.61);
-  box-shadow: 1px 1px 5px 2px rgba(148, 148, 148, 0.3);
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.61);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
