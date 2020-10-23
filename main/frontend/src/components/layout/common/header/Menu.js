@@ -2,14 +2,11 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import DropDownArrow from "./img/dropdown.svg";
 import ShoppingBasketIcon from "./img/basket-black.svg";
 import "./Menu.css";
 
 function Menu() {
   const [dropDown, setDropDown] = useState(false);
-
-  const handleDropDown = (status) => setDropDown(status);
 
   return (
     <>

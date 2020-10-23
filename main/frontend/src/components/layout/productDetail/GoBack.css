@@ -1,0 +1,26 @@
+.go-back-wrapper {
+  padding: 20px 0;
+  text-align: left;
+}
+
+.go-back {
+  font-size: 16px;
+  font-weight: 500;
+  color: #393939;
+}
+.go-back:hover {
+  cursor: pointer;
+}
+.go-back-arrow {
+  display: inline-block;
+  padding: 0 5px;
+  position: relative;
+  top: 1px;
+  transform: rotate(180deg);
+  height: 15px;
+  margin-right: 2px;
+  transition: 0.2s;
+}
+.go-back:hover .go-back-arrow {
+  padding: 0 0 0 10px;
+}

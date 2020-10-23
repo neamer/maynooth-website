@@ -1,0 +1,79 @@
+.product-detail-info-wrapper {
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.product-detail-category {
+  color: #4cb3aa;
+  font-size: 18px;
+}
+
+.product-detail-name {
+  margin-top: 5px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #393939;
+}
+
+.product-detail-desc {
+  font-size: 18px;
+  color: #393939;
+  margin-top: 5px;
+}
+
+.product-detail-price {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 90px;
+  color: #4cb3aa;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.add-to-cart-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  column-gap: 15px;
+}
+
+.add-to-cart-qty {
+  outline: none;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 7px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3px;
+  padding: 12px;
+  font-size: 22px;
+}
+.add-to-cart-button {
+  outline: none;
+  border: none;
+  background-color: #842c68;
+  border-radius: 7px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  padding: 15px;
+  transition: 0.2s;
+}
+.add-to-cart-button:hover {
+  background-color: #9c3c7e;
+  cursor: pointer;
+}
+.product-detail-in-stock {
+  margin: auto;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4cb3aa;
+}
+.check-mark {
+  height: 17px;
+}

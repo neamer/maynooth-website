@@ -7,7 +7,8 @@ import "./App.css";
 
 import LandingPage from "./layout/landingPage";
 import SearchResults from "./layout/searchResults";
-import CategoryPage from './layout/categoryPage';
+import CategoryPage from "./layout/categoryPage";
+import ProductDetail from "./layout/productDetail";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route path="/search" exact component={SearchResults} />
           <Route path="/shopbyroom/:category" exact component={CategoryPage} />
+          <Route path="/product/:productName" exact component={ProductDetail} />
           <Route path="/" component={LandingPage} />
         </Switch>
       </Router>

@@ -1,0 +1,9 @@
+.detail-wrapper {
+  margin-top: 65px;
+}
+
+.detail-info-div {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  padding-bottom: 60px;
+}
