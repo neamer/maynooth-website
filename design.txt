@@ -58,4 +58,10 @@ BACKEND FUNCTIONALITY(views)
 
 
 
-  
+  PLANS FOR TOMMOROW - 25.10.2020
+    
+    - finish up the product detail design.
+
+    - update the design of the basket
+
+    - start implementing the basket frontend

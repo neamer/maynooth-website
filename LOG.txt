@@ -94,3 +94,7 @@ WEEK TWO
     location. Also this is like the fifth time I haven't pushed the code I worked on
     so I write an essay here to feel like im being prodctive.
   
+  Monday 18.19.2020 thru Saturday 24.10.2020
+  ----
+    Added backend integration to the category page for product listings. Started and
+    finished most of the product detail page, next big step is basket integration.
