@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { Link } from "react-router-dom";
+
 import Search from "../common/search";
 
 import "./ProductList.css";
@@ -39,27 +41,32 @@ function ProductList() {
           {results
             ? results.map((item, index) => {
                 return (
-                  <div
+                  <Link
+                    className="link-default"
+                    to={`/product/${item.name.replace(/-/g, " ")}`}
                     key={index}
-                    className={
-                      index % 3 === 0
-                        ? "result-product-wrapper product-left"
-                        : index % 3 === 1
-                        ? "result-product-wrapper product-middle"
-                        : "result-product-wrapper product-right"
-                    }
                   >
                     <div
-                      className="result-product-pic-div"
-                      style={{ backgroundImage: `url(${item.pictures[0]})` }}
+                      className={
+                        index % 3 === 0
+                          ? "result-product-wrapper product-left"
+                          : index % 3 === 1
+                          ? "result-product-wrapper product-middle"
+                          : "result-product-wrapper product-right"
+                      }
                     >
-                      <h3 className="result-product-price">{item.price}</h3>
+                      <div
+                        className="result-product-pic-div"
+                        style={{ backgroundImage: `url(${item.pictures[0]})` }}
+                      >
+                        <h3 className="result-product-price">{item.price}</h3>
+                      </div>
+                      <h3 className="result-product-name">{item.name}</h3>
+                      <p className="result-product-tagline">
+                        {item.colors.length} colors available
+                      </p>
                     </div>
-                    <h3 className="result-product-name">{item.name}</h3>
-                    <p className="result-product-tagline">
-                      {item.colors.length} colors available
-                    </p>
-                  </div>
+                  </Link>
                 );
               })
             : ""}

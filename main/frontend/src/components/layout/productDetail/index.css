@@ -1,9 +1,28 @@
 .detail-wrapper {
   margin-top: 65px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1500px 1500px, 400px auto;
+  background-position: -600px -900px, right center;
+  background-blend-mode: overlay, multiply;
+
+  transition: 1s;
 }
 
 .detail-info-div {
   display: grid;
   grid-template-columns: 65% 35%;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .detail-info-div {
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+
+  .detail-wrapper {
+    background-repeat: no-repeat;
+    background-size: 350px 350px, 160px auto;
+    background-position: -150px -150px, right center;
+  }
 }

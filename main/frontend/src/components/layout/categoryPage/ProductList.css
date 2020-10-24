@@ -13,7 +13,9 @@
   border: 3px solid white;
   border-radius: 7px;
 }
-
+.link-default {
+  text-decoration: none;
+}
 .results-wrapper {
   padding: 100px 0;
 }

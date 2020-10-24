@@ -1,8 +1,8 @@
 .span-bg-detail {
-  height: 100px;
+  height: 150px;
   width: 100%;
   position: absolute;
-  top: -100px;
+  top: -150px;
   background-color: #842c68;
   z-index: 2;
 }

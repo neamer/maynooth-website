@@ -13,7 +13,7 @@ import ProductInfo from "./ProductInfo";
 import ProductDetailedDesc from "./ProductDetailedDesc";
 import SecondSection from "../common/SecondSection";
 import Showcase from "../common/Showcase";
-import ExtendBackground from "./ExtendBackground";
+import ProductAction from "./ProductAction";
 import Footer from "../common/footer";
 
 function ProductDetail(props) {
@@ -51,29 +51,31 @@ function ProductDetail(props) {
   return (
     <>
       <Header />
-      <div className="detail-wrapper">
+      <div
+        className="detail-wrapper"
+        style={{
+          backgroundImage:
+            'url("static/frontend/background-1.png"), url("static/frontend/background-4.svg")',
+        }}
+      >
         <div className="content-wrapper">
-          <GoBack />
           {product !== null ? (
             <div className="detail-info-div">
-              <ProductPictures />
+              <ProductPictures Pictures={product.pictures} />
               <ProductInfo
                 Category={product.category}
                 Name={product.name}
                 ShortDesc={product.short_desc}
-                Price={product.price}
-                InStock={product.in_stock}
               />
+              <ProductAction Price={product.price} InStock={product.in_stock} />
             </div>
           ) : (
             "loading"
           )}
-        </div>
-      </div>
-      <SecondSection>
-        <div className="content-wrapper" style={{ paddingTop: "30px" }}>
           <ProductDetailedDesc />
         </div>
+      </div>
+      <SecondSection GoUnder>
         <Showcase Light heading="Similar Items" />
         <Footer />
       </SecondSection>
