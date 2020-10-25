@@ -1,14 +1,16 @@
 .detailed-desc-wrapper {
   position: relative;
   z-index: 50;
-  padding: 15px 40px 50px 40px;
+  padding: 15px 150px 50px 150px;
+  text-align: justify;
   background-color: #fff;
   border-radius: 7px;
 
+  /*
   box-shadow: 0 1px 1px rgba(100, 100, 100, 0.12),
     0 2px 2px rgba(100, 100, 100, 0.12), 0 4px 4px rgba(100, 100, 100, 0.12),
     0 8px 8px rgba(100, 100, 100, 0.12), 0 16px 16px rgba(100, 100, 100, 0.12);
-
+  */
   margin-bottom: 40px;
 }
 .detailed-desc-header {
@@ -21,7 +23,20 @@
 .detailed-desc-body {
   margin-top: 15px;
   color: #464646;
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 18px;
+  line-height: 40px;
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .detailed-desc-wrapper {
+    padding: 10px;
+  }
+  .detailed-desc-header {
+    font-size: 32px;
+  }
+  .detailed-desc-body {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

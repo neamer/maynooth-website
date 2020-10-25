@@ -5,7 +5,6 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 import Header from "../common/header";
-import GoBack from "./GoBack";
 
 import "./index.css";
 import ProductPictures from "./ProductPictures";
@@ -60,19 +59,24 @@ function ProductDetail(props) {
       >
         <div className="content-wrapper">
           {product !== null ? (
-            <div className="detail-info-div">
-              <ProductPictures Pictures={product.pictures} />
-              <ProductInfo
-                Category={product.category}
-                Name={product.name}
-                ShortDesc={product.short_desc}
-              />
-              <ProductAction Price={product.price} InStock={product.in_stock} />
-            </div>
+            <>
+              <div className="detail-info-div">
+                <ProductPictures Pictures={product.pictures} />
+                <ProductInfo
+                  Category={product.category}
+                  Name={product.name}
+                  ShortDesc={product.short_desc}
+                />
+                <ProductAction
+                  Price={product.price}
+                  InStock={product.in_stock}
+                />
+              </div>
+              <ProductDetailedDesc DetailDesc={product.detail_desc} />
+            </>
           ) : (
             "loading"
           )}
-          <ProductDetailedDesc />
         </div>
       </div>
       <SecondSection GoUnder>

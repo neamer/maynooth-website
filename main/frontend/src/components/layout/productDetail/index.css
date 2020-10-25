@@ -11,12 +11,14 @@
 .detail-info-div {
   display: grid;
   grid-template-columns: 65% 35%;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
 @media screen and (max-width: 750px) {
   .detail-info-div {
     grid-template-columns: 1fr;
+    padding-top: 10px;
     padding-bottom: 30px;
   }
 
