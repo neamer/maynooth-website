@@ -1,6 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
@@ -14,7 +17,7 @@ import ScrollToTop from "./layout/common/ScrollToTop";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <ScrollToTop />
         <Switch>
@@ -24,7 +27,7 @@ function App() {
           <Route path="/" component={LandingPage} />
         </Switch>
       </Router>
-    </>
+    </Provider>
   );
 }
 

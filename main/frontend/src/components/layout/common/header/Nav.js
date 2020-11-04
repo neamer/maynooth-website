@@ -73,7 +73,7 @@ function Nav(props) {
           ""
         )}
 
-        {showMenu ? <Menu /> : ""}
+        {showMenu ? <Menu openBasket={props.openBasket} /> : ""}
       </div>
     </div>
   );

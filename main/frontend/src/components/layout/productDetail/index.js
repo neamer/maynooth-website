@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/basket/basketActions";
+
 import axios from "axios";
 
 import { useParams } from "react-router-dom";
 
 import Header from "../common/header";
-
-import "./index.css";
+import ShoppingBasket from "../shoppingBasket";
 import ProductPictures from "./ProductPictures";
 import ProductInfo from "./ProductInfo";
 import ProductDetailedDesc from "./ProductDetailedDesc";
@@ -15,8 +17,12 @@ import Showcase from "../common/Showcase";
 import ProductAction from "./ProductAction";
 import Footer from "../common/footer";
 
+import "./index.css";
+
 function ProductDetail(props) {
   const [product, setProduct] = useState(null);
+  const [basketIsOpen, setBasketIsOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const params = useParams();
 
@@ -47,9 +53,22 @@ function ProductDetail(props) {
       });
   }, [params]);
 
+  const AddToBasket = (amount) => {
+    const productToBasket = {
+      name: product.name,
+      price: product.price,
+      color: product.color,
+      picture: product.pictures[0],
+      quantity: amount,
+    };
+
+    dispatch(addProduct(productToBasket));
+  };
+
   return (
     <>
-      <Header />
+      {basketIsOpen ? <ShoppingBasket onClick={setBasketIsOpen} /> : ""}
+      <Header onClick={setBasketIsOpen} />
       <div
         className="detail-wrapper"
         style={{
@@ -70,6 +89,7 @@ function ProductDetail(props) {
                 <ProductAction
                   Price={product.price}
                   InStock={product.in_stock}
+                  onClick={AddToBasket}
                 />
               </div>
               <ProductDetailedDesc DetailDesc={product.detail_desc} />

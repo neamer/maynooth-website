@@ -22,7 +22,12 @@ function ProductAction(props) {
           />
         </div>
         <div>
-          <button className="add-to-cart-button">ADD TO CART</button>
+          <button
+            className="add-to-cart-button"
+            onClick={() => props.onClick(quantity)}
+          >
+            ADD TO CART
+          </button>
         </div>
       </div>
       {props.InStock ? (

@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import Nav from "./Nav";
 import SidebarShadow from "./SidebarShadow";
 
-function Header() {
+function Header(props) {
   const [sidebar, setSidebar] = useState(false);
   const [triggerFadeOut, setTriggerFadeOut] = useState(false);
 
@@ -22,7 +22,11 @@ function Header() {
 
   return (
     <>
-      <Nav sidebar={sidebar} onClick={handleSidebar} />
+      <Nav
+        sidebar={sidebar}
+        openBasket={props.onClick}
+        onClick={handleSidebar}
+      />
       {sidebar ? (
         <>
           {" "}

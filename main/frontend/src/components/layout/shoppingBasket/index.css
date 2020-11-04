@@ -1,0 +1,156 @@
+.basket-wrapper {
+  background-color: #efefef;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+}
+
+.basket-close-btn {
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  left: calc(50% - 21px);
+  height: 42px;
+  width: 42px;
+  background-color: #2a2a2a;
+  transition: 0.2s;
+}
+.basket-close-btn:hover {
+  background-color: #393939;
+  cursor: pointer;
+}
+
+.basket-close-icon {
+  width: 18x;
+}
+
+.basket-grid {
+  display: flex;
+  padding: 20px;
+}
+
+.basket-left-section {
+  flex-grow: 1;
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 40px);
+  margin-right: 20px;
+  border-radius: 7px;
+}
+
+.basket-right-section {
+  width: 500px;
+  background-color: #fff;
+  height: calc(100vh - 40px);
+}
+
+.basket-heading {
+  padding: 23px 40px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #2a2a2a;
+}
+
+.basket-table-top-row {
+  display: flex;
+  padding: 5px 20px;
+  border-bottom: 2px solid #2a2a2a;
+}
+.top-row-price {
+  width: 155px;
+  margin: 0 10px;
+  text-align: center;
+
+  font-size: 18px;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+.top-row-quantity {
+  width: 185px;
+  margin: 0 10px;
+  text-align: center;
+
+  font-size: 18px;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+.top-row-whitespace {
+  width: 185px;
+  margin-left: 10px;
+}
+.top-row-product {
+  flex-grow: 1;
+
+  font-size: 18px;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.basket-table-row {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.basket-table-row:nth-of-type(odd) {
+  background-color: #fbfbfb;
+}
+
+.basket-table-pic {
+  background-color: #acacac;
+  border-radius: 7px;
+  height: 120px;
+  width: 180px;
+}
+
+.basket-table-name {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #393939;
+}
+.basket-table-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.basket-table-quantity {
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  height: 40px;
+  width: 155px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 7px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+.basket-table-price {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #393939;
+  width: 155px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.basket-table-remove {
+  height: 40px;
+  width: 185px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}

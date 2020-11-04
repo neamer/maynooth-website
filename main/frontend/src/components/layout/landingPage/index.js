@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "../common/header";
+import ShoppingBasket from "../shoppingBasket";
 import HeroSection from "./heroSection";
 import Showcase from "../common/Showcase";
 import EmailCapture from "../landingPage/emailCapture";
@@ -10,13 +11,16 @@ import About from "./about";
 import Footer from "../common/footer";
 
 function LandingPage() {
+  const [basketIsOpen, setBasketIsOpen] = useState(false);
+
   useEffect(() => {
     document.title = `Maynooth Furniture - Home`;
   }, []);
 
   return (
     <>
-      <Header />
+      {basketIsOpen ? <ShoppingBasket onClick={setBasketIsOpen} /> : ""}
+      <Header onClick={setBasketIsOpen} />
       <HeroSection />
       <Showcase Background heading="New in store" />
       <EmailCapture />
