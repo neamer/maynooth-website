@@ -79,7 +79,47 @@ function ShoppingBasket(props) {
             </div>
           </div>
         </div>
-        <div className="basket-right-section">a</div>
+        <div className="basket-right-section">
+          <div className="basket-summary-wrapper">
+            <div className="basket-summary">
+              <h3 className="basket-summary-header">SUMMARY</h3>
+              <label htmlFor="shippingOptions" className="basket-summary-label">
+                SHIPPING OPTIONS
+              </label>
+              <select name="shippingOptions" className="summary-input">
+                <option value="economy" className="summary-shipping-option">
+                  economy
+                </option>
+                <option value="standard" className="summary-shipping-option">
+                  standard
+                </option>
+                <option value="premium" className="summary-shipping-option">
+                  premium
+                </option>
+              </select>
+
+              <label htmlFor="shippingOptions" className="basket-summary-label">
+                DISCOUNT CODE
+              </label>
+              <input
+                type="text"
+                name="discountCode"
+                className="summary-input"
+              />
+
+              <div className="summary-subtotal">
+                <span>SUBTOTAL</span>
+                <span>$1257.99</span>
+              </div>
+              <hr className="summary-line" />
+
+              <button className="summary-proceed-btn">
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
+          </div>
+          <div className="basket-similar-wrapper">b</div>
+        </div>
       </div>
     </div>
   );
