@@ -1,6 +1,7 @@
-import { ADD_ITEM, REMOVE_ITEM } from "./basketTypes";
+import { ADD_ITEM, CHANGE_AMOUNT, REMOVE_ITEM } from "./basketTypes";
 
 import RemoveByProductName from "../helperFunctions/RemoveProductByName";
+import ChangeAmount from "../helperFunctions/ChangeAmount";
 
 const initialState = {
   products: [],
@@ -19,7 +20,15 @@ const BasketReducer = (state = initialState, action) => {
       return {
         products: RemoveByProductName(state.products, action.payload),
       };
-    // to implement : CHANGE_AMOUNT
+    case CHANGE_AMOUNT: {
+      return {
+        products: ChangeAmount(
+          state.products,
+          action.payload.name,
+          action.payload.newAmount
+        ),
+      };
+    }
     default:
       return state;
   }

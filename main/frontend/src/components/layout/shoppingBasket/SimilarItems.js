@@ -57,7 +57,7 @@ function SimilarItems(props) {
               key={index}
               className="similar-items-slider-element"
               style={{
-                transform: `translate(${position * -292}px)`,
+                transform: `translate(${position * -312}px)`,
               }}
             >
               <div
@@ -72,10 +72,10 @@ function SimilarItems(props) {
         })}
         {position !== 0 ? (
           <button
-            className="similar-items-btn similar-items-btn-left"
+            className="pictures-slider-btn pictures-slider-btn-left"
             onClick={goLeft}
           >
-            <ArrowIcon className="arrow arrow-left" />
+            <ArrowIcon className="pictures-arrow arrow-left" />
           </button>
         ) : (
           ""
@@ -83,10 +83,10 @@ function SimilarItems(props) {
 
         {position + 1 !== elements.length ? (
           <button
-            className="similar-items-btn similar-items-btn-right"
+            className="pictures-slider-btn pictures-slider-btn-right"
             onClick={goRight}
           >
-            <ArrowIcon className="arrow" />
+            <ArrowIcon className="pictures-arrow" />
           </button>
         ) : (
           ""

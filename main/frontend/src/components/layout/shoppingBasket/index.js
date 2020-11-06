@@ -1,16 +1,30 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import "./index.css";
 import CloseIcon from "./img/close.svg";
 import SimilarItems from "./SimilarItems";
+import BasketProduct from "./BasketProduct";
 
 function ShoppingBasket(props) {
+  const productsInBasket = useSelector((state) => state.products);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "unset";
     };
   }, []);
+
+  const getSubtotal = () => {
+    let result = 0;
+
+    productsInBasket.forEach((item) => {
+      result += item.price * item.quantity;
+    });
+
+    return result;
+  };
 
   return (
     <div className="basket-wrapper">
@@ -19,7 +33,12 @@ function ShoppingBasket(props) {
       </div>
 
       <div className="basket-grid">
-        <div className="basket-left-section">
+        <div
+          className="basket-left-section"
+          style={{
+            backgroundImage: 'url("static/frontend/background-5.svg")',
+          }}
+        >
           <h1 className="basket-heading">SHOPPING BASKET</h1>
 
           <div className="basket-table-top-row">
@@ -29,56 +48,20 @@ function ShoppingBasket(props) {
             <div className="top-row-whitespace"></div>
           </div>
 
-          <div className="basket-table-wrapper">
-            <div className="basket-table-row">
-              <div className="basket-table-pic"></div>
-              <div className="basket-table-info">
-                <h3 className="basket-table-name">Blue Sofa Haru Large</h3>
-                <p className="basket-table-color">Blue</p>
-              </div>
-              <input
-                type="number"
-                name="quantity"
-                id=""
-                value="1"
-                className="basket-table-quantity"
-              />
-              <div className="basket-table-price">$399.00</div>
-              <button className="basket-table-remove">REMOVE</button>
+          {productsInBasket.length === 0 ? (
+            <>
+              <h2 className="basket-empty-h">Your basket is empty!</h2>
+              <p className="basket-empty-p">
+                Add some products to the basket and they will show up here
+              </p>
+            </>
+          ) : (
+            <div className="basket-table-wrapper">
+              {productsInBasket.map((item, index) => {
+                return <BasketProduct key={index} product={item} />;
+              })}
             </div>
-            <div className="basket-table-row">
-              <div className="basket-table-pic"></div>
-              <div className="basket-table-info">
-                <h3 className="basket-table-name">Blue Sofa Haru Large</h3>
-                <p className="basket-table-color">Blue</p>
-              </div>
-              <input
-                type="number"
-                name="quantity"
-                id=""
-                value="1"
-                className="basket-table-quantity"
-              />
-              <div className="basket-table-price">$399.00</div>
-              <button className="basket-table-remove">REMOVE</button>
-            </div>
-            <div className="basket-table-row">
-              <div className="basket-table-pic"></div>
-              <div className="basket-table-info">
-                <h3 className="basket-table-name">Blue Sofa Haru Large</h3>
-                <p className="basket-table-color">Blue</p>
-              </div>
-              <input
-                type="number"
-                name="quantity"
-                id=""
-                value="1"
-                className="basket-table-quantity"
-              />
-              <div className="basket-table-price">$399.00</div>
-              <button className="basket-table-remove">REMOVE</button>
-            </div>
-          </div>
+          )}
         </div>
         <div className="basket-right-section">
           <div className="basket-summary-wrapper">
@@ -108,20 +91,28 @@ function ShoppingBasket(props) {
                 className="summary-input"
               />
 
-              <div className="summary-subtotal">
-                <span>SUBTOTAL</span>
-                <span>$1257.99</span>
-              </div>
-              <hr className="summary-line" />
-
+              {productsInBasket.length !== 0 ? (
+                <>
+                  <div className="summary-subtotal">
+                    <span>SUBTOTAL</span>
+                    <span>${getSubtotal()}</span>
+                  </div>
+                  <hr className="summary-line" />
+                </>
+              ) : (
+                ""
+              )}
               <button className="summary-proceed-btn">
                 PROCEED TO CHECKOUT
               </button>
             </div>
           </div>
           <div className="basket-similar-wrapper">
-            <h3 className="basket-summary-header">SIMILAR ITEMS</h3>
-            <SimilarItems />
+            <h3 className="basket-similar-header">RECOMMENDATIONS</h3>
+            <p className="basket-similar-subtitle">
+              Based on the items in your cart
+            </p>
+            {productsInBasket.length === 0 ? "" : <SimilarItems />}
           </div>
         </div>
       </div>
