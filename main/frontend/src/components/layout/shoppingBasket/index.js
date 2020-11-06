@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import "./index.css";
 import CloseIcon from "./img/close.svg";
+import SimilarItems from "./SimilarItems";
 
 function ShoppingBasket(props) {
   useEffect(() => {
@@ -118,7 +119,10 @@ function ShoppingBasket(props) {
               </button>
             </div>
           </div>
-          <div className="basket-similar-wrapper">b</div>
+          <div className="basket-similar-wrapper">
+            <h3 className="basket-summary-header">SIMILAR ITEMS</h3>
+            <SimilarItems />
+          </div>
         </div>
       </div>
     </div>

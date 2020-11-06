@@ -40,10 +40,13 @@
   height: calc(100vh - 40px);
   margin-right: 20px;
   border-radius: 7px;
+  box-shadow: 0 1px 1px rgba(100, 100, 100, 0.12),
+    0 2px 2px rgba(100, 100, 100, 0.12), 0 4px 4px rgba(100, 100, 100, 0.12),
+    0 8px 8px rgba(100, 100, 100, 0.12), 0 16px 16px rgba(100, 100, 100, 0.12);
 }
 
 .basket-right-section {
-  width: 500px;
+  width: 450px;
   height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
@@ -55,6 +58,10 @@
   align-content: center;
   flex-grow: 1;
   background-color: #fff;
+
+  box-shadow: 0 1px 1px rgba(100, 100, 100, 0.12),
+    0 2px 2px rgba(100, 100, 100, 0.12), 0 4px 4px rgba(100, 100, 100, 0.12),
+    0 8px 8px rgba(100, 100, 100, 0.12), 0 16px 16px rgba(100, 100, 100, 0.12);
 
   display: flex;
   justify-content: center;
@@ -68,7 +75,7 @@
   color: #2a2a2a;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .basket-summary-label {
   font-weight: 700;
@@ -123,9 +130,17 @@
 }
 
 .basket-similar-wrapper {
-  height: 380px;
+  box-sizing: border-box;
+  width: 450px;
+  height: 400px;
   margin-top: 20px;
   background-color: #fff;
+  border-radius: 7px;
+  padding: 10px;
+
+  box-shadow: 0 1px 1px rgba(100, 100, 100, 0.12),
+    0 2px 2px rgba(100, 100, 100, 0.12), 0 4px 4px rgba(100, 100, 100, 0.12),
+    0 8px 8px rgba(100, 100, 100, 0.12), 0 16px 16px rgba(100, 100, 100, 0.12);
 }
 
 .basket-heading {
@@ -141,7 +156,7 @@
   border-bottom: 2px solid #2a2a2a;
 }
 .top-row-price {
-  width: 155px;
+  width: 135px;
   margin: 0 10px;
   text-align: center;
 
@@ -150,7 +165,7 @@
   font-weight: 600;
 }
 .top-row-quantity {
-  width: 185px;
+  width: 150px;
   margin: 0 10px;
   text-align: center;
 
@@ -203,7 +218,7 @@
   outline: none;
   padding: 0 15px;
   height: 40px;
-  width: 155px;
+  width: 120px;
   background-color: rgb(240, 240, 240);
   border-radius: 7px;
   font-family: "DM Serif Display", serif;
@@ -217,7 +232,7 @@
   font-weight: 500;
   font-size: 22px;
   color: #393939;
-  width: 155px;
+  width: 135px;
   text-align: center;
   margin: 0 10px;
 }
