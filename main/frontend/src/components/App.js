@@ -21,7 +21,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <Switch>
-          <Route path="/search" exact component={SearchResults} />
+          <Route path="/search/:input" exact component={SearchResults} />
           <Route path="/shopbyroom/:category" exact component={CategoryPage} />
           <Route path="/product/:productName" exact component={ProductDetail} />
           <Route path="/" component={LandingPage} />

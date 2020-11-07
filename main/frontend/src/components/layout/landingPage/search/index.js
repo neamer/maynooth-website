@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import "./index.css";
 
-function Search() {
+function Search(props) {
   const [left, setLeft] = useState(0);
+  const [input, setInput] = useState(null);
 
   useEffect(() => {
     if (window.innerWidth >= 1463) {
@@ -32,8 +33,11 @@ function Search() {
         type="text"
         className="home-search-input"
         placeholder="home-search through our collection"
+        onChange={(e) => setInput(e.target.value)}
       />
-      <button className="home-search-btn">SEARCH</button>
+      <button className="home-search-btn" onClick={() => props.onClick(input)}>
+        SEARCH
+      </button>
     </div>
   );
 }

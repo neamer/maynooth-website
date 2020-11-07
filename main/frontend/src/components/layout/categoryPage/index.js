@@ -6,7 +6,7 @@ import ShoppingBasket from "../shoppingBasket";
 import CategoryHero from "./CategoryHero";
 import Showcase from "../common/Showcase";
 import SecondSection from "../common/SecondSection";
-import ProductList from "./ProductList";
+import ProductList from "../common/ProductList";
 import Footer from "../common/footer";
 import ExtendBackground from "./ExtendBackground";
 

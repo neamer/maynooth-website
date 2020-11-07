@@ -1,4 +1,5 @@
 from django.http import Http404
+from django.db.models import Q
 
 from rest_framework import generics
 from rest_framework.views import APIView
@@ -19,6 +20,25 @@ class ProductList(generics.ListAPIView):
     pagination_class = StandardResultsSetPagination
 
 
+class ProductSearchResults(APIView):
+    """
+    Retrieve a list of products based on the input string
+    """
+
+    def get_object(self, searchInput):
+        try:
+            return Product.objects.filter(Q(name__contains=searchInput) | Q(short_desc__contains=searchInput) | Q(detail_desc__contains=searchInput))
+        except Product.DoesNotExist:
+            print('not found')
+            raise Http404
+
+    def get(self, request, format=None):
+        searchInput = request.query_params.dict()["searchInput"]
+        product = self.get_object(searchInput)
+        serializer = ProductSerializer(product, many=True)
+        return Response(serializer.data)
+
+
 class ProductDetail(APIView):
     """
     Retrieve a product instance from its name.
@@ -32,7 +52,6 @@ class ProductDetail(APIView):
             raise Http404
 
     def get(self, request, format=None):
-        print(request.query_params.dict()["productName"])
         name = request.query_params.dict()["productName"]
         product = self.get_object(name)
         serializer = ProductSerializer(product)

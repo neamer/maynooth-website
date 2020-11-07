@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Search from "../common/search";
 
 import "./ProductList.css";
+import Product from "./Product";
 
 function ProductList() {
   const [results, setResults] = useState(null);
@@ -40,21 +41,21 @@ function ProductList() {
         <div className="results-grid">
           {results
             ? results.map((item, index) => {
+                return index % 3 === 0 ? (
+                  <Product Product={item} Left />
+                ) : index % 3 === 1 ? (
+                  <Product Product={item} Middle />
+                ) : (
+                  <Product Product={item} Right />
+                );
+
                 return (
                   <Link
                     className="link-default"
                     to={`/product/${item.name.replace(/-/g, " ")}`}
                     key={index}
                   >
-                    <div
-                      className={
-                        index % 3 === 0
-                          ? "result-product-wrapper product-left"
-                          : index % 3 === 1
-                          ? "result-product-wrapper product-middle"
-                          : "result-product-wrapper product-right"
-                      }
-                    >
+                    <div className={}>
                       <div
                         className="result-product-pic-div"
                         style={{ backgroundImage: `url(${item.pictures[0]})` }}

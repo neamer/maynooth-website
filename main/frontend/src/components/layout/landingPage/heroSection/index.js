@@ -12,22 +12,27 @@ function HeroSection() {
       setHeight(parseInt(window.innerHeight * 0.8) + "px");
     else if (window.innerWidth <= 1366)
       setHeight(parseInt(window.innerHeight * 0.5) + "px");
-    else 
-      setHeight(parseInt(window.innerHeight * 0.6) + "px");
+    else setHeight(parseInt(window.innerHeight * 0.6) + "px");
   }, []);
 
+  const RedirectToSearch = (input) => {
+    console.log(input);
+    if (input !== null) {
+      window.location.replace(`/#/search/${input.replace(/-/g, " ")}`);
+    }
+  };
+
   window.addEventListener("resize", () => {
-    if (document.body.clientWidth <= 750) {}
-    else if (window.innerWidth <= 1366)
+    if (document.body.clientWidth <= 750) {
+    } else if (window.innerWidth <= 1366)
       setHeight(parseInt(window.innerHeight * 0.5) + "px");
-    else 
-      setHeight(parseInt(window.innerHeight * 0.6) + "px");
+    else setHeight(parseInt(window.innerHeight * 0.6) + "px");
   });
 
   return (
     <div className="hero-container" style={{ height: height }}>
       <Slider />
-      <Search />
+      <Search onClick={RedirectToSearch} />
     </div>
   );
 }
