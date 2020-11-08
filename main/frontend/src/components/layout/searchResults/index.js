@@ -4,6 +4,13 @@ import axios from "axios";
 
 import { useParams } from "react-router-dom";
 
+import Header from "../common/header";
+
+import "./index.css";
+import ProductList from "../common/ProductList";
+import SecondSection from "../common/SecondSection";
+import Footer from "../common/footer";
+
 function SearchResults() {
   const params = useParams();
 
@@ -34,9 +41,20 @@ function SearchResults() {
   }, [params]);
 
   return (
-    <div>
-      <h1>SearchResults</h1>
-    </div>
+    <>
+      <Header />
+      <div className="search-results-main-wrapper">
+        <div className="content-wrapper">
+          <h2 className="search-results-heading">
+            Search results for "{params.input}"
+          </h2>
+        </div>
+        <ProductList Light />
+        <SecondSection>
+          <Footer />
+        </SecondSection>
+      </div>
+    </>
   );
 }
 
