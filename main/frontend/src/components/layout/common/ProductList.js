@@ -32,8 +32,16 @@ function ProductList(props) {
   return (
     <div className="content-wrapper product-list-wrapper">
       <div className="filter-grid">
-        <Search />
-        <div className="filter-reorder">newest</div>
+        {props.Light ? <Search Light /> : <Search />}
+        <div
+          className={
+            props.Light
+              ? "filter-reorder filter-reorder-light"
+              : "filter-reorder"
+          }
+        >
+          newest
+        </div>
       </div>
       <div className="results-wrapper">
         <div className="results-grid">

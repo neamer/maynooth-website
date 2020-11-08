@@ -14,16 +14,20 @@
   border: none;
   outline: none;
   border-radius: 7px 10px 10px 7px;
-  padding: 15px 25px;
+  padding: 14px 25px;
+  border: 1px solid transparent;
+  transition: 0.5s ease-out;
 }
 .search-input:hover,
 .search-input:focus {
   background-color: rgb(255, 255, 255);
+  border: 1px solid #4cb3aa;
 }
 
 .search-btn {
   box-sizing: border-box;
   border: none;
+  outline: none;
   position: absolute;
   font-weight: bold;
   color: #fff;
@@ -33,9 +37,22 @@
   padding: 13px 40px;
   right: 0px;
   bottom: 0px;
+  transition: 0.5s ease-out;
 }
 .search-btn:hover {
   cursor: pointer;
+}
+
+/* LIGHT */
+.search-btn-light {
+  background-color: #842c68;
+}
+.search-btn-light:hover {
+  background-color: #aa3485;
+}
+.search-btn-light:active {
+  transition: 0.05s ease-out;
+  background-color: #ee78c9;
 }
 
 @media screen and (max-width: 1463px) {

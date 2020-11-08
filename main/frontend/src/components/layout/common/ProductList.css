@@ -26,6 +26,11 @@
   row-gap: 60px;
 }
 
+.filter-reorder-light {
+  color: #2a2a2a;
+  border: 3px solid #2a2a2a;
+}
+
 @media screen and (max-width: 750px) {
   .results-wrapper {
     padding: 40px 0;

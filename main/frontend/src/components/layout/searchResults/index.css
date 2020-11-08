@@ -4,7 +4,8 @@
 
 .search-results-heading {
   padding: 60px 0 50px 0;
-  font-weight: 600;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
   font-size: 32px;
   color: #3b3b3b;
 }

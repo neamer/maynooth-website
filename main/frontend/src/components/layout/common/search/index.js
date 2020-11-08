@@ -9,11 +9,16 @@ function Search(props) {
     <div className="search-wrapper">
       <input
         type="text"
-        className="search-input"
+        className={
+          props.Light ? "search-input search-input-light" : "search-input"
+        }
         placeholder="search through our collection"
         onChange={(e) => setInput(e.target.value)}
       />
-      <button className="search-btn" onClick={() => props.onClick(input)}>
+      <button
+        className={props.Light ? "search-btn search-btn-light" : "search-btn"}
+        onClick={() => props.onClick(input)}
+      >
         SEARCH
       </button>
     </div>
