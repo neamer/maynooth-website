@@ -184,3 +184,30 @@
   height: calc(100% - 137px);
   overflow-y: scroll;
 }
+
+@media screen and (max-width: 1463px) {
+  .basket-wrapper {
+    overflow-y: scroll;
+  }
+
+  .basket-grid {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .basket-heading {
+    padding: 13px 20px;
+    padding-top: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #2a2a2a;
+  }
+  .basket-left-section {
+    height: auto;
+    max-height: auto;
+    margin: 0 0 10px 0;
+  }
+  .basket-right-section {
+    width: 100%;
+    height: auto;
+  }
+}

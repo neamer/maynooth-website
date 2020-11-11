@@ -11,10 +11,12 @@ function Header(props) {
   const handleSidebar = (show) => {
     if (show) {
       setSidebar(true);
+      document.body.style.overflow = "hidden";
     } else {
       setTriggerFadeOut(true);
       setTimeout(() => {
         setSidebar(false);
+        document.body.style.overflow = "unset";
         setTriggerFadeOut(false);
       }, 500);
     }
@@ -30,7 +32,10 @@ function Header(props) {
       {sidebar ? (
         <>
           {" "}
-          <Sidebar triggerFadeOut={triggerFadeOut} />{" "}
+          <Sidebar
+            triggerFadeOut={triggerFadeOut}
+            onClick={props.onClick}
+          />{" "}
           <SidebarShadow
             onClick={handleSidebar}
             triggerFadeOut={triggerFadeOut}

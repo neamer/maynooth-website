@@ -43,7 +43,13 @@ function SearchResults() {
   return (
     <>
       <Header />
-      <div className="search-results-main-wrapper">
+      <div
+        className="search-results-main-wrapper"
+        style={{
+          backgroundImage:
+            'url("static/frontend/background-1.svg"), url("static/frontend/background-2.svg")',
+        }}
+      >
         <div className="content-wrapper">
           <h2 className="search-results-heading">
             Search results for "{params.input}"
