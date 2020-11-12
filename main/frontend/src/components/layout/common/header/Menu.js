@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
@@ -6,8 +6,6 @@ import ShoppingBasketIcon from "./img/basket-black.svg";
 import "./Menu.css";
 
 function Menu(props) {
-  const [dropDown, setDropDown] = useState(false);
-
   return (
     <>
       <ul className="nav-menu">

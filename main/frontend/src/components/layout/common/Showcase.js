@@ -67,12 +67,12 @@ function Showcase(props) {
         setElementsDisplayed(1);
       }
     } else {
-    if (responsive) {
-      setResponsive(false);
-      setPosition(0);
-      setElementsDisplayed(2);
+      if (responsive) {
+        setResponsive(false);
+        setPosition(0);
+        setElementsDisplayed(2);
+      }
     }
-  }
   });
 
   const goLeft = () => {
@@ -90,7 +90,7 @@ function Showcase(props) {
         props.Background
           ? {
               backgroundImage:
-                'url("static/frontend/background-1.png"), url("static/frontend/background-2.svg")',
+                'url("static/frontend/background-1.png"), url("static/frontend/background-4.svg")',
             }
           : {}
       }

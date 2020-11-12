@@ -32,7 +32,7 @@ function Search(props) {
       <input
         type="text"
         className="home-search-input"
-        placeholder="home-search through our collection"
+        placeholder="Search through our collection"
         onChange={(e) => setInput(e.target.value)}
       />
       <button className="home-search-btn" onClick={() => props.onClick(input)}>

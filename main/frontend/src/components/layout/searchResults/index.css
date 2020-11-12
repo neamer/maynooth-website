@@ -1,5 +1,10 @@
 .search-results-main-wrapper {
   padding-top: 65px;
+
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1200px 1200px, 360px auto;
+  background-position: -400px -650px, right center;
+  background-blend-mode: overlay, multiply;
 }
 
 .search-results-heading {
@@ -8,4 +13,17 @@
   font-weight: 400;
   font-size: 32px;
   color: #3b3b3b;
+}
+
+@media screen and (max-width: 750px) {
+  .search-results-main-wrapper {
+    background-size: 350px 350px, 160px auto;
+    background-position: -150px -100px, right bottom;
+  }
+
+  .search-results-heading {
+    padding: 30px 10px 25px 10px;
+    font-size: 28px;
+    text-align: center;
+  }
 }

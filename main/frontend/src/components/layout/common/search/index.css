@@ -21,7 +21,7 @@
 .search-input:hover,
 .search-input:focus {
   background-color: rgb(255, 255, 255);
-  border: 1px solid #4cb3aa;
+  border: 1px solid #aa3485;
 }
 
 .search-btn {

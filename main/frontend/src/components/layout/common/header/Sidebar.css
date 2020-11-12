@@ -1,4 +1,5 @@
 .nav-sidebar {
+  font-weight: 300;
   box-sizing: border-box;
   padding-top: 20px;
   position: fixed;
@@ -51,6 +52,7 @@
 }
 .basket-button-txt {
   padding-right: 30px;
+  font-weight: 600;
 }
 .basket-icon-inline {
   position: absolute;
