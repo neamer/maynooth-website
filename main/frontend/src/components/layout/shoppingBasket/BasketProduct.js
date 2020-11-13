@@ -16,7 +16,7 @@ function BasketProduct(props) {
       ></div>
       <div className="basket-table-info">
         <h3 className="basket-table-name">{props.product.name}</h3>
-        <p className="basket-table-color">{props.product.color}</p>
+        <p className="basket-table-color">{props.product.color.name}</p>
       </div>
       <input
         type="number"

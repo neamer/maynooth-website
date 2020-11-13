@@ -1,0 +1,42 @@
+.r-basket-table-top {
+  display: flex;
+}
+.r-basket-table-bottom {
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .basket-table-row {
+    display: block;
+    padding: 8px;
+  }
+  .basket-table-info {
+    padding: 0 7px;
+    flex-grow: 0;
+  }
+  .basket-table-pic {
+    width: 134px;
+    height: 90px;
+  }
+  .basket-table-name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .basket-table-color {
+    font-size: 16px;
+  }
+  .basket-table-price {
+    font-size: 24px;
+    text-align: left;
+    width: auto;
+    margin: 0;
+    padding: 2px 0;
+  }
+  .basket-table-quantity {
+    flex-grow: 1;
+    margin: 0;
+  }
+  .basket-table-remove {
+    width: 120px;
+  }
+}

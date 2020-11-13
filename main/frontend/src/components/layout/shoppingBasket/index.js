@@ -5,6 +5,7 @@ import "./index.css";
 import CloseIcon from "./img/close.svg";
 import SimilarItems from "./SimilarItems";
 import BasketProduct from "./BasketProduct";
+import BasketProductResp from "./BasketProductResp";
 
 function ShoppingBasket(props) {
   const productsInBasket = useSelector((state) => state.products);
@@ -43,9 +44,15 @@ function ShoppingBasket(props) {
 
           <div className="basket-table-top-row">
             <div className="top-row-product">PRODUCT</div>
-            <div className="top-row-quantity">QUANTITY</div>
-            <div className="top-row-price">PRICE</div>
-            <div className="top-row-whitespace"></div>
+            {document.body.clientWidth > 1366 ? (
+              <>
+                <div className="top-row-quantity">QUANTITY</div>
+                <div className="top-row-price">PRICE</div>
+                <div className="top-row-whitespace"></div>
+              </>
+            ) : (
+              ""
+            )}
           </div>
 
           {productsInBasket.length === 0 ? (
@@ -58,7 +65,11 @@ function ShoppingBasket(props) {
           ) : (
             <div className="basket-table-wrapper">
               {productsInBasket.map((item, index) => {
-                return <BasketProduct key={index} product={item} />;
+                return document.body.clientWidth > 1366 ? (
+                  <BasketProduct key={index} product={item} />
+                ) : (
+                  <BasketProductResp key={index} product={item} />
+                );
               })}
             </div>
           )}

@@ -186,6 +186,18 @@
 }
 
 @media screen and (max-width: 1463px) {
+  .basket-empty-h {
+    font-weight: 700;
+    font-size: 22px;
+    padding: 24px 0 6px 20px;
+    color: #b3b3b3;
+  }
+  .basket-empty-p {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    color: #cfcfcf;
+  }
   .basket-wrapper {
     overflow-y: scroll;
   }

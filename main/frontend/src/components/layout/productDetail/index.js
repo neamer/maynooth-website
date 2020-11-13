@@ -57,7 +57,7 @@ function ProductDetail(props) {
     const productToBasket = {
       name: product.name,
       price: product.price,
-      color: product.color,
+      color: product.colors[0],
       picture: product.pictures[0],
       quantity: amount,
     };
