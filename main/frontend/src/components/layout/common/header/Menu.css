@@ -39,6 +39,7 @@
   text-decoration: none;
   color: #1a1a1a;
   font-size: 15px;
+  margin-top: 10px;
 }
 .nav-line {
   display: inline-block;
@@ -46,4 +47,10 @@
   font-size: 18px;
   padding-top: 7px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 750px) {
+  .dropdown-link {
+    margin-top: 0px;
+  }
 }

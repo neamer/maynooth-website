@@ -47,7 +47,7 @@ function SearchResults() {
         className="search-results-main-wrapper"
         style={{
           backgroundImage:
-            'url("static/frontend/background-1.svg"), url("static/frontend/background-2.svg")',
+            'url("static/frontend/background-1.svg"), url("static/frontend/background-3.svg")',
         }}
       >
         <div className="content-wrapper">

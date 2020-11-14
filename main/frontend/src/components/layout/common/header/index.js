@@ -35,6 +35,7 @@ function Header(props) {
           <Sidebar
             triggerFadeOut={triggerFadeOut}
             onClick={props.onClick}
+            handleSidebar={handleSidebar}
           />{" "}
           <SidebarShadow
             onClick={handleSidebar}

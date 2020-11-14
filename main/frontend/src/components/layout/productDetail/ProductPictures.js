@@ -59,23 +59,25 @@ function ProductPictures(props) {
           ""
         )}
       </div>
-      <div className="detail-bottom-pictures-wrapper">
-        {props.Pictures.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className={
-                position === index * -100
-                  ? "detail-bottom-picture detail-bottom-picture-active"
-                  : "detail-bottom-picture"
-              }
-              style={{
-                backgroundImage: `url(${item})`,
-              }}
-              onClick={() => setPosition(index * -100)}
-            ></div>
-          );
-        })}
+      <div className="detail-bottom-pictures-div">
+        <div className="detail-bottom-pictures-wrapper">
+          {props.Pictures.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className={
+                  position === index * -100
+                    ? "detail-bottom-picture detail-bottom-picture-active"
+                    : "detail-bottom-picture"
+                }
+                style={{
+                  backgroundImage: `url(${item})`,
+                }}
+                onClick={() => setPosition(index * -100)}
+              ></div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

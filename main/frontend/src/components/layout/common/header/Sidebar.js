@@ -22,17 +22,26 @@ function Sidebar(props) {
     <div className={show ? "nav-sidebar nav-sidebar-active" : "nav-sidebar"}>
       <h4 className="sidebar-section">SHOP BY ROOM</h4>
       <ul className="sidebar-list">
-        <li className="sidebar-list-item">
+        <li
+          className="sidebar-list-item"
+          onClick={() => props.handleSidebar(false)}
+        >
           <Link className="dropdown-link" to="/shopbyroom/livingroom">
             LIVING ROOM
           </Link>
         </li>
-        <li className="sidebar-list-item">
+        <li
+          className="sidebar-list-item"
+          onClick={() => props.handleSidebar(false)}
+        >
           <Link className="dropdown-link" to="/shopbyroom/bedroom">
             BEDROOM
           </Link>
         </li>
-        <li className="sidebar-list-item">
+        <li
+          className="sidebar-list-item"
+          onClick={() => props.handleSidebar(false)}
+        >
           <Link className="dropdown-link" to="/shopbyroom/kitchendining">
             KITCHEN & DINING
           </Link>
