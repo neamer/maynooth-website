@@ -60,3 +60,34 @@ BACKEND FUNCTIONALITY(views)
 REDUX setup
 ----
   
+
+  6 items per page
+60 items
+
+
+soo... 10 pages in total
+
+information we have
+----
+	page number - from 1 to count / items on page
+	
+
+calc
+----
+	page = 3
+	results.length = 6
+	count = 58
+
+	page 1 = 1-6	
+	page 2 = 7-13
+	page 3 = 14-20 items displayed = page * paginator_size + page - 1
+	page 4 = 21-27
+	page 5 = 28-34
+	-----------------
+	
+	number of items went thru = page * paginator_size
+	
+	next button exists => check if next page = null
+	next other button exists => if number of items went thru at page + 2 <= count - paginator_size (if the last page doesnt have the max amount of items)
+	
+	

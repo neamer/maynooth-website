@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
@@ -13,6 +13,7 @@ import Footer from "../common/footer";
 
 function SearchResults() {
   const params = useParams();
+  const [resultList, setResultList] = useState(null);
 
   useEffect(() => {
     // fetch the product information
@@ -34,6 +35,7 @@ function SearchResults() {
       .get("/api/products/search/", config)
       .then((res) => {
         console.log(res.data);
+        setResultList(res.data);
       })
       .catch((err) => {
         console.log(err.response.data, err.response.status);
@@ -55,7 +57,7 @@ function SearchResults() {
             Search results for "{params.input}"
           </h2>
         </div>
-        <ProductList Light />
+        <ProductList Light List={resultList} />
         <SecondSection>
           <Footer />
         </SecondSection>

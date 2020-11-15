@@ -7,28 +7,6 @@ import "./ProductList.css";
 import Product from "./Product";
 
 function ProductList(props) {
-  const [results, setResults] = useState(null);
-
-  useEffect(() => {
-    // load the products when the component gets initially rendered
-
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    axios
-      .get("/api/products/", config)
-      .then((res) => {
-        setResults(res.data.results);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err.response.data, err.response.status);
-      });
-  }, []);
-
   return (
     <div className="content-wrapper product-list-wrapper">
       <div className="filter-grid">
@@ -45,8 +23,8 @@ function ProductList(props) {
       </div>
       <div className="results-wrapper">
         <div className="results-grid">
-          {results
-            ? results.map((item, index) => {
+          {props.List
+            ? props.List.map((item, index) => {
                 if (props.Light) {
                   return index % 3 === 0 ? (
                     <Product Product={item} key={index} Light Left />

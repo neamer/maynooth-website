@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import axios from "axios";
+
 import Header from "../common/header";
 import ShoppingBasket from "../shoppingBasket";
 import CategoryHero from "./CategoryHero";
@@ -14,6 +16,8 @@ import "./index.css";
 
 function CategoryPage(props) {
   const [basketIsOpen, setBasketIsOpen] = useState(false);
+  const [page, setPage] = useState(1);
+  const [resultList, setResultList] = useState(null);
 
   const params = useParams();
 
@@ -39,7 +43,27 @@ function CategoryPage(props) {
 
   useEffect(() => {
     document.title = `Maynooth Furniture - ${categoryName}`;
+
+    // load the products when the component gets initially rendered
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    axios
+      .get("/api/products/", config)
+      .then((res) => {
+        setResultList(res.data.results);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err.response.data, err.response.status);
+      });
   }, [categoryName]);
+
+  const pageAfterNext = () => {};
 
   return (
     <>
@@ -49,7 +73,7 @@ function CategoryPage(props) {
       <Showcase LightText heading="New in category" />
       <SecondSection GoUnder>
         <ExtendBackground />
-        <ProductList />
+        <ProductList List={resultList} />
         <Footer />
       </SecondSection>
     </>
