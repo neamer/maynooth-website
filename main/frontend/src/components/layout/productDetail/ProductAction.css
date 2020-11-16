@@ -47,6 +47,10 @@
   background-color: #9c3c7e;
   cursor: pointer;
 }
+.add-to-cart-button:focus {
+  transition: 0.05s ease-out;
+  background-color: #ee78c9;
+}
 .product-detail-in-stock {
   margin: auto;
   margin-top: 35px;

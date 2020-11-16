@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { addProduct } from "../../redux/basket/basketActions";
 
 import CheckMark from "./checkMark.svg";
 
@@ -6,6 +7,13 @@ import "./ProductAction.css";
 
 function ProductAction(props) {
   const [quantity, setQuantity] = useState(1);
+  const [btnDisabled, setBtnDisabled] = useState(false);
+
+  const addToCart = () => {
+    setBtnDisabled(true);
+    props.onClick(quantity);
+    setTimeout(() => setBtnDisabled(false), 1000);
+  };
 
   return (
     <div className="product-detail-action-wrapper">
@@ -22,12 +30,15 @@ function ProductAction(props) {
           />
         </div>
         <div>
-          <button
-            className="add-to-cart-button"
-            onClick={() => props.onClick(quantity)}
-          >
-            ADD TO CART
-          </button>
+          {btnDisabled ? (
+            <button className="add-to-cart-button" disabled>
+              ITEM ADDED
+            </button>
+          ) : (
+            <button className="add-to-cart-button" onClick={() => addToCart()}>
+              ADD TO CART
+            </button>
+          )}
         </div>
       </div>
       {props.InStock ? (
