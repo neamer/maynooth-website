@@ -17,7 +17,7 @@ class ProductList(generics.ListAPIView):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = StandardResultsSetPagination
+    pagination_class = SmallResultsSetPagination
 
 
 class ProductSearchResults(APIView):

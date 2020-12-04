@@ -6,6 +6,7 @@ import axios from "axios";
 import Header from "../common/header";
 import ShoppingBasket from "../shoppingBasket";
 import CategoryHero from "./CategoryHero";
+import Search from "../common/search";
 import Showcase from "../common/Showcase";
 import SecondSection from "../common/SecondSection";
 import ProductList from "../common/ProductList";
@@ -13,11 +14,14 @@ import Footer from "../common/footer";
 import ExtendBackground from "./ExtendBackground";
 
 import "./index.css";
+import PageButton from "../common/pagination/PageButton";
 
 function CategoryPage(props) {
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const [page, setPage] = useState(1);
-  const [resultList, setResultList] = useState(null);
+  const [response, setResponse] = useState(null);
+
+  const paginatorSize = 6; // change to 12
 
   const params = useParams();
 
@@ -46,6 +50,15 @@ function CategoryPage(props) {
 
     // load the products when the component gets initially rendered
 
+    loadPage(1);
+  }, [categoryName]);
+
+  const pageAfterNext = () =>
+    page * paginatorSize + page + 1 <= response.count - paginatorSize;
+
+  const loadPage = (page) => {
+    console.log(`attempted loading page ${page} of category ${categoryName}!`);
+
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -53,17 +66,16 @@ function CategoryPage(props) {
     };
 
     axios
-      .get("/api/products/", config)
+      .get(`/api/products/?page=${page}`, config)
       .then((res) => {
-        setResultList(res.data.results);
+        setResponse(res.data);
+        setPage(page);
         console.log(res.data);
       })
       .catch((err) => {
         console.log(err.response.data, err.response.status);
       });
-  }, [categoryName]);
-
-  const pageAfterNext = () => {};
+  };
 
   return (
     <>
@@ -72,8 +84,50 @@ function CategoryPage(props) {
       <CategoryHero Category={categoryName} heroImgSrc={categoryPic} />
       <Showcase LightText heading="New in category" />
       <SecondSection GoUnder>
+        <div className="content-wrapper">
+          <div className="filter-grid">
+            <Search />
+            <div className="filter-reorder">newest</div>
+          </div>
+        </div>
+
         <ExtendBackground />
-        <ProductList List={resultList} />
+        {response !== null ? (
+          <>
+            <ProductList List={response.results} />
+
+            <div className="page-buttons-wrapper">
+              {page > 2 ? (
+                <PageButton page={page - 2} onClick={loadPage} />
+              ) : (
+                ""
+              )}
+
+              {page > 1 ? (
+                <PageButton page={page - 1} onClick={loadPage} />
+              ) : (
+                ""
+              )}
+
+              <PageButton page={page} active onClick={loadPage} />
+
+              {response.next ? (
+                <PageButton page={page + 1} onClick={loadPage} />
+              ) : (
+                " "
+              )}
+
+              {pageAfterNext() ? (
+                <PageButton page={page + 2} onClick={loadPage} />
+              ) : (
+                " "
+              )}
+            </div>
+          </>
+        ) : (
+          ""
+        )}
+
         <Footer />
       </SecondSection>
     </>

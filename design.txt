@@ -91,3 +91,15 @@ calc
 	next other button exists => if number of items went thru at page + 2 <= count - paginator_size (if the last page doesnt have the max amount of items)
 	
 	
+
+
+  THINGS TO DO BEFORE WRAP UP
+  ----
+    1. finish pagination(category and search)
+    2. implement loading animation when the products are being fetched and appropriate error messages
+    3. implement sorting for category
+    4. implement some sort of reccomendations
+    5. implement the instagram section on the homepage
+    6. about us section
+    7. basket animation
+    7. implement continue to checkout (sends a mail with all the items)

@@ -1,0 +1,30 @@
+.page-buttons-wrapper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.page-btn {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.212);
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.253);
+  color: #fff;
+  margin: 0 5px;
+  padding-top: 13px;
+
+  transition: 0.2s;
+}
+.page-btn:hover,
+.page-btn-active {
+  cursor: pointer;
+  background-color: #fff;
+  color: #842c68;
+}

@@ -5,6 +5,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 import Header from "../common/header";
+import Search from "../common/search";
 
 import "./index.css";
 import ProductList from "../common/ProductList";
@@ -57,6 +58,14 @@ function SearchResults() {
             Search results for "{params.input}"
           </h2>
         </div>
+
+        <div className="content-wrapper">
+          <div className="filter-grid">
+            <Search Light />
+            <div className="filter-reorder filter-reorder-light">newest</div>
+          </div>
+        </div>
+
         <ProductList Light List={resultList} />
         <SecondSection>
           <Footer />

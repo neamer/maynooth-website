@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-import Search from "../common/search";
+import React from "react";
 
 import "./ProductList.css";
 import Product from "./Product";
@@ -9,18 +6,6 @@ import Product from "./Product";
 function ProductList(props) {
   return (
     <div className="content-wrapper product-list-wrapper">
-      <div className="filter-grid">
-        {props.Light ? <Search Light /> : <Search />}
-        <div
-          className={
-            props.Light
-              ? "filter-reorder filter-reorder-light"
-              : "filter-reorder"
-          }
-        >
-          newest
-        </div>
-      </div>
       <div className="results-wrapper">
         <div className="results-grid">
           {props.List
