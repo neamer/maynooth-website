@@ -14,34 +14,41 @@ import Footer from "../common/footer";
 
 function SearchResults() {
   const params = useParams();
-  const [resultList, setResultList] = useState(null);
+  const [page, setPage] = useState(1);
+  const [response, setResponse] = useState(null);
+
+  let searchInput = "NONE";
 
   useEffect(() => {
     // fetch the product information
 
-    let searchInput = params.input.replace(/-/g, " ");
+    searchInput = params.input.replace(/-/g, " ");
 
     document.title = `${searchInput} - Maynooth Furniture`;
+
+    loadPage(1);
+  }, [params]);
+
+  const loadPage = (page) => {
+    console.log(`attempted loading page ${page} of keyword ${searchInput}!`);
 
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
-      params: {
-        searchInput,
-      },
     };
 
     axios
-      .get("/api/products/search/", config)
+      .get(`/api/products/search/?page=${searchInput}`, config)
       .then((res) => {
+        setResponse(res.data);
+        setPage(page);
         console.log(res.data);
-        setResultList(res.data);
       })
       .catch((err) => {
         console.log(err.response.data, err.response.status);
       });
-  }, [params]);
+  };
 
   return (
     <>
@@ -66,7 +73,41 @@ function SearchResults() {
           </div>
         </div>
 
-        <ProductList Light List={resultList} />
+        {response !== null ? (
+          <>
+            <ProductList List={response.results} />
+
+            <div className="page-buttons-wrapper">
+              {page > 2 ? (
+                <PageButton page={page - 2} onClick={loadPage} />
+              ) : (
+                ""
+              )}
+
+              {page > 1 ? (
+                <PageButton page={page - 1} onClick={loadPage} />
+              ) : (
+                ""
+              )}
+
+              <PageButton page={page} active onClick={loadPage} />
+
+              {response.next ? (
+                <PageButton page={page + 1} onClick={loadPage} />
+              ) : (
+                " "
+              )}
+
+              {pageAfterNext() ? (
+                <PageButton page={page + 2} onClick={loadPage} />
+              ) : (
+                " "
+              )}
+            </div>
+          </>
+        ) : (
+          ""
+        )}
         <SecondSection>
           <Footer />
         </SecondSection>
