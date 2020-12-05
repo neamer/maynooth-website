@@ -13,6 +13,8 @@ import ProductList from "../common/ProductList";
 import Footer from "../common/footer";
 import ExtendBackground from "./ExtendBackground";
 
+import { PAGINATOR_SIZE } from "../common/pagination/Constants";
+
 import "./index.css";
 import PageButton from "../common/pagination/PageButton";
 
@@ -20,8 +22,6 @@ function CategoryPage(props) {
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [response, setResponse] = useState(null);
-
-  const paginatorSize = 6; // change to 12
 
   const params = useParams();
 
@@ -54,7 +54,7 @@ function CategoryPage(props) {
   }, [categoryName]);
 
   const pageAfterNext = () =>
-    page * paginatorSize + page + 1 <= response.count - paginatorSize;
+    page * PAGINATOR_SIZE + page + 1 <= response.count - PAGINATOR_SIZE;
 
   const loadPage = (page) => {
     console.log(`attempted loading page ${page} of category ${categoryName}!`);

@@ -6,23 +6,25 @@ import { useParams } from "react-router-dom";
 
 import Header from "../common/header";
 import Search from "../common/search";
+import PageButton from "../common/pagination/PageButton";
 
 import "./index.css";
 import ProductList from "../common/ProductList";
 import SecondSection from "../common/SecondSection";
 import Footer from "../common/footer";
 
+import { PAGINATOR_SIZE } from "../common/pagination/Constants";
+
 function SearchResults() {
   const params = useParams();
   const [page, setPage] = useState(1);
   const [response, setResponse] = useState(null);
-
-  let searchInput = "NONE";
+  const [searchInput, setSearchInput] = useState("NONE");
 
   useEffect(() => {
     // fetch the product information
 
-    searchInput = params.input.replace(/-/g, " ");
+    setSearchInput((state) => params.input.replace(/-/g, " "));
 
     document.title = `${searchInput} - Maynooth Furniture`;
 
@@ -36,10 +38,13 @@ function SearchResults() {
       headers: {
         "Content-Type": "application/json",
       },
+      params: {
+        searchInput,
+      },
     };
 
     axios
-      .get(`/api/products/search/?page=${searchInput}`, config)
+      .get(`/api/products/search/?page=${page}`, config)
       .then((res) => {
         setResponse(res.data);
         setPage(page);
@@ -49,6 +54,9 @@ function SearchResults() {
         console.log(err.response.data, err.response.status);
       });
   };
+
+  const pageAfterNext = () =>
+    page * PAGINATOR_SIZE + page + 1 <= response.count - PAGINATOR_SIZE;
 
   return (
     <>
@@ -75,7 +83,7 @@ function SearchResults() {
 
         {response !== null ? (
           <>
-            <ProductList List={response.results} />
+            <ProductList List={response} />
 
             <div className="page-buttons-wrapper">
               {page > 2 ? (
@@ -92,11 +100,7 @@ function SearchResults() {
 
               <PageButton page={page} active onClick={loadPage} />
 
-              {response.next ? (
-                <PageButton page={page + 1} onClick={loadPage} />
-              ) : (
-                " "
-              )}
+              {1 == 1 ? <PageButton page={page + 1} onClick={loadPage} /> : " "}
 
               {pageAfterNext() ? (
                 <PageButton page={page + 2} onClick={loadPage} />
