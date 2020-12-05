@@ -39,7 +39,9 @@ class ProductSearchResults(APIView):
         results = paginator.paginate_queryset(products, request)
         serializer = ProductSerializer(results, many=True)
 
-        return Response(serializer.data)
+        next_page = paginator.get_next_link()
+
+        return Response({"count": products.count(), "next": next_page, "results": serializer.data})
 
 
 class ProductDetail(APIView):

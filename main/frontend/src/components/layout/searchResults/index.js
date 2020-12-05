@@ -25,11 +25,14 @@ function SearchResults() {
     // fetch the product information
 
     setSearchInput((state) => params.input.replace(/-/g, " "));
+  }, [, params]);
 
-    document.title = `${searchInput} - Maynooth Furniture`;
-
-    loadPage(1);
-  }, [params]);
+  useEffect(() => {
+    if (searchInput !== "NONE") {
+      document.title = `${searchInput} - Maynooth Furniture`;
+      loadPage(1);
+    }
+  }, [searchInput]);
 
   const loadPage = (page) => {
     console.log(`attempted loading page ${page} of keyword ${searchInput}!`);
@@ -58,6 +61,13 @@ function SearchResults() {
   const pageAfterNext = () =>
     page * PAGINATOR_SIZE + page + 1 <= response.count - PAGINATOR_SIZE;
 
+  const RenewSearch = (input) => {
+    console.log(input);
+    if (input !== null) {
+      window.location.replace(`/#/search/${input.replace(/-/g, " ")}`);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -76,34 +86,38 @@ function SearchResults() {
 
         <div className="content-wrapper">
           <div className="filter-grid">
-            <Search Light />
+            <Search Light onClick={RenewSearch} />
             <div className="filter-reorder filter-reorder-light">newest</div>
           </div>
         </div>
 
         {response !== null ? (
           <>
-            <ProductList List={response} />
+            <ProductList Light List={response.results} />
 
             <div className="page-buttons-wrapper">
               {page > 2 ? (
-                <PageButton page={page - 2} onClick={loadPage} />
+                <PageButton Light page={page - 2} onClick={loadPage} />
               ) : (
                 ""
               )}
 
               {page > 1 ? (
-                <PageButton page={page - 1} onClick={loadPage} />
+                <PageButton Light page={page - 1} onClick={loadPage} />
               ) : (
                 ""
               )}
 
-              <PageButton page={page} active onClick={loadPage} />
+              <PageButton Light page={page} active onClick={loadPage} />
 
-              {1 == 1 ? <PageButton page={page + 1} onClick={loadPage} /> : " "}
+              {response.next ? (
+                <PageButton Light page={page + 1} onClick={loadPage} />
+              ) : (
+                " "
+              )}
 
               {pageAfterNext() ? (
-                <PageButton page={page + 2} onClick={loadPage} />
+                <PageButton Light page={page + 2} onClick={loadPage} />
               ) : (
                 " "
               )}
