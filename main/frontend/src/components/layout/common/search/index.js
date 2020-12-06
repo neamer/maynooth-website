@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./index.css";
 
 function Search(props) {
-  const [input, setInput] = useState(null);
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    setInput(props.input);
+  }, [props.input]);
 
   return (
     <div className="search-wrapper">
@@ -12,6 +16,7 @@ function Search(props) {
         className={
           props.Light ? "search-input search-input-light" : "search-input"
         }
+        value={input}
         placeholder="search through our collection"
         onChange={(e) => setInput(e.target.value)}
       />

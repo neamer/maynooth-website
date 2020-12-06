@@ -5,14 +5,7 @@
   grid-template-columns: 85% 15%;
   column-gap: 20px;
 }
-.filter-reorder {
-  padding: 10px 0;
-  font-weight: 600;
-  text-align: center;
-  color: white;
-  border: 3px solid white;
-  border-radius: 7px;
-}
+
 .link-default {
   text-decoration: none;
 }
@@ -24,11 +17,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 60px;
-}
-
-.filter-reorder-light {
-  color: #2a2a2a;
-  border: 3px solid #2a2a2a;
 }
 
 @media screen and (max-width: 750px) {
@@ -54,10 +42,5 @@
   .search-btn {
     padding: 14px 20px 13px 20px;
     right: 0px;
-  }
-  .filter-reorder {
-    width: 40%;
-    margin: auto;
-    margin-top: 10px;
   }
 }

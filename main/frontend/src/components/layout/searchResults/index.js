@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import Header from "../common/header";
 import Search from "../common/search";
 import PageButton from "../common/pagination/PageButton";
+import SortBy from "../common/sortBy/SortBy";
 
 import "./index.css";
 import ProductList from "../common/ProductList";
@@ -86,8 +87,8 @@ function SearchResults() {
 
         <div className="content-wrapper">
           <div className="filter-grid">
-            <Search Light onClick={RenewSearch} />
-            <div className="filter-reorder filter-reorder-light">newest</div>
+            <Search Light onClick={RenewSearch} input={searchInput} />
+            <SortBy />
           </div>
         </div>
 

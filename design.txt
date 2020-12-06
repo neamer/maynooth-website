@@ -95,7 +95,7 @@ calc
 
   THINGS TO DO BEFORE WRAP UP
   ----
-    1. finish pagination(category and search)
+    x  finish pagination(category and search)
     2. implement loading animation when the products are being fetched and appropriate error messages
     3. implement sorting for category
     4. implement some sort of reccomendations
