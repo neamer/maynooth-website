@@ -6,18 +6,18 @@ import "./Product.css";
 
 function Product(props) {
   return (
-    <Link
-      className="link-default"
-      to={`/product/${props.Product.name.replace(/-/g, " ")}`}
+    <div
+      className={
+        props.Left
+          ? "result-product-wrapper product-left"
+          : props.Middle
+          ? "result-product-wrapper product-middle"
+          : "result-product-wrapper product-right"
+      }
     >
-      <div
-        className={
-          props.Left
-            ? "result-product-wrapper product-left"
-            : props.Middle === 1
-            ? "result-product-wrapper product-middle"
-            : "result-product-wrapper product-right"
-        }
+      <Link
+        className="link-default"
+        to={`/product/${props.Product.name.replace(/-/g, " ")}`}
       >
         <div
           className="result-product-pic-div"
@@ -51,8 +51,8 @@ function Product(props) {
         >
           {props.Product.colors.length} colors available
         </p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

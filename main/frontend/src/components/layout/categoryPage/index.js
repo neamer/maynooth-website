@@ -7,11 +7,11 @@ import Header from "../common/header";
 import ShoppingBasket from "../shoppingBasket";
 import CategoryHero from "./CategoryHero";
 import Search from "../common/search";
+import SortBy from "../common/sortBy/SortBy";
 import Showcase from "../common/Showcase";
 import SecondSection from "../common/SecondSection";
 import ProductList from "../common/ProductList";
 import Footer from "../common/footer";
-import ExtendBackground from "./ExtendBackground";
 
 import { PAGINATOR_SIZE } from "../common/pagination/Constants";
 
@@ -54,7 +54,7 @@ function CategoryPage(props) {
   }, [categoryName]);
 
   const pageAfterNext = () =>
-    page * PAGINATOR_SIZE + page + 1 <= response.count - PAGINATOR_SIZE;
+    page * PAGINATOR_SIZE + PAGINATOR_SIZE + 1 <= response.count;
 
   const loadPage = (page) => {
     console.log(`attempted loading page ${page} of category ${categoryName}!`);
@@ -82,16 +82,15 @@ function CategoryPage(props) {
       {basketIsOpen ? <ShoppingBasket onClick={setBasketIsOpen} /> : ""}
       <Header onClick={setBasketIsOpen} />
       <CategoryHero Category={categoryName} heroImgSrc={categoryPic} />
-      <Showcase LightText heading="New in category" />
-      <SecondSection GoUnder>
+      <Showcase heading="Staff picks" Background />
+      <SecondSection style={{ paddingTop: "60px" }} id="scroll-anchor">
         <div className="content-wrapper">
           <div className="filter-grid">
             <Search />
-            <div className="filter-reorder">newest</div>
+            <SortBy Light />
           </div>
         </div>
 
-        <ExtendBackground />
         {response !== null ? (
           <>
             <ProductList List={response.results} />

@@ -1,1 +1,1 @@
-export const PAGINATOR_SIZE = 6;
+export const PAGINATOR_SIZE = 12;

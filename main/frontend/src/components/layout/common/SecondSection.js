@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import './SecondSection.css'
+import "./SecondSection.css";
 
 function SecondSection(props) {
   return (
-    <div className={ props.GoUnder ? "second-section second-section-under" : "second-section" }>
+    <div
+      style={props.style}
+      className={
+        props.GoUnder ? "second-section second-section-under" : "second-section"
+      }
+      id={props.id}
+    >
       {props.children}
     </div>
-  )
+  );
 }
 
-export default SecondSection
+export default SecondSection;

@@ -60,7 +60,7 @@ function SearchResults() {
   };
 
   const pageAfterNext = () =>
-    page * PAGINATOR_SIZE + page + 1 <= response.count - PAGINATOR_SIZE;
+    page * PAGINATOR_SIZE + PAGINATOR_SIZE + 1 <= response.count;
 
   const RenewSearch = (input) => {
     console.log(input);

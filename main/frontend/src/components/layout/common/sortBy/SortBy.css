@@ -16,11 +16,18 @@
 }
 
 .sortby-main-light {
+  background-color: #eeeeeed5;
   color: #2a2a2a;
+}
+.sortby-main-light:hover {
+  cursor: pointer;
+  background-color: #eeeeeeec;
+  border-radius: 7px 7px 0 0;
 }
 
 .sortby-menu-div {
   position: absolute;
+  z-index: 999;
   top: 46px;
   left: 0;
   right: 0;
@@ -42,8 +49,13 @@
   background-color: #842c68;
   color: white;
 }
+
 .sortby-menu-item:last-of-type {
   border-radius: 0 0 7px 7px;
+}
+
+.sortby-menu-item-light {
+  background-color: #eeeeeeec;
 }
 
 @media screen and (max-width: 750px) {

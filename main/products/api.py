@@ -17,7 +17,7 @@ class ProductList(generics.ListAPIView):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = SmallResultsSetPagination
+    pagination_class = StandardResultsSetPagination
 
 
 class ProductSearchResults(APIView):
@@ -35,7 +35,7 @@ class ProductSearchResults(APIView):
     def get(self, request, format=None):
         searchInput = request.query_params.dict()["searchInput"]
         products = self.get_object(searchInput)
-        paginator = SmallResultsSetPagination()
+        paginator = StandardResultsSetPagination()
         results = paginator.paginate_queryset(products, request)
         serializer = ProductSerializer(results, many=True)
 
@@ -60,5 +60,4 @@ class ProductDetail(APIView):
         name = request.query_params.dict()["productName"]
         product = self.get_object(name)
         serializer = ProductSerializer(product)
-        print(serializer.data)
         return Response(serializer.data)

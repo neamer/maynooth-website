@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import "./SortBy.css";
 
-function SortBy() {
-  const [selected, setSelected] = useState("newest");
+function SortBy(props) {
+  const [selected, setSelected] = useState("Newest");
   const [menuStyle, setMenuStyle] = useState({});
 
   const openMenu = () => {
@@ -17,17 +17,53 @@ function SortBy() {
   return (
     <div>
       <div
-        className="sortby-main sortby-main-light"
+        className={
+          props.Light ? "sortby-main sortby-main-light" : "sortby-main"
+        }
         onMouseOver={openMenu}
         onMouseLeave={closeMenu}
       >
         {selected}
         <div className="sortby-menu-div" style={menuStyle}>
-          <div className="sortby-menu-item sortby-menu-item-selected">
-            newest
+          <div
+            className={
+              props.Light
+                ? "sortby-menu-item sortby-menu-item-light"
+                : "sortby-menu-item"
+            }
+            onClick={() => {
+              setSelected("Newest");
+              closeMenu();
+            }}
+          >
+            Newest
           </div>
-          <div className="sortby-menu-item">oldest</div>
-          <div className="sortby-menu-item">best match</div>
+          <div
+            className={
+              props.Light
+                ? "sortby-menu-item sortby-menu-item-light"
+                : "sortby-menu-item"
+            }
+            onClick={() => {
+              setSelected("Oldest");
+              closeMenu();
+            }}
+          >
+            Oldest
+          </div>
+          <div
+            className={
+              props.Light
+                ? "sortby-menu-item sortby-menu-item-light"
+                : "sortby-menu-item"
+            }
+            onClick={() => {
+              setSelected("Best Match");
+              closeMenu();
+            }}
+          >
+            Best Match
+          </div>
         </div>
       </div>
     </div>
