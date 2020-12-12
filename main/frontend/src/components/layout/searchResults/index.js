@@ -88,7 +88,7 @@ function SearchResults() {
         <div className="content-wrapper">
           <div className="filter-grid">
             <Search Light onClick={RenewSearch} input={searchInput} />
-            <SortBy />
+            <SortBy Light />
           </div>
         </div>
 

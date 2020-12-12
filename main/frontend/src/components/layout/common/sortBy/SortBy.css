@@ -4,7 +4,6 @@
   text-align: center;
   background-color: #f0f0f085;
   color: #fff;
-  transition: 0.2s;
   border-radius: 7px;
 
   position: relative;
@@ -31,10 +30,9 @@
   top: 46px;
   left: 0;
   right: 0;
-  height: 0;
+  height: 0px;
   overflow: hidden;
-
-  transition: 0.2s;
+  transition: all 0.3s;
 }
 .sortby-menu-item {
   font-weight: 600;

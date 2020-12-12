@@ -18,7 +18,7 @@ function Menu(props) {
           <span className="nav-line">|</span>
         </li>
         <li className="nav-item">
-          <Link className="dropdown-link" to="/shopbyroom/livingroom">
+          <Link className="dropdown-link" to="/shopbyroom/living-room">
             LIVING ROOM
           </Link>
         </li>
@@ -28,7 +28,7 @@ function Menu(props) {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="dropdown-link" to="/shopbyroom/kitchen">
+          <Link className="dropdown-link" to="/shopbyroom/kitchen-and-dining">
             KITCHEN & DINING
           </Link>
         </li>

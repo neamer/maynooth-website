@@ -11,13 +11,35 @@ from .serializers import ProductSerializer
 from .pagination import SmallResultsSetPagination, StandardResultsSetPagination
 
 
-class ProductList(generics.ListAPIView):
+class ProductList(APIView):
     """
-    List all products.
+    Retrieve a list of products of a certain category
     """
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-    pagination_class = StandardResultsSetPagination
+
+    def get_object(self, searchInput, category):
+        try:
+            if searchInput != "":
+                print(f"search is {searchInput}")
+                return Product.objects.filter(category=category).filter(Q(name__contains=searchInput) | Q(short_desc__contains=searchInput) | Q(detail_desc__contains=searchInput))
+            else:
+                print("search is none")
+                return Product.objects.filter(category=category)
+        except Product.DoesNotExist:
+            print('not found')
+            raise Http404
+
+    def get(self, request, format=None):
+        searchInput = request.query_params.dict()["searchInput"]
+        category = request.query_params.dict()["category"]
+
+        products = self.get_object(searchInput, category)
+        paginator = StandardResultsSetPagination()
+        results = paginator.paginate_queryset(products, request)
+        serializer = ProductSerializer(results, many=True)
+
+        next_page = paginator.get_next_link()
+
+        return Response({"count": products.count(), "next": next_page, "results": serializer.data})
 
 
 class ProductSearchResults(APIView):

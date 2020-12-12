@@ -26,7 +26,7 @@ function Sidebar(props) {
           className="sidebar-list-item"
           onClick={() => props.handleSidebar(false)}
         >
-          <Link className="dropdown-link" to="/shopbyroom/livingroom">
+          <Link className="dropdown-link" to="/shopbyroom/living-room">
             LIVING ROOM
           </Link>
         </li>
@@ -42,7 +42,7 @@ function Sidebar(props) {
           className="sidebar-list-item"
           onClick={() => props.handleSidebar(false)}
         >
-          <Link className="dropdown-link" to="/shopbyroom/kitchendining">
+          <Link className="dropdown-link" to="/shopbyroom/kitchen-and-dining">
             KITCHEN & DINING
           </Link>
         </li>

@@ -7,11 +7,11 @@ function SortBy(props) {
   const [menuStyle, setMenuStyle] = useState({});
 
   const openMenu = () => {
-    setMenuStyle({ height: "auto" });
+    setMenuStyle({ height: "180px" });
   };
 
   const closeMenu = () => {
-    setMenuStyle({ height: "0" });
+    setMenuStyle({ height: "0px" });
   };
 
   return (

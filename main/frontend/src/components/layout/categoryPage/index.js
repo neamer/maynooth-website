@@ -19,6 +19,7 @@ import "./index.css";
 import PageButton from "../common/pagination/PageButton";
 
 function CategoryPage(props) {
+  const [searchInput, setSearchInput] = useState("");
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [response, setResponse] = useState(null);
@@ -30,14 +31,14 @@ function CategoryPage(props) {
   let categoryPic;
 
   switch (params.category) {
-    case "livingroom":
+    case "living-room":
       categoryName = "Living Room";
       categoryPic = "static/frontend/livingRoomHero.png";
       break;
     case "bedroom":
       categoryName = "Bedroom";
       break;
-    case "kitchendining":
+    case "kitchen-and-dining":
       categoryName = "Kitchen & Dining";
       break;
 
@@ -56,12 +57,23 @@ function CategoryPage(props) {
   const pageAfterNext = () =>
     page * PAGINATOR_SIZE + PAGINATOR_SIZE + 1 <= response.count;
 
+  const changeSearchInput = (input) => {
+    setTimeout(() => {
+      setSearchInput(input);
+    }, 500);
+    loadPage(1);
+  };
+
   const loadPage = (page) => {
     console.log(`attempted loading page ${page} of category ${categoryName}!`);
 
     const config = {
       headers: {
         "Content-Type": "application/json",
+      },
+      params: {
+        category: categoryName[0],
+        searchInput: searchInput,
       },
     };
 
@@ -86,7 +98,7 @@ function CategoryPage(props) {
       <SecondSection style={{ paddingTop: "60px" }} id="scroll-anchor">
         <div className="content-wrapper">
           <div className="filter-grid">
-            <Search />
+            <Search onClick={changeSearchInput} />
             <SortBy Light />
           </div>
         </div>
