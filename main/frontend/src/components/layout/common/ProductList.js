@@ -6,7 +6,13 @@ import Product from "./Product";
 function ProductList(props) {
   return (
     <div className="content-wrapper product-list-wrapper">
-      <div className="results-wrapper">
+      <div
+        className={
+          props.Loading
+            ? "results-wrapper results-wrapper-loading"
+            : "results-wrapper"
+        }
+      >
         <div className="results-grid">
           {props.List
             ? props.List.map((item, index) => {

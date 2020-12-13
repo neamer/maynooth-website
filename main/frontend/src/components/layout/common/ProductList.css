@@ -11,6 +11,10 @@
 }
 .results-wrapper {
   padding: 100px 0;
+  transition: all 5s;
+}
+.results-wrapper-loading {
+  filter: blur(10px);
 }
 
 .results-grid {

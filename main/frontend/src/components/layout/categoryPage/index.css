@@ -4,3 +4,8 @@
 .second-section-fix {
   height: calc(auto - 300px);
 }
+
+.search-results-heading-category {
+  color: white;
+  padding-top: 0px;
+}

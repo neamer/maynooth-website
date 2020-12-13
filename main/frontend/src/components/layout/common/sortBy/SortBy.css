@@ -1,5 +1,5 @@
 .sortby-main {
-  padding: 12px 0;
+  padding: 13px 0;
   font-weight: 600;
   text-align: center;
   background-color: #f0f0f085;
@@ -27,7 +27,7 @@
 .sortby-menu-div {
   position: absolute;
   z-index: 999;
-  top: 46px;
+  top: 48px;
   left: 0;
   right: 0;
   height: 0px;
@@ -36,7 +36,7 @@
 }
 .sortby-menu-item {
   font-weight: 600;
-  padding: 12px 0;
+  padding: 13px 0;
   background-color: #f0f0f085;
   text-align: center;
 

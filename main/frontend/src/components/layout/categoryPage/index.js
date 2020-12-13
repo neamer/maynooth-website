@@ -22,6 +22,7 @@ function CategoryPage(props) {
   const [searchInput, setSearchInput] = useState("");
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
   const params = useParams();
@@ -52,20 +53,21 @@ function CategoryPage(props) {
     // load the products when the component gets initially rendered
 
     loadPage(1);
-  }, [categoryName]);
+  }, [categoryName, searchInput]);
 
   const pageAfterNext = () =>
     page * PAGINATOR_SIZE + PAGINATOR_SIZE + 1 <= response.count;
 
-  const changeSearchInput = (input) => {
-    setTimeout(() => {
-      setSearchInput(input);
-    }, 500);
+  const changeSearchInput = () => {
     loadPage(1);
   };
 
   const loadPage = (page) => {
-    console.log(`attempted loading page ${page} of category ${categoryName}!`);
+    setLoading(true);
+
+    console.log(
+      `attempted loading page ${page} of category ${categoryName}! Keyword -> ${searchInput}`
+    );
 
     const config = {
       headers: {
@@ -80,6 +82,10 @@ function CategoryPage(props) {
     axios
       .get(`/api/products/?page=${page}`, config)
       .then((res) => {
+        setLoading(false);
+
+        setTimeout(() => console.log("waited 500"), 500);
+
         setResponse(res.data);
         setPage(page);
         console.log(res.data);
@@ -97,15 +103,26 @@ function CategoryPage(props) {
       <Showcase heading="Staff picks" Background />
       <SecondSection style={{ paddingTop: "60px" }} id="scroll-anchor">
         <div className="content-wrapper">
+          {searchInput !== "" ? (
+            <h2 className="search-results-heading search-results-heading-category">
+              Search results for "{searchInput}"
+            </h2>
+          ) : (
+            ""
+          )}
           <div className="filter-grid">
-            <Search onClick={changeSearchInput} />
+            <Search onClick={setSearchInput} />
             <SortBy Light />
           </div>
         </div>
 
         {response !== null ? (
           <>
-            <ProductList List={response.results} />
+            {loading ? (
+              <ProductList Loading List={response.results} />
+            ) : (
+              <ProductList List={response.results} />
+            )}
 
             <div className="page-buttons-wrapper">
               {page > 2 ? (

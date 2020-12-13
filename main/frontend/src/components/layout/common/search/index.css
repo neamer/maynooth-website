@@ -40,7 +40,12 @@
   transition: 0.5s ease-out;
 }
 .search-btn:hover {
+  background-color: #5ec7be;
   cursor: pointer;
+}
+.search-btn:active {
+  transition: 0.05s ease-out;
+  background-color: #95f0e8;
 }
 
 /* LIGHT */

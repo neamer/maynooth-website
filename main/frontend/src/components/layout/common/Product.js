@@ -30,7 +30,7 @@ function Product(props) {
                 : "result-product-price"
             }
           >
-            {props.Product.price}
+            ${props.Product.price}
           </h3>
         </div>
         <h3

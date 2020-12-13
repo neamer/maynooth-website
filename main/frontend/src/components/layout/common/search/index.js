@@ -6,7 +6,7 @@ function Search(props) {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    setInput(props.input);
+    //setInput(props.input);
   }, [props.input]);
 
   return (
