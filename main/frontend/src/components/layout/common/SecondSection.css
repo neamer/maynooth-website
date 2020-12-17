@@ -5,9 +5,9 @@
     rgba(132, 44, 104, 1) 0%,
     rgba(100, 33, 79, 1) 100%
   );
+  position: relative;
 }
 
 .second-section-under {
-  position: relative;
   z-index: 2;
 }

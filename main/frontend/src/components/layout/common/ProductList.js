@@ -12,6 +12,7 @@ function ProductList(props) {
             ? "results-wrapper results-wrapper-loading"
             : "results-wrapper"
         }
+        id="scroll-anchor"
       >
         <div className="results-grid">
           {props.List

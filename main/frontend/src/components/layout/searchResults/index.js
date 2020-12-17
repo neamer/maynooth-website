@@ -15,6 +15,7 @@ import SecondSection from "../common/SecondSection";
 import Footer from "../common/footer";
 
 import { PAGINATOR_SIZE } from "../common/pagination/Constants";
+import ScrollAnchor from "../common/ScrollAnchor";
 
 function SearchResults() {
   const params = useParams();
@@ -80,6 +81,7 @@ function SearchResults() {
         }}
       >
         <div className="content-wrapper">
+          <ScrollAnchor />
           <h2 className="search-results-heading">
             Search results for "{params.input}"
           </h2>

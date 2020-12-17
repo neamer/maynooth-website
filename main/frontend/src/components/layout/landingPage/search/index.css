@@ -19,6 +19,7 @@
   border-radius: 7px 10px 10px 7px;
   padding: 15px 25px;
   transition: 0.5s ease-out;
+  height: 49px;
 }
 .home-search-input:hover,
 .home-search-input:focus {
@@ -26,6 +27,7 @@
 }
 
 .home-search-btn {
+  height: 49px;
   box-sizing: border-box;
   border: none;
   outline: none;

@@ -4,7 +4,11 @@
 .second-section-fix {
   height: calc(auto - 300px);
 }
-
+.category-line {
+  height: 5px;
+  width: 100%;
+  background-color: #4cb3aa;
+}
 .search-results-heading-category {
   color: white;
   padding-top: 0px;

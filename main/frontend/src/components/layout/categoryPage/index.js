@@ -17,6 +17,7 @@ import { PAGINATOR_SIZE } from "../common/pagination/Constants";
 
 import "./index.css";
 import PageButton from "../common/pagination/PageButton";
+import ScrollAnchor from "../common/ScrollAnchor";
 
 function CategoryPage(props) {
   const [searchInput, setSearchInput] = useState("");
@@ -100,8 +101,10 @@ function CategoryPage(props) {
       {basketIsOpen ? <ShoppingBasket onClick={setBasketIsOpen} /> : ""}
       <Header onClick={setBasketIsOpen} />
       <CategoryHero Category={categoryName} heroImgSrc={categoryPic} />
+      <div className="category-line"></div>
       <Showcase heading="Staff picks" Background />
-      <SecondSection style={{ paddingTop: "60px" }} id="scroll-anchor">
+      <SecondSection style={{ paddingTop: "60px" }}>
+        <ScrollAnchor />
         <div className="content-wrapper">
           {searchInput !== "" ? (
             <h2 className="search-results-heading search-results-heading-category">

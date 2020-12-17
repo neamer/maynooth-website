@@ -17,6 +17,7 @@
   padding: 14px 25px;
   border: 1px solid transparent;
   transition: 0.5s ease-out;
+  height: 49px;
 }
 .search-input:hover,
 .search-input:focus {
@@ -25,6 +26,7 @@
 }
 
 .search-btn {
+  height: 49px;
   box-sizing: border-box;
   border: none;
   outline: none;
