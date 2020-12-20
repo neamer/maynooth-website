@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, Redirect } from "react-router-dom";
 
 import ArrowIcon from "../../common/img/arrowLight.svg";
 import "./Slider.css";
@@ -14,16 +15,19 @@ function Slider() {
       caption: "The perfect sofa for your home",
       action: "SHOP SOFAS",
       src: "static/frontend/slide1.png",
+      link: "/search/sofa",
     },
     {
       caption: "Everything you need for your dining room",
       action: "SHOP NOW",
       src: "static/frontend/slide2.png",
+      link: "/shopbyroom/kitchen-and-dining",
     },
     {
       caption: "Everything you need for your bedroom",
       action: "SHOP NOW",
       src: "static/frontend/slide3.jpg",
+      link: "/shopbyroom/bedroom",
     },
   ];
 
@@ -66,7 +70,10 @@ function Slider() {
               >
                 {item.caption}
               </h1>
-              <button className="slider-action">{item.action}</button>
+
+              <Link to={item.link}>
+                <button className="slider-action">{item.action}</button>
+              </Link>
             </div>
           </div>
         );
