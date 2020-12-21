@@ -10,7 +10,14 @@
 .feed-pic {
   width: 100%;
   padding-top: 100%;
+  transition: 0.2s;
+  background-size: 100%;
+  background-position: center center;
   background-color: #bdbdbd;
+}
+.feed-pic:hover {
+  background-size: 105%;
+  cursor: pointer;
 }
 .feed-pic:nth-of-type(2) {
   background-color: #c5c5c5;
@@ -34,8 +41,17 @@
   font-weight: 300;
   font-size: 20px;
 }
+.feed-action:hover {
+  cursor: pointer;
+}
+.feed-action:hover > .arrow-long {
+  margin-left: 7px;
+  margin-right: 0px;
+}
 .arrow-long {
+  transition: 0.2s;
   margin-top: 7px;
+  margin-right: 7px;
   height: 15px;
 }
 
