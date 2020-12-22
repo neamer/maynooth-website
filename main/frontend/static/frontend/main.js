@@ -625,6 +625,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/layout/landingPage/about/AboutCard.css":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/layout/landingPage/about/AboutCard.css ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);\n// Module\n___CSS_LOADER_EXPORT___.push([module.i, \".about-card-placeholder {\\r\\n  margin: 50px 0;\\r\\n  height: 500px;\\r\\n  width: 100%;\\r\\n  background-color: #fff;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ __webpack_exports__[\"default\"] = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/AboutCard.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/components/layout/landingPage/about/index.css":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/components/layout/landingPage/about/index.css ***!
@@ -633,7 +645,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);\n// Module\n___CSS_LOADER_EXPORT___.push([module.i, \".about-heading {\\r\\n  font-family: \\\"DM Serif Display\\\", serif;\\r\\n  font-weight: 500;\\r\\n  font-size: 54px;\\r\\n  color: #fff;\\r\\n  margin-bottom: 50px;\\r\\n  text-align: center;\\r\\n}\\r\\n\\r\\n.about-wrapper {\\r\\n  padding: 50px 0 200px 0;\\r\\n  text-align: center;\\r\\n}\\r\\n\\r\\n.about-placeholder {\\r\\n  height: 1200px;\\r\\n}\\r\\n\\r\\n@media screen and (max-width: 750px) {\\r\\n  .about-heading {\\r\\n    padding-top: 20px;\\r\\n    font-size: 40px;\\r\\n  }\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ __webpack_exports__[\"default\"] = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/index.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);\n// Module\n___CSS_LOADER_EXPORT___.push([module.i, \".about-heading {\\r\\n  font-family: \\\"DM Serif Display\\\", serif;\\r\\n  font-weight: 500;\\r\\n  font-size: 54px;\\r\\n  color: #fff;\\r\\n  margin-bottom: 50px;\\r\\n  text-align: center;\\r\\n}\\r\\n\\r\\n.about-wrapper {\\r\\n  padding: 50px 0 200px 0;\\r\\n  text-align: center;\\r\\n}\\r\\n\\r\\n.about-line {\\r\\n  height: 400px;\\r\\n}\\r\\n\\r\\n.about-placeholder {\\r\\n  height: 1200px;\\r\\n}\\r\\n\\r\\n@media screen and (max-width: 750px) {\\r\\n  .about-heading {\\r\\n    padding-top: 20px;\\r\\n    font-size: 40px;\\r\\n  }\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ __webpack_exports__[\"default\"] = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/index.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -2269,6 +2281,65 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./src/components/layout/landingPage/about/AboutCard.css":
+/*!***************************************************************!*\
+  !*** ./src/components/layout/landingPage/about/AboutCard.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js!./AboutCard.css */ \"./node_modules/css-loader/dist/cjs.js!./src/components/layout/landingPage/about/AboutCard.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/AboutCard.css?");
+
+/***/ }),
+
+/***/ "./src/components/layout/landingPage/about/AboutCard.js":
+/*!**************************************************************!*\
+  !*** ./src/components/layout/landingPage/about/AboutCard.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _AboutCard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AboutCard.css */ \"./src/components/layout/landingPage/about/AboutCard.css\");\n/* harmony import */ var _AboutCard_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_AboutCard_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nfunction AboutCard() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"content-wrapper\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"about-card-placeholder\"\n  }));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AboutCard);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/AboutCard.js?");
+
+/***/ }),
+
+/***/ "./src/components/layout/landingPage/about/about-us-connector.svg":
+/*!************************************************************************!*\
+  !*** ./src/components/layout/landingPage/about/about-us-connector.svg ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\nvar _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"path\", {\n  fill: \"none\",\n  stroke: \"#fff\",\n  strokeMiterlimit: 10,\n  strokeWidth: 7,\n  d: \"M10.44-.67v207.7\"\n});\n\nfunction SvgAboutUsConnector(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"svg\", _extends({\n    \"data-name\": \"Layer 1\",\n    viewBox: \"0 0 21.32 206.62\"\n  }, props), _ref);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (SvgAboutUsConnector);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/about-us-connector.svg?");
+
+/***/ }),
+
+/***/ "./src/components/layout/landingPage/about/about-us-end.svg":
+/*!******************************************************************!*\
+  !*** ./src/components/layout/landingPage/about/about-us-end.svg ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\nvar _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"circle\", {\n  cx: 10.44,\n  cy: 207.69,\n  r: 10.44,\n  fill: \"#fff\"\n});\n\nvar _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"path\", {\n  fill: \"none\",\n  stroke: \"#fff\",\n  strokeMiterlimit: 10,\n  strokeWidth: 7,\n  d: \"M10.44 207.69V0\"\n});\n\nfunction SvgAboutUsEnd(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"svg\", _extends({\n    \"data-name\": \"Layer 1\",\n    viewBox: \"0 0 21.32 217.73\"\n  }, props), _ref, _ref2);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (SvgAboutUsEnd);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/about-us-end.svg?");
+
+/***/ }),
+
+/***/ "./src/components/layout/landingPage/about/about-us-start.svg":
+/*!********************************************************************!*\
+  !*** ./src/components/layout/landingPage/about/about-us-start.svg ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\nvar _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"circle\", {\n  cx: 10.44,\n  cy: 10.44,\n  r: 10.44,\n  fill: \"#fff\"\n});\n\nvar _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"path\", {\n  fill: \"none\",\n  stroke: \"#fff\",\n  strokeMiterlimit: 10,\n  strokeWidth: 7,\n  d: \"M10.44 10.44v207.69\"\n});\n\nfunction SvgAboutUsStart(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"svg\", _extends({\n    \"data-name\": \"Layer 1\",\n    viewBox: \"0 0 21.32 217.73\"\n  }, props), _ref, _ref2);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (SvgAboutUsStart);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/about-us-start.svg?");
+
+/***/ }),
+
 /***/ "./src/components/layout/landingPage/about/index.css":
 /*!***********************************************************!*\
   !*** ./src/components/layout/landingPage/about/index.css ***!
@@ -2288,19 +2359,7 @@ eval("var api = __webpack_require__(/*! ../../../../../node_modules/style-loader
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/components/layout/landingPage/about/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _placeholder_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./placeholder.svg */ \"./src/components/layout/landingPage/about/placeholder.svg\");\n\n\n\n\nfunction About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"content-wrapper about-wrapper\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", {\n    className: \"about-heading\"\n  }, \"About Maynooth\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_placeholder_svg__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    className: \"about-placeholder\"\n  })));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (About);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/index.js?");
-
-/***/ }),
-
-/***/ "./src/components/layout/landingPage/about/placeholder.svg":
-/*!*****************************************************************!*\
-  !*** ./src/components/layout/landingPage/about/placeholder.svg ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\nvar _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"defs\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"style\", null, \".placeholder_svg__cls-1{fill:#fff}\"));\n\nvar _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"path\", {\n  className: \"placeholder_svg__cls-1\",\n  d: \"M25.14 50.27a25.14 25.14 0 1125.13-25.13 25.16 25.16 0 01-25.13 25.13zm0-43.27a18.14 18.14 0 1018.13 18.14A18.16 18.16 0 0025.14 7zM25.14 958.42a25.14 25.14 0 1125.13-25.14 25.17 25.17 0 01-25.13 25.14zm0-43.27a18.14 18.14 0 1018.13 18.13 18.16 18.16 0 00-18.13-18.13z\"\n});\n\nvar _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"path\", {\n  className: \"placeholder_svg__cls-1\",\n  d: \"M21.64 46.77h7v864.88h-7z\"\n});\n\nfunction SvgPlaceholder(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"svg\", _extends({\n    id: \"placeholder_svg__Layer_1\",\n    \"data-name\": \"Layer 1\",\n    viewBox: \"0 0 52.67 958.51\"\n  }, props), _ref, _ref2, _ref3);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (SvgPlaceholder);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/placeholder.svg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/components/layout/landingPage/about/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _about_us_start_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about-us-start.svg */ \"./src/components/layout/landingPage/about/about-us-start.svg\");\n/* harmony import */ var _about_us_connector_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about-us-connector.svg */ \"./src/components/layout/landingPage/about/about-us-connector.svg\");\n/* harmony import */ var _about_us_end_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about-us-end.svg */ \"./src/components/layout/landingPage/about/about-us-end.svg\");\n/* harmony import */ var _AboutCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AboutCard */ \"./src/components/layout/landingPage/about/AboutCard.js\");\n\n\n\n\n\n\n\nfunction About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"content-wrapper about-wrapper\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", {\n    className: \"about-heading\"\n  }, \"About Maynooth\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_us_start_svg__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    className: \"about-line\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutCard__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_us_connector_svg__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    className: \"about-line\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutCard__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_us_connector_svg__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    className: \"about-line\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutCard__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_us_connector_svg__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    className: \"about-line\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AboutCard__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_us_end_svg__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    className: \"about-line\"\n  })));\n}\n/* \r\n\r\nIDEAS\r\n----\r\n  at the end of the about us section, add a \"today\"\r\n  section showcasing maynooths achievmenets today\r\n  (number of employees, stores, satisfied customers)\r\n*/\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (About);\n\n//# sourceURL=webpack:///./src/components/layout/landingPage/about/index.js?");
 
 /***/ }),
 

@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+.about-line {
+  height: 400px;
+}
+
 .about-placeholder {
   height: 1200px;
 }
