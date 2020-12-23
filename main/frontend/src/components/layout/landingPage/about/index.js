@@ -10,7 +10,10 @@ import AboutCard from "./AboutCard";
 function About() {
   return (
     <div className="content-wrapper about-wrapper">
-      <h2 className="about-heading">About Maynooth</h2>
+      <h2 className="about-title">About Us</h2>
+      <p className="about-subtitle">
+        Our story from humble beginings to today.
+      </p>
       <div>
         <LineStart className="about-line" />
         <AboutCard />

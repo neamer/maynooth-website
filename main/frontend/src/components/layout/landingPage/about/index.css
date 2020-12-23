@@ -1,10 +1,17 @@
-.about-heading {
+.about-title {
   font-family: "DM Serif Display", serif;
   font-weight: 500;
   font-size: 54px;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.about-subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
 }
 
 .about-wrapper {
