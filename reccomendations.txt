@@ -1,0 +1,20 @@
+IDEA
+----
+  make a semi-intelligent ai that reccomends products based on one or
+  more sample project
+
+IMPLEMENTATION
+  make a priority queue where the priority is determined by the similarity
+  between the two products. 
+
+  DETERMINING SIMILARITY
+  ----
+    cut up the name and short_desc strings into words that will serve as keywords
+    an item that contains more keywords from the sample gets a higher priority.
+
+    TYPE                       PRIORITY
+    ----
+      name keyword match - 10
+      short_desc keyword match - 3
+      category match - 1
+

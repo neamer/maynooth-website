@@ -96,10 +96,10 @@ calc
   THINGS TO DO BEFORE WRAP UP
   ----
     x  finish pagination(category and search)
-    2. implement loading animation when the products are being fetched and appropriate error messages
-    3. implement sorting for category
+    x  implement the instagram section on the homepage
+    x implement loading animation when the products are being fetched and appropriate error messages
     4. implement some sort of reccomendations
-    5. implement the instagram section on the homepage
+    3. implement sorting for category
     6. about us section
     7. basket animation
     7. implement continue to checkout (sends a mail with all the items)
