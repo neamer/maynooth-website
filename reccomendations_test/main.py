@@ -27,10 +27,10 @@ class Heap:
         return index // 2 if index > 1 else OUT_OF_BOUNDS
 
     def get_left_child_index(self, index):
-        return index * 2 if index * 2 <= len(self.data) else OUT_OF_BOUNDS
+        return index * 2 if index * 2 < len(self.data) else OUT_OF_BOUNDS
 
     def get_right_child_index(self, index):
-        return index * 2 + 1 if index * 2 + 1 <= len(self.data) else OUT_OF_BOUNDS
+        return index * 2 + 1 if index * 2 + 1 < len(self.data) else OUT_OF_BOUNDS
 
     def get_root_index(self):
         return 1
@@ -75,17 +75,21 @@ class MaxHeap(Heap):
 
     def pop(self):
         popped = self.get_item(self.get_root_index())
-        self.replace_root()
 
-        self.heapify_down()
+        if self.get_length() > 2:
+            self.replace_root()
+            self.heapify_down()
+        elif self.get_length() == 2:
+            self.data.pop()
+        else:
+            raise IndexError("Attempted to pop a empty MaxHeap")
 
         return popped
 
     def __str__(self):
-        return f"{self.__repr__()}\n{Heap.__str__(self)}======================================="
+        return f"=======================================\n{self.__repr__()}\n{Heap.__str__(self)}======================================="
 
     def heapify_up(self):
-        print("\heapify\n")
         # preuredi maxi gomilu nakon dodavanja nove stavke
 
         # stavka koja je zadnja dodata se treba uporediti sa ostatkom gomile da bi se sacuvala konzistentost
@@ -99,10 +103,7 @@ class MaxHeap(Heap):
 
             # -1 je vrijednost koju koristimo da naznacimo da stavka nema roditelja
             if parent_index != OUT_OF_BOUNDS:
-                print(
-                    f"parent -> {self.get_item(parent_index)} | item -> {self.get_item(item_index)}\n")
                 if self.get_item(parent_index) < self.get_item(item_index):
-                    print("\nswapped\n")
                     # ako je stavka veca od roditelja vrsimo zamjenu
                     self.swap(parent_index, item_index)
                     item_index = parent_index
@@ -123,7 +124,6 @@ class MaxHeap(Heap):
         continue_to_heapify = True
 
         while (continue_to_heapify):
-            print("continue")
 
             left_child_index = self.get_left_child_index(item_index)
             right_child_index = self.get_right_child_index(item_index)
@@ -172,3 +172,4 @@ for i in range(10):
     sorted_order.append(heap.pop())
 
 print(heap)
+print(sorted_order)
