@@ -23,3 +23,9 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = ['name', 'price', 'short_desc', 'detail_desc',
                   'colors', 'category', 'in_stock', 'date_added', 'pictures']
+
+
+class CompactProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['name', 'category', 'short_desc', 'detail_desc']

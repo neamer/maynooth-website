@@ -203,28 +203,7 @@ class MaxHeap(Heap):
                 continue_to_heapify = False
 
 
-def test_heap:
-    seed(1)
-
-    heap = MaxHeap()
-    for i in range(5):
-        heap.push(i * 100, 10)
-
-    for i in range(5):
-        heap.push(i * 100 + 1, 5)
-
-    print(heap)
-
-    sorted_order = []
-
-    for i in range(10):
-        sorted_order.append(heap.pop().data)
-
-    print(heap)
-    print(sorted_order)
-
-
-def get_products:
+def get_products():
     return [
         Product("Reisa 2 Seater Sofa, Pine Green Velvet", "L", "Statement sofa? You got it. Reisa's sure to garner a few guests' attention. And yours. Just check out that curve appeal – and choose from our selection of rich velvets. This 2 seater's designed by Ian Archer – he's known for his luxurious take on mid-century design."),
         Product("Kooper 2 Seater Sofa, Nutmeg Orange Velvet", "L",
@@ -251,10 +230,59 @@ def get_products:
                 "Generous proportions, comfy cushions and smart tailoring. Vento's a savvy choice for your modern living space. Curved armrests and loose back cushions maximise the comfort, and so does that soft leather upholstery."),
         Product("Orson 2 Seater Sofa, Dark Blue Weave", "L", "Wide, comfy seats just waiting to be sunk into. Deep blue woven upholstery. Lacquered, turned legs. Oh, that's Orson. It's the definition of luxe. Traditional design, updated with simplified lines – total drawing room vibes. This sofa's so inviting."),
         Product("Scott 3 Seater Sofa, Concrete Cotton Velvet", "L",
-                "Nothing says luxury quite like Scott. A sleek silhouette with pulled detail cushions, upholstered in plush velvet – it oozes sophistication. The clean lines nod to mid-century design, and there’s plenty of room to snuggle up.")
+                "Nothing says luxury quite like Scott. A sleek silhouette with pulled detail cushions, upholstered in plush velvet – it oozes sophistication. The clean lines nod to mid-century design, and there’s plenty of room to snuggle up."),
         Product("Content by Terence Conran Tobias, 3 Seater Sofa, Plush Paprika Velvet, Dark Wood Leg", "L",
                 "Looking for designer seating, for less? Say 'hi' to Tobias. Available in a range of sizes and shades, it's as comfy as it is cool – with wide arms and a deep, low seat."),
         Product("Reisa 3 Seater Sofa, Pine Green Velvet", "L", "Statement sofa? You got it. Reisa's sure to garner a few guests' attention. And yours. Just check out that curve appeal – and choose from our selection of rich velvets. This 3 seater's designed by Ian Archer – he's known for his luxurious take on mid-century design."),
         Product("Julianne 3 Seater Sofa, Navy Cotton Velvet", "L",
                 "Luxuriously upholstered in navy cotton velvet, Julianne is a sofa that makes a statement. It comes in other on-trend colours, too.")
     ]
+
+
+def make_reccomendations(sample, products):
+    """ 
+    evaluate products one by one, determine the priority and then insert into the Maxheap
+    name match - 15 points
+    category match - 5
+    description match - 2
+    """
+
+    heap = MaxHeap()
+
+    name_keywords = sample.name.lower().split()
+    desc_keywords = sample.short_desc.lower().split()
+
+    for product in products:
+        priority = 0
+
+        # check name
+        for keyword in name_keywords:
+            if keyword in product.name:
+                priority += 15
+
+        # check description
+        for keyword in desc_keywords:
+            if keyword in product.short_desc:
+                priority += 2
+
+        # check category
+        if sample.category == product.category:
+            priority += 5
+
+        heap.push(product, priority)
+
+    reccomendations = []
+    for counter in range(5):
+        reccomendations.append(heap.pop())
+
+    return reccomendations
+
+
+products = get_products()
+sample = Product("Haru Large Double Sofa Bed, Pine Green Velvet", "L",
+                 "Haru is ideal for homes that you want to keep ready for guests without using up all your space. The retro inspired design, piped detailing and soft velvet fabric makes this double sofa bed stylish, grown up – and practical.")
+
+reccomendations = make_reccomendations(sample, products)
+
+for reccomended in reccomendations:
+    print(reccomended)
