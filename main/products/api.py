@@ -10,6 +10,8 @@ from .models import Product
 from .serializers import ProductSerializer
 from .pagination import SmallResultsSetPagination, StandardResultsSetPagination
 
+from .reccomendations import reccomend
+
 
 class ProductList(APIView):
     """
@@ -82,4 +84,14 @@ class ProductDetail(APIView):
         name = request.query_params.dict()["productName"]
         product = self.get_object(name)
         serializer = ProductSerializer(product)
-        return Response(serializer.data)
+
+        print(f"name -> {name}")
+        print(product)
+
+        reccomendations_queryset = reccomend.make_reccomendations(
+            product, Product.objects.all())
+
+        reccomendations = ProductSerializer(
+            reccomendations_queryset, many=True)
+
+        return Response({"product": serializer.data, "reccomendations": reccomendations.data})

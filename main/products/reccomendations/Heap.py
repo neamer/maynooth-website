@@ -1,3 +1,4 @@
+
 class HeapItem:
 
     # constructor
@@ -6,7 +7,6 @@ class HeapItem:
         self.priority = priority
 
     # equal to
-
     def __eq__(self, other):
         return self.priority == other.priority
 
@@ -32,10 +32,14 @@ class HeapItem:
 
 class Heap:
 
+    # constants
+    OUT_OF_BOUNDS = "OUT OF BOUNDS"
+    INDEX_CORRECTION = "INDEX CORRECTION"
+
     # constructor
     def __init__(self):
         self.data = []
-        self.data.append(INDEX_CORRECTION)
+        self.data.append(Heap.INDEX_CORRECTION)
 
     def __str__(self):
         stream = ""
@@ -47,13 +51,13 @@ class Heap:
     # -- return OUT OF BOUNDS if the index exceeds heap length
 
     def get_parent_index(self, index):
-        return index // 2 if index > 1 else OUT_OF_BOUNDS
+        return index // 2 if index > 1 else self.OUT_OF_BOUNDS
 
     def get_left_child_index(self, index):
-        return index * 2 if index * 2 < len(self.data) else OUT_OF_BOUNDS
+        return index * 2 if index * 2 < len(self.data) else self.OUT_OF_BOUNDS
 
     def get_right_child_index(self, index):
-        return index * 2 + 1 if index * 2 + 1 < len(self.data) else OUT_OF_BOUNDS
+        return index * 2 + 1 if index * 2 + 1 < len(self.data) else self.OUT_OF_BOUNDS
 
     def get_root_index(self):
         return 1
@@ -97,7 +101,7 @@ class MaxHeap(Heap):
         self.heapify_up()
 
     def pop(self):
-        popped = self.get_item(self.get_root_index())
+        popped = self.get_item(self.get_root_index()).data
 
         if self.get_length() > 2:
             self.replace_root()
@@ -125,7 +129,7 @@ class MaxHeap(Heap):
             parent_index = self.get_parent_index(item_index)
 
             # -1 je vrijednost koju koristimo da naznacimo da stavka nema roditelja
-            if parent_index != OUT_OF_BOUNDS:
+            if parent_index != self.OUT_OF_BOUNDS:
                 if self.get_item(parent_index) < self.get_item(item_index):
                     # ako je stavka veca od roditelja vrsimo zamjenu
                     self.swap(parent_index, item_index)
@@ -152,7 +156,7 @@ class MaxHeap(Heap):
             right_child_index = self.get_right_child_index(item_index)
 
             # -1 je vrijednost koju koristimo da naznacimo da stavka dijeteta
-            if (right_child_index != OUT_OF_BOUNDS):
+            if (right_child_index != self.OUT_OF_BOUNDS):
                 # predpostavimo da lijevo djete stavke ima vecu vrijednost
                 index_of_greater_child = left_child_index
 
@@ -167,7 +171,7 @@ class MaxHeap(Heap):
                 else:
                     # ako stavka nije manja od djeteta sa vecom vrijednosti pronasli smo njeno mjesto u gomili i prekidamo preuredjivanje
                     continue_to_heapify = False
-            elif left_child_index != OUT_OF_BOUNDS:
+            elif left_child_index != self.OUT_OF_BOUNDS:
                 # posto stavka nema desnog djeteta nemoramo ga porediti sa lijevim
                 if self.get_item(item_index) < self.get_item(left_child_index):
                     # ako je stavka manja od djeteta vrsimo zamjenu

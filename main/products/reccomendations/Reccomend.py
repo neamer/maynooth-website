@@ -1,3 +1,22 @@
+from products.models import Product
+
+from . import Heap
+
+
+def get_queryset_from_names(arr):
+    """
+    Takes an array of product names and returns a queryset 
+    with the products from the array
+    """
+
+    queryset = Product.objects.none()
+
+    for name in arr:
+        queryset |= Product.objects.filter(name=name)
+
+    return queryset
+
+
 def make_reccomendations(sample, products):
     """ 
     evaluate products one by one, determine the priority and then insert into the Maxheap
@@ -6,7 +25,9 @@ def make_reccomendations(sample, products):
     description match - 2
     """
 
-    heap = MaxHeap()
+    print(sample.name)
+
+    heap = Heap.MaxHeap()
 
     name_keywords = sample.name.lower().split()
     desc_keywords = sample.short_desc.lower().split()
@@ -31,7 +52,7 @@ def make_reccomendations(sample, products):
         heap.push(product, priority)
 
     reccomendations = []
-    for counter in range(5):
-        reccomendations.append(heap.pop())
+    for counter in range(3):
+        reccomendations.append(heap.pop().name)
 
-    return reccomendations
+    return get_queryset_from_names(reccomendations)

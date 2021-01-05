@@ -39,6 +39,11 @@ class Product(models.Model):
         return self.name
 
 
+class ProductGroup(models.Model):
+    name = models.CharField(max_length=50)
+    products = models.ManyToManyField(Product, max_length=5)
+
+
 class Picture(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='pictures')
