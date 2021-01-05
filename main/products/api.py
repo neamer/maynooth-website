@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, ProductGroup
+from .serializers import ProductSerializer, ProductGroupSerializer
 from .pagination import SmallResultsSetPagination, StandardResultsSetPagination
 
 from .reccomendations import reccomend
@@ -85,9 +85,6 @@ class ProductDetail(APIView):
         product = self.get_object(name)
         serializer = ProductSerializer(product)
 
-        print(f"name -> {name}")
-        print(product)
-
         reccomendations_queryset = reccomend.make_reccomendations(
             product, Product.objects.all())
 
@@ -95,3 +92,22 @@ class ProductDetail(APIView):
             reccomendations_queryset, many=True)
 
         return Response({"product": serializer.data, "reccomendations": reccomendations.data})
+
+
+class ProductSet(APIView):
+    """
+    Retrieve a product group from its name.
+    """
+
+    def get_object(self, name):
+        try:
+            return ProductGroup.objects.filter(name=name).first()
+        except Product.DoesNotExist:
+            raise Http404
+
+    def get(self, request, format=None):
+        name = request.query_params.dict()["groupName"]
+        productGroup = self.get_object(name)
+        serializer = ProductGroupSerializer(productGroup)
+
+        return Response(serializer.data)

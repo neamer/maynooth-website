@@ -41,7 +41,10 @@ class Product(models.Model):
 
 class ProductGroup(models.Model):
     name = models.CharField(max_length=50)
-    products = models.ManyToManyField(Product, max_length=5)
+    products = models.ManyToManyField(Product)
+
+    def __str__(self):
+        return self.name
 
 
 class Picture(models.Model):

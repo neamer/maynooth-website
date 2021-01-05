@@ -9,4 +9,6 @@ urlpatterns = [
     path('products/', api.ProductList.as_view(), name="product-list"),
     path('product/',
          api.ProductDetail.as_view(), name="product-detail"),
+    path('product-group/',
+         api.ProductSet.as_view(), name="product-set"),
 ]
