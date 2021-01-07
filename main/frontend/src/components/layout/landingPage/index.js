@@ -20,8 +20,8 @@ function LandingPage() {
   useEffect(() => {
     document.title = `Maynooth Furniture - Home`;
 
-    LoadProductGroup("NewInStore", setNewInStore);
-    LoadProductGroup("NewInStore", setClearanceDeals);
+    LoadProductGroup("new-in-store", setNewInStore);
+    LoadProductGroup("clearance-deals", setClearanceDeals);
   }, []);
 
   return (
@@ -33,7 +33,7 @@ function LandingPage() {
       <EmailCapture />
       <SocialsSection />
       <SecondSection>
-        <Showcase Light heading="Clearance deals" products={newInStore} />
+        <Showcase Light heading="Clearance deals" products={clearanceDeals} />
         <About />
         <Footer />
       </SecondSection>

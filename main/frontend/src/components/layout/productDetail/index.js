@@ -21,6 +21,7 @@ import "./index.css";
 
 function ProductDetail(props) {
   const [product, setProduct] = useState(null);
+  const [reccomendations, setReccomendations] = useState(null);
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -46,7 +47,8 @@ function ProductDetail(props) {
       .get("/api/product/", config)
       .then((res) => {
         console.log(res.data);
-        setProduct(res.data);
+        setProduct(res.data.product);
+        setReccomendations(res.data.reccomendations);
       })
       .catch((err) => {
         console.log(err.response.data, err.response.status);
@@ -100,7 +102,7 @@ function ProductDetail(props) {
         </div>
       </div>
       <SecondSection GoUnder>
-        <Showcase Light heading="Similar Items" />
+        <Showcase Light heading="Similar Items" products={reccomendations} />
         <Footer />
       </SecondSection>
     </>

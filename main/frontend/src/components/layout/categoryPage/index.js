@@ -19,23 +19,25 @@ import "./index.css";
 import PageButton from "../common/pagination/PageButton";
 import ScrollAnchor from "../common/ScrollAnchor";
 
+import LoadProductGroup from "../common/LoadProductGroup";
+
 function CategoryPage(props) {
   const [searchInput, setSearchInput] = useState("");
   const [basketIsOpen, setBasketIsOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [newInCategory, setNewInCategory] = useState(null);
 
   const params = useParams();
 
-  let categoryName;
+  let categoryName = null;
 
-  let categoryPic;
+  let categoryPic = null;
 
   switch (params.category) {
     case "living-room":
       categoryName = "Living Room";
-      categoryPic = "static/frontend/livingRoomHero.png";
       break;
     case "bedroom":
       categoryName = "Bedroom";
@@ -51,8 +53,7 @@ function CategoryPage(props) {
   useEffect(() => {
     document.title = `Maynooth Furniture - ${categoryName}`;
 
-    // load the products when the component gets initially rendered
-
+    LoadProductGroup(`new-in-${params.category}`, setNewInCategory);
     loadPage(1);
   }, [categoryName, searchInput]);
 
@@ -102,7 +103,7 @@ function CategoryPage(props) {
       <Header onClick={setBasketIsOpen} />
       <CategoryHero Category={categoryName} heroImgSrc={categoryPic} />
       <div className="category-line"></div>
-      <Showcase heading="Staff picks" Background />
+      <Showcase heading="Staff picks" Background products={newInCategory} />
       <SecondSection style={{ paddingTop: "60px" }}>
         <ScrollAnchor />
         <div className="content-wrapper">

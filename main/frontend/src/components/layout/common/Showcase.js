@@ -80,6 +80,7 @@ function Showcase(props) {
   };
 
   const goRight = () => {
+    console.log(` props.products.length -> ${props.products.length}`);
     setPosition((currPosition) => currPosition + 1);
   };
 
@@ -105,82 +106,89 @@ function Showcase(props) {
         >
           {props.heading}
         </h1>
-        <div className="showcase-container">
-          {props.products !== null
-            ? props.products.map((item, index) => {
-                return (
+
+        {props.products ? (
+          <div className="showcase-container">
+            {props.products.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="showcase-slider-element"
+                  style={{
+                    transform: `translate(${
+                      position * (responsive ? -292 : -600)
+                    }px)`,
+                  }}
+                >
                   <div
-                    key={index}
-                    className="showcase-slider-element"
-                    style={{
-                      transform: `translate(${
-                        position * (responsive ? -292 : -600)
-                      }px)`,
-                    }}
+                    className="showcase-pic-div"
+                    style={{ backgroundImage: `url(${item.pictures[0]})` }}
                   >
-                    <div
-                      className="showcase-pic-div"
-                      style={{ backgroundImage: `url(${item.pictures[0]})` }}
-                    >
-                      <h3
-                        className={
-                          props.Light
-                            ? "showcase-price showcase-price-light"
-                            : "showcase-price"
-                        }
-                      >
-                        ${item.price}
-                      </h3>
-                    </div>
                     <h3
                       className={
-                        props.Light || props.LightText
-                          ? "showcase-name showcase-name-light"
-                          : "showcase-name"
+                        props.Light
+                          ? "showcase-price showcase-price-light"
+                          : "showcase-price"
                       }
                     >
-                      {item.name}
+                      ${item.price}
                     </h3>
-                    <p
-                      className={
-                        props.Light || props.LightText
-                          ? "showcase-desc showcase-desc-light"
-                          : "showcase-desc"
-                      }
-                    >
-                      {item.colors.length} color/s available
-                    </p>
                   </div>
-                );
-              })
-            : ""}
-          {position !== 0 ? (
-            <button className="showcase-btn showcase-btn-left" onClick={goLeft}>
-              {props.Light ? (
-                <ArrowIconLight className="arrow arrow-left" />
-              ) : (
-                <ArrowIcon className="arrow arrow-left" />
-              )}
-            </button>
-          ) : (
-            ""
-          )}
+                  <h3
+                    className={
+                      props.Light || props.LightText
+                        ? "showcase-name showcase-name-light"
+                        : "showcase-name"
+                    }
+                  >
+                    {item.name}
+                  </h3>
+                  <p
+                    className={
+                      props.Light || props.LightText
+                        ? "showcase-desc showcase-desc-light"
+                        : "showcase-desc"
+                    }
+                  >
+                    {item.colors.length} color/s available
+                  </p>
+                </div>
+              );
+            })}
 
-          {position + elementsDisplayed !== elements.length ? (
-            <button
-              className="showcase-btn showcase-btn-right"
-              onClick={goRight}
-            >
-              {props.Light ? (
-                <ArrowIconLight className="arrow" />
-              ) : (
-                <ArrowIcon className="arrow" />
-              )}
-            </button>
-          ) : (
-            ""
-          )}
-        </div>
+            {position !== 0 ? (
+              <button
+                className="showcase-btn showcase-btn-left"
+                onClick={goLeft}
+              >
+                {props.Light ? (
+                  <ArrowIconLight className="arrow arrow-left" />
+                ) : (
+                  <ArrowIcon className="arrow arrow-left" />
+                )}
+              </button>
+            ) : (
+              ""
+            )}
+
+            {position + elementsDisplayed < props.products.length ? (
+              <button
+                className="showcase-btn showcase-btn-right"
+                onClick={goRight}
+              >
+                {props.Light ? (
+                  <ArrowIconLight className="arrow" />
+                ) : (
+                  <ArrowIcon className="arrow" />
+                )}
+              </button>
+            ) : (
+              ""
+            )}
+          </div>
+        ) : (
+          "Loading..."
+        )}
       </div>
     </div>
   );
