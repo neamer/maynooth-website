@@ -28,6 +28,7 @@ function CategoryPage(props) {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const [newInCategory, setNewInCategory] = useState(null);
+  const [sorting, setSorting] = useState("NEWEST");
 
   const params = useParams();
 
@@ -78,6 +79,7 @@ function CategoryPage(props) {
       params: {
         category: categoryName[0],
         searchInput: searchInput,
+        sorting: sorting,
       },
     };
 
@@ -112,11 +114,13 @@ function CategoryPage(props) {
               Search results for "{searchInput}"
             </h2>
           ) : (
-            ""
+            <h1 className="showcase-heading showcase-heading-light">
+              All listings
+            </h1>
           )}
           <div className="filter-grid">
             <Search onClick={setSearchInput} />
-            <SortBy Light />
+            <SortBy Light onClick={loadPage} />
           </div>
         </div>
 

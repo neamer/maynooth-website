@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import ArrowIcon from "../common/img/arrowDark.svg";
 import ArrowIconLight from "../common/img/arrowLight.svg";
 import "./Showcase.css";
@@ -9,6 +11,7 @@ function Showcase(props) {
   const [responsive, setResponsive] = useState(false);
   const [elementsDisplayed, setElementsDisplayed] = useState(1);
 
+  // remove
   const elements = [
     {
       price: "$379",
@@ -111,14 +114,15 @@ function Showcase(props) {
           <div className="showcase-container">
             {props.products.map((item, index) => {
               return (
-                <div
+                <Link
                   key={index}
-                  className="showcase-slider-element"
+                  className="showcase-slider-element link-default"
                   style={{
                     transform: `translate(${
                       position * (responsive ? -292 : -600)
                     }px)`,
                   }}
+                  to={`/product/${item.name.replace(/-/g, " ")}`}
                 >
                   <div
                     className="showcase-pic-div"
@@ -152,7 +156,7 @@ function Showcase(props) {
                   >
                     {item.colors.length} color/s available
                   </p>
-                </div>
+                </Link>
               );
             })}
 

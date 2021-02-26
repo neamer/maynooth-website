@@ -5,6 +5,7 @@
   background-color: #f0f0f085;
   color: #fff;
   border-radius: 7px;
+  transition: all 0.3s;
 
   position: relative;
 }

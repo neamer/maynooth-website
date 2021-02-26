@@ -18,11 +18,17 @@ class ProductList(APIView):
     Retrieve a list of products of a certain category
     """
 
-    def get_object(self, searchInput, category):
+    def get_object(self, searchInput, category, sorting):
         try:
             if searchInput != "":
                 print(f"search is {searchInput}")
-                return Product.objects.filter(category=category).filter(Q(name__contains=searchInput) | Q(short_desc__contains=searchInput) | Q(detail_desc__contains=searchInput))
+
+                if sorting == "NEWEST":
+                    objects = Product.objects.order_by("-date_added")
+                else:
+                    objects = Product.objects.order_by("date_added")
+
+                return objects.filter(category=category).filter(Q(name__contains=searchInput) | Q(short_desc__contains=searchInput) | Q(detail_desc__contains=searchInput))
             else:
                 print("search is none")
                 return Product.objects.filter(category=category)
@@ -33,8 +39,9 @@ class ProductList(APIView):
     def get(self, request, format=None):
         searchInput = request.query_params.dict()["searchInput"]
         category = request.query_params.dict()["category"]
+        sorting = request.query_params.dict()["sorting"]
 
-        products = self.get_object(searchInput, category)
+        products = self.get_object(searchInput, category, sorting)
         paginator = StandardResultsSetPagination()
         results = paginator.paginate_queryset(products, request)
         serializer = ProductSerializer(results, many=True)

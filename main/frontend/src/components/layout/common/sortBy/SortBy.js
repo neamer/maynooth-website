@@ -34,6 +34,7 @@ function SortBy(props) {
             onClick={() => {
               setSelected("Newest");
               closeMenu();
+              props.onClick(1, "NEWEST");
             }}
           >
             Newest
@@ -47,22 +48,10 @@ function SortBy(props) {
             onClick={() => {
               setSelected("Oldest");
               closeMenu();
+              props.onClick(1, "OLDEST");
             }}
           >
             Oldest
-          </div>
-          <div
-            className={
-              props.Light
-                ? "sortby-menu-item sortby-menu-item-light"
-                : "sortby-menu-item"
-            }
-            onClick={() => {
-              setSelected("Best Match");
-              closeMenu();
-            }}
-          >
-            Best Match
           </div>
         </div>
       </div>
