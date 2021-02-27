@@ -10,7 +10,7 @@ from .models import Product, ProductGroup
 from .serializers import ProductSerializer, ProductGroupSerializer
 from .pagination import SmallResultsSetPagination, StandardResultsSetPagination
 
-from .reccomendations import reccomend
+from .reccomendations import Reccomend as reccomend
 
 
 class ProductList(APIView):
