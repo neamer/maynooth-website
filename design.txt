@@ -97,8 +97,8 @@ calc
   ----
     x  finish pagination(category and search)
     x  implement the instagram section on the homepage
-    x implement loading animation when the products are being fetched and appropriate error messages
-    4. implement some sort of reccomendations
+    2. implement loading animation when the products are being fetched and appropriate error messages
+    x. implement some sort of reccomendations
     3. implement sorting for category
     6. about us section
     7. basket animation
